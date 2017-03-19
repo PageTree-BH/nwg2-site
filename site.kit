@@ -20,15 +20,12 @@
 				<script src="assets/js/modernizr-custom-slim.js"></script>
 				<script src="assets/js/picturefill.min.js"></script>
 
-				<!-- // <script src="https://www.youtube.com/iframe_api"></script> -->
-
 
 
 				<!-- THE PAGETREE CMS AUTOMATICALLY LOADS A NUMBER OF CSS AND JS FILE AUTOMATICALLY -->
 				<link rel="stylesheet" media="screen" href="assets/local/PT-CSS-LOCAL-BUNDLE.min.css">
 
-				<link rel="stylesheet" media="screen" href="assets/css/tachyons.min.css">
-
+				<!-- <link rel="stylesheet" media="screen" href="assets/css/tachyons.min.css"> -->
 
 				<!-- THIS IS THE SITE SPECIFIC STYLES -->
 				<link rel="stylesheet" media="screen" href="assets/site.css">
@@ -41,14 +38,12 @@
 		<!-- VIEWPORT -->
 		<div id="viewport" class="viewport">
 
-			<!-- @----include sasskits/nwg-modal.kit -->
+			<!-- @     include sasskits/nwg-modal.kit -->
 			<!-- @include sasskits/nwg-nav.kit -->
 
 
 
-
 			<div class="preloader-cover"></div>
-
 
 
 
@@ -80,19 +75,12 @@
 
 
 
-
-
-
-
-
 			<div class="mobile-video-holder">
 				<a class="mobile-video-closebtn" href="#"><i class="fa fa-close"></i></a>
 				<div class="mobile-video-inner">
 					<div id="mobile-player"></div>
 				</div>
 			</div>
-
-
 
 
 
@@ -154,12 +142,11 @@
 
 
 	<section id="section-fmx" class="section-nwg">
-		<div class="myVideoHolder" data-nwg-video-holder>
+		<!-- <div class="myVideoHolder" data-nwg-video-holder>
 			<video id="VID1" class="fillvid" >
-					 <!-- <source src="assets/video/road-to-nwg.mp4" type="video/mp4" /> -->
 				 <source src="assets/video/b-roll-epic-clouds.mp4" type="video/mp4" />
 			</video>
-		</div>
+		</div> -->
 
 		<h1 class="section-header">FMX</h1>
 
@@ -168,11 +155,12 @@
 			<img class="action-shadow" src="assets/img/section-fmx-action-shadow2.png" alt="">
 		</div>
 
-<!--
 		<div class="section-bg" >
 			<img class="visible-sm" src="assets/img/section-fmx-bg-sm.jpg" alt="">
 			<img class="visible-xs" src="assets/img/section-fmx-bg-xs.jpg" alt="">
 		</div>
+
+<!--
 		<div class="section-info">
 
 			<div class="section-info-headshot" data-pt-imgswap>
@@ -359,23 +347,22 @@
 
 
 
+<!-- JQUERY AND BOOTSTRAP ARE ALREADY BEING IMPORTED BY THE PAGETREE CMS ENGINE ( DO NOT INCLUDE WHEN INTEGRATING INTO THE CMS ) -->
+<script src="assets/local/PT-JS-LOCAL-BUNDLE.min.js"></script>
 
-			<!-- JQUERY AND BOOTSTRAP ARE ALREADY BEING IMPORTED BY THE PAGETREE CMS ENGINE ( DO NOT INCLUDE WHEN INTEGRATING INTO THE CMS ) -->
-			<script src="assets/local/PT-JS-LOCAL-BUNDLE.min.js"></script>
-
-			<!-- PT BASE SITE  -->
-			<script src="assets/site.min.js"></script>
+<!-- <script src="assets/pt-base-lib-bundle-v13.min.js"></script> -->
 
 
+<!-- LIBRARIES  -->
+<script src="assets/site-base.min.js"></script>
+
+<!-- PT BASE SITE  -->
+<script src="assets/site.min.js"></script>
 
 
-
-
-
-
-
-
-
+<!--
+// @codekit-prepend "pt/pt-base-v13.js"
+ -->
 
 
 
@@ -396,7 +383,6 @@
 
 
 			<script>
-				// THIS SCRIPT HAS BEEN ADDED TO THE MAIN SITE.JS FILE:
 
 				var HP_player;
 				var Mobile_player;
@@ -581,15 +567,6 @@
 
 
 			</script>
-
-
-
-
-
-
-
-
-
 
 
 

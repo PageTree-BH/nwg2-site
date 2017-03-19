@@ -168,6 +168,15 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
+	"\/_deploy\/articles.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/articles.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_deploy\/assets\/cookies.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2080,17 +2089,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_deploy\/assets\/js\/jquery.jpanelmenu.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/assets\/js\/jquery.jpanelmenu.js",
-		"outputAbbreviatedPath": "\/_deploy\/assets\/jquery.jpanelmenu.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/_deploy\/assets\/js\/modernizr-3.3.1.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2155,6 +2153,39 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/_deploy\/assets\/pt-base-lib-bundle-v13.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v13.min.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v13.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/_deploy\/assets\/pt-base-v13.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/pt-base-v13.min.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-v13.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/_deploy\/assets\/site-base.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/site-base.min.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/site-base.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/_deploy\/assets\/site.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -2180,24 +2211,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_deploy\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_deploy\/intro.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/intro.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_deploy\/site_backup_v1.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/site_backup_v1.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2229,14 +2242,14 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_thatnewnew.scss": {
+	"\/_thatnewnew\/_thatnewnew.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_thatnewnew.scss",
+		"inputAbbreviatedPath": "\/_thatnewnew\/_thatnewnew.scss",
 		"outputAbbreviatedPath": "\/css\/_thatnewnew.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -2251,6 +2264,37 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_thatnewnew\/footer.kit",
 		"outputAbbreviatedPath": "\/_deploy\/footer.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_thatnewnew\/homepage.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/_thatnewnew\/homepage.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/homepage.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/_thatnewnew\/newnew-vids.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_thatnewnew\/newnew-vids.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/newnew-vids.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/articles.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/articles.kit",
+		"outputAbbreviatedPath": "\/_deploy\/articles.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -2911,15 +2955,6 @@
 		"outputAbbreviatedPath": "\/_deploy\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
-		},
-	"\/intro.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/intro.kit",
-		"outputAbbreviatedPath": "\/_deploy\/intro.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/lib\/bootstrap\/js\/bootstrap.min.js": {
 		"fileType": 64,
@@ -5129,7 +5164,7 @@
 		},
 	"\/lib\/greensock\/minified\/plugins\/ColorPropsPlugin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/greensock\/minified\/plugins\/ColorPropsPlugin.min.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/ColorPropsPlugin.min.min.js",
@@ -5151,7 +5186,7 @@
 		},
 	"\/lib\/greensock\/minified\/plugins\/CSSRulePlugin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/greensock\/minified\/plugins\/CSSRulePlugin.min.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/CSSRulePlugin.min.min.js",
@@ -5261,7 +5296,7 @@
 		},
 	"\/lib\/greensock\/minified\/plugins\/RoundPropsPlugin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/greensock\/minified\/plugins\/RoundPropsPlugin.min.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/RoundPropsPlugin.min.min.js",
@@ -5983,16 +6018,14 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/newnew-vids.js": {
-		"fileType": 64,
-		"ignore": 1,
+	"\/page-styleguide.kit": {
+		"fileType": 2048,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/newnew-vids.js",
-		"outputAbbreviatedPath": "\/_deploy\/assets\/newnew-vids.min.js",
+		"inputAbbreviatedPath": "\/page-styleguide.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-styleguide.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/pt\/_BootstrapMods.scss": {
 		"createSourceMap": 0,
@@ -6058,14 +6091,25 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
+	"\/pt\/pt-base-lib-bundle-v13.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pt\/pt-base-lib-bundle-v13.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v13.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/pt\/pt-base-lib-bundle-v9.js": {
 		"fileType": 64,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pt\/pt-base-lib-bundle-v9.js",
-		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v9.min.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v9_old.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
@@ -6079,6 +6123,53 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
+		},
+	"\/pt\/pt-base-v13.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/pt\/pt-base-v13.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-v13.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/pt\/pt-slicks.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pt\/pt-slicks.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-slicks.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/pt\/pt-slicks.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/pt\/pt-slicks.kit",
+		"outputAbbreviatedPath": "\/_deploy\/pt-slicks.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pt\/pt-slicks.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/pt\/pt-slicks.scss",
+		"outputAbbreviatedPath": "\/css\/pt-slicks.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
 	"\/sasskits\/_site-base.scss": {
 		"createSourceMap": 0,
@@ -6098,8 +6189,8 @@
 		},
 	"\/sasskits\/ab-sections.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/ab-sections.kit",
 		"outputAbbreviatedPath": "\/_deploy\/ab-sections.html",
 		"outputPathIsOutsideProject": 0,
@@ -6183,8 +6274,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/nwg-menu.scss",
 		"outputAbbreviatedPath": "\/css\/nwg-menu.css",
 		"outputPathIsOutsideProject": 0,
@@ -6196,8 +6287,8 @@
 		},
 	"\/sasskits\/nwg-modal.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/nwg-modal.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/nwg-modal.min.js",
 		"outputPathIsOutsideProject": 0,
@@ -6260,8 +6351,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/nwg-site-intro.scss",
 		"outputAbbreviatedPath": "\/css\/nwg-site-intro.css",
 		"outputPathIsOutsideProject": 0,
@@ -6369,8 +6460,8 @@
 		},
 	"\/sasskits\/responsive-images.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/responsive-images.kit",
 		"outputAbbreviatedPath": "\/_deploy\/responsive-images.html",
 		"outputPathIsOutsideProject": 0,
@@ -6551,8 +6642,8 @@
 		},
 	"\/sasskits\/social-media-icons.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/social-media-icons.kit",
 		"outputAbbreviatedPath": "\/_deploy\/social-media-icons.html",
 		"outputPathIsOutsideProject": 0,
@@ -6563,8 +6654,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/social-media-icons.scss",
 		"outputAbbreviatedPath": "\/css\/social-media-icons.css",
 		"outputPathIsOutsideProject": 0,
@@ -6579,8 +6670,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/top-navigation-old.scss",
 		"outputAbbreviatedPath": "\/css\/top-navigation-old.css",
 		"outputPathIsOutsideProject": 0,
@@ -6595,8 +6686,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/top-navigation.scss",
 		"outputAbbreviatedPath": "\/css\/top-navigation.css",
 		"outputPathIsOutsideProject": 0,
@@ -6608,8 +6699,8 @@
 		},
 	"\/sasskits\/typography.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/typography.kit",
 		"outputAbbreviatedPath": "\/_deploy\/typography.html",
 		"outputPathIsOutsideProject": 0,
@@ -6630,6 +6721,55 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
 		"useLibsass": 0
+		},
+	"\/site-base.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site-base.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/site-base.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/site-foot.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site-foot.kit",
+		"outputAbbreviatedPath": "\/_deploy\/site-foot.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/site-head.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site-head.kit",
+		"outputAbbreviatedPath": "\/_deploy\/site-head.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/site-navigation.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site-navigation.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/site-navigation.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/site-navigation.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site-navigation.kit",
+		"outputAbbreviatedPath": "\/_deploy\/site-navigation.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/SITE-VARS.scss": {
 		"createSourceMap": 0,
@@ -6655,7 +6795,7 @@
 		"outputAbbreviatedPath": "\/_deploy\/assets\/site.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/site.kit": {
@@ -6678,44 +6818,28 @@
 		"outputAbbreviatedPath": "\/_deploy\/assets\/site.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 3,
+		"outputStyle": 1,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
-	"\/site_backup_v1.kit": {
-		"fileType": 2048,
+	"\/site_BACKUP_v1.js": {
+		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/site_backup_v1.kit",
-		"outputAbbreviatedPath": "\/_deploy\/site_backup_v1.html",
+		"inputAbbreviatedPath": "\/site_BACKUP_v1.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/site_BACKUP_v1.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
-	"\/styleguide.kit": {
+	"\/site_BACKUP_v1.kit": {
 		"fileType": 2048,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styleguide.kit",
-		"outputAbbreviatedPath": "\/_deploy\/styleguide.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/venue.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/venue.kit",
-		"outputAbbreviatedPath": "\/_deploy\/venue.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/videos.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/videos.kit",
-		"outputAbbreviatedPath": "\/_deploy\/videos.html",
+		"inputAbbreviatedPath": "\/site_BACKUP_v1.kit",
+		"outputAbbreviatedPath": "\/_deploy\/site_BACKUP_v1.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}

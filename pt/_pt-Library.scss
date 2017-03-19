@@ -12,12 +12,12 @@
 
 
 
- 
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LAYOUT :
 
 
 
-// I'M NOT SURE IF USING THE ptViewport() MIXIN IS A GOOD IDEA ANY MORE.. .. 
+// I'M NOT SURE IF USING THE ptViewport() MIXIN IS A GOOD IDEA ANY MORE.. ..
 // .. .. PLEASE RECONSIDER.
 
 .pt-zone{
@@ -78,7 +78,7 @@
 
 
 
-.pt-padded{	
+.pt-padded{
 	padding-top:2em;
 	padding-bottom:2em;
 }
@@ -108,11 +108,11 @@
 .pt-padded-responsive{
 
   padding:1em;
-  
+
   @include ptBreakpoint($sm){
     padding:2em;
   }
-  
+
   @include ptBreakpoint($md){
     padding:5em;
   }
@@ -158,13 +158,13 @@
 
 
 
-.pt-img-responsive, 
+.pt-img-responsive,
 .img-responsive{
 	max-width:100%;
 	height:auto;
 }
 
-.pt-img-responsive-max, 
+.pt-img-responsive-max,
 .img-responsive-max{
 	width:100%;
 	height:auto;
@@ -175,7 +175,7 @@
 
 .pt-maxsize{
 	display:block;
-	position:absolute; 
+	position:absolute;
 	top:0; right:0; bottom:0; left:0;
 	width:100%; height:100%;
 	// z-index:-1;
@@ -208,13 +208,13 @@
 }
 
 
- 
+
 
 
 
 
 .no-touch .pt-bg-fixed{
-	
+
 	background-attachment:fixed !important;
 	// will-change:transform !important;
 	// backface-visibility: hidden !important;
@@ -233,8 +233,8 @@
 // .pt-bg-parallax,
 // .pt-parallax-bg{
 // 	overflow:hidden;
-// 	position:absolute; 
-// 	top:0; bottom:0;	  
+// 	position:absolute;
+// 	top:0; bottom:0;
 // 	left:0;	right:0;
 
 // 	width:100%;
@@ -271,13 +271,13 @@
 
 .pt-boxo{
 	position:relative;
-	
+
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
 	justify-content:center;
   	// justify-content:flex-start;
-  
+
   &.pt-boxo-center{
     justify-content:center;
   }
@@ -286,7 +286,7 @@
   }
   &.pt-boxo-between{
     justify-content:space-between;
-  }  
+  }
 }
 
 .pt-boxo-center{
@@ -294,7 +294,7 @@
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
-	justify-content:center;	
+	justify-content:center;
 }
 
 .pt-boxo-around{
@@ -302,7 +302,7 @@
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
-	
+
 	justify-content:space-around;
 }
 
@@ -321,9 +321,9 @@
 
 
 
- 
 
- 
+
+
 
 
 
@@ -336,7 +336,7 @@
 }
 
 
-/* 
+/*
 	.pt-pos-1{
 		@extend .pt-pos;
 		align-items: flex-start;
@@ -428,7 +428,7 @@
 
 
 
-/* 
+/*
 
 
 
@@ -457,9 +457,9 @@
   // border:10px dotted purple;
 
   @include ptPos(5);
-  
+
   // display:none;
-  
+
 	// & {
 	// 	display:flex;
 	// }
@@ -477,7 +477,7 @@
 #pt-devbox,
 .pt-devbox {
 	display:none;
-	
+
 	position: fixed; bottom:5px; left: 5px; right:5px;
 	// width:98%;
 	height:20px;
@@ -500,18 +500,21 @@
 #pt-sizer,
 .pt-sizer {
 	// display:none;
-	width:40px;
-	height:40px;
-	position:fixed; bottom:20px; left:5px;
+	width:20px;
+	height:20px;
+	position:fixed; bottom:0px; left:0px;
 	z-index:99999;
 	text-align:center;
-	padding:8px 5px 0 5px;
-	border:2px solid #333;
+	// padding:8px 5px 0 5px;
+	border:0px solid #333;
 
 	// @include border-radius-whole(50%);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    // -webkit-border-radius: 50%;
+    // -moz-border-radius: 50%;
+    border-top-right-radius: 5px;
+
+
+
 
 	@include ptBreakpoint($xs) {
 		background-color:yellow;
@@ -538,7 +541,7 @@
 		}
 	}
 	@include ptBreakpoint($xl) {
-		background-color:lightblue; 
+		background-color:lightblue;
 		&:before {
     		content: "XL";
 		}
@@ -566,7 +569,7 @@
 
 
 
-/* 
+/*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	CMS Customizations:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -576,11 +579,11 @@
 
 .imInEditMode .imSectionContainer{
     margin:10px 0;
-    border:5px solid lightgreen !important;   
+    border:5px solid lightgreen !important;
 }
 
 .imInEditMode .imSectionActions{
-    margin:0 50px !important;   
+    margin:0 50px !important;
 }
 
 .imSectionActions .fa,
@@ -597,7 +600,7 @@
 }
 
 .imInEditMode .pt-section-editor {
-    margin:50px 0;    
+    margin:50px 0;
 }
 
 .imInEditMode .text-center .text-editor p {
@@ -624,7 +627,7 @@
 // REDACTOR TEXT-EDITOR EDITOR:
 
 .text-editor{
-    
+
 
     &.te-none{
         .redactor-editor{
@@ -637,10 +640,10 @@
         .redactor-toolbar{
             display:none;
         }
-        
+
     }
-    
-    
+
+
     &.te-slim{
         .redactor-editor{
             min-height:0;
@@ -648,7 +651,7 @@
         }
         .redactor-box{
             margin-bottom:inherit;
-        }        
+        }
         .redactor-toolbar{
             .re-outdent,
             .re-indent,
@@ -665,31 +668,6 @@
             }
         }
     }
-    
-    
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,68 +4,68 @@
 
 
 /*
-global 
-PT:true, 
-SITE:true, 
-TimelineMax:true, 
-TweenMax:true, 
-TweenLite:true, 
-SplitText:true, 
-Linear:true, 
-Elastic:true, 
-Power1:true, 
-Power2:true, 
-Power3:true, 
-Power4:true, 
-Bounce:true, 
-ScrollMagic:true, 
-FastClick:true, 
-enquire:true, 
-Justice:true, 
-ScrollMagic:true, 
+global
+PT:true,
+SITE:true,
+TimelineMax:true,
+TweenMax:true,
+TweenLite:true,
+SplitText:true,
+Linear:true,
+Elastic:true,
+Power1:true,
+Power2:true,
+Power3:true,
+Power4:true,
+Bounce:true,
+ScrollMagic:true,
+FastClick:true,
+enquire:true,
+Justice:true,
+ScrollMagic:true,
 Modernizr:true,
-PT_UTILS:true, 
+PT_UTILS:true,
 jQuery:true,
 ssm:true
 */
-    
-
- 
- 
 
 
 
-     
-// @codekit-prepend "pt-base-lib-bundle-v9.js"  
 
 
 
- 
 
 
- 
-$(function() { 
+// @codekit-prepend "pt-base-lib-bundle-v9.js"
+
+
+
+
+
+
+
+$(function() {
     PT.init();
 });
 
 
- 
 
 
 
-var PT = { 
 
-    _SETTINGS: { 
-        name: "pt-base-v11.js", 
+var PT = {
+
+    _SETTINGS: {
+        name: "pt-base-v11.js",
         version: "11.0.0",
         url: "pt base 11 "
     }
 
     ,_isDevMode : false
 
-    ,_isPreLoaded : false
+    ,_isPreloaded : false
 
-    // SIMPLE STATE MANAGER.js  
+    // SIMPLE STATE MANAGER.js
     ,_SSM: ssm
 
     ,_Size:'xs' // xs,sm,md,lg,xl
@@ -77,13 +77,13 @@ var PT = {
 
     ,init: function() {
         // Application has been initalized
-        console.log(this._SETTINGS.name + "(v" + this._SETTINGS.version + ") Started"); 
+        console.log(this._SETTINGS.name + "(v" + this._SETTINGS.version + ") Started");
 
 
-        
+
         // ADDS BREAKPOINT SIZE INDICATOR :
         $('body').prepend('<div class="pt-sizer"></div>');
-        
+
 
 
 
@@ -101,12 +101,12 @@ var PT = {
 
 
         PT.runStickies();
-        
+
         PT.runImgSwaps();
 
 
         // PT.buildTransitions(true);
- 
+
 
         // PT.monitorFPS();
 
@@ -139,7 +139,7 @@ var PT = {
 
 
     // THIS IS A WAY TO ADD MULTIPLE window.onload FUNCTIONS PER PAGE.
-    
+
     ,onLoadFuncs:[]
 
     ,addOnLoad: function(func) {
@@ -149,10 +149,10 @@ var PT = {
 
         window.onload = function() {
             //console.log('!!! ON LOAD !!!');
-            
-            PT._isPreLoaded = true;
 
-            for(var i = 0; i < PT.onLoadFuncs.length; i++) { 
+            PT._isPreloaded = true;
+
+            for(var i = 0; i < PT.onLoadFuncs.length; i++) {
                 var func = PT.onLoadFuncs[i];
                 func();
             }
@@ -162,12 +162,12 @@ var PT = {
     }
 
 
- 
 
 
 
 
- 
+
+
 
 
 
@@ -180,14 +180,14 @@ var PT = {
 
     ,checkPreloader:function(){
         //console.log('PT.checkPreloader()');
-        
+
         var _pl = $('.pt-preloader');
 
         if(_pl.length){
 
             _pl.css({'display':'flex'});
-            
-            PT.addOnLoad( 
+
+            PT.addOnLoad(
                 fadePreloader
             );
 
@@ -205,8 +205,7 @@ var PT = {
 
         }
 
-    } 
- 
+    }
 
 
 
@@ -223,7 +222,8 @@ var PT = {
 
 
 
- 
+
+
 
 
     ,buildSSM: function() {
@@ -329,7 +329,7 @@ var PT = {
 
 
 
-    // SIMPLE STICK / PIN  USING ScrollMagic  
+    // SIMPLE STICK / PIN  USING ScrollMagic
     ,makeSticky: function(item){
         // //console.log('makeSticky() ' + item);
         // var locY  = item.offset().top;
@@ -398,7 +398,7 @@ var PT = {
         $('[data-pt-imgswap]').each(function(i, val){
 
             // check the data attribute value and pass it along to the imgSwap function.
-            // var _bgStyle = ;// 'cover' / 'contain' / 
+            // var _bgStyle = ;// 'cover' / 'contain' /
 
             PT.imgSwap( $(val).find('img:first'), $(val) );
         });
@@ -441,16 +441,16 @@ var PT = {
 
 
 */
-   
+
 
 
 
     // COPIES IMG SRC INTO CSS BACKGROUND-IMAGE.
     ,imgSwapUploadCareResponsive: function(_img, _div) {
-        
+
         PT.log('PT.imgSwapResponsive()');
         PT.log(PT._Size);
-        
+
 
         var IMG = _img;
         var DIV = _div;
@@ -463,35 +463,35 @@ var PT = {
 
         if(PT._Size === 'xs'){
             if(DIV.data('pt-imgswap-ucr').xs !== undefined){
-                IMGurl += (DIV.data('pt-imgswap-ucr').xs);                
+                IMGurl += (DIV.data('pt-imgswap-ucr').xs);
             }else{
                 IMGurl += ("-/resize/800x/");
             }
         }
         if(PT._Size === 'sm'){
             if(DIV.data('pt-imgswap-ucr').sm !== undefined){
-                IMGurl += (DIV.data('pt-imgswap-ucr').sm);                
+                IMGurl += (DIV.data('pt-imgswap-ucr').sm);
             }else{
                 IMGurl += ("-/resize/1000x/");
             }
         }
         if(PT._Size === 'md'){
             if(DIV.data('pt-imgswap-ucr').md !== undefined){
-                IMGurl += (DIV.data('pt-imgswap-ucr').md);                
+                IMGurl += (DIV.data('pt-imgswap-ucr').md);
             }else{
                 IMGurl += ("-/resize/1200x/");
             }
         }
         if(PT._Size === 'lg'){
             if(DIV.data('pt-imgswap-ucr').lg !== undefined){
-                IMGurl += (DIV.data('pt-imgswap-ucr').lg);                
+                IMGurl += (DIV.data('pt-imgswap-ucr').lg);
             }else{
                 IMGurl += ("-/resize/1500x/");
             }
         }
         if(PT._Size === 'xl'){
             if(DIV.data('pt-imgswap-ucr').xl !== undefined){
-                IMGurl += (DIV.data('pt-imgswap-ucr').xl);                
+                IMGurl += (DIV.data('pt-imgswap-ucr').xl);
             }else{
                 IMGurl += ("-/resize/1900x/");
             }
@@ -500,11 +500,11 @@ var PT = {
         if(DIV.data('pt-imgswap-ucr') === '' || DIV.data('pt-imgswap-ucr') === ' ' || DIV.data('pt-imgswap-ucr') === 'default' || DIV.data('pt-imgswap-ucr') === undefined){
             // PT.log('?~? zilcho');
         }else{
-            // PT.log('?~? ' + DIV.data('pt-imgswap-ucr'));        
+            // PT.log('?~? ' + DIV.data('pt-imgswap-ucr'));
         }
 
 
-        // PT.log('???? ' + $(DIV.data('pt-imgswap-ucr')).length);     
+        // PT.log('???? ' + $(DIV.data('pt-imgswap-ucr')).length);
 
         PT.log(IMGurl);
 
@@ -523,7 +523,7 @@ var PT = {
         $('[data-pt-imgswap-ucr]').each(function(i, val){
 
             // check the data attribute value and pass it along to the imgSwap function.
-            // var _bgStyle = ;// 'cover' / 'contain' / 
+            // var _bgStyle = ;// 'cover' / 'contain' /
 
             PT.imgSwapUploadCareResponsive( $(val).find('img:first'), $(val) );
 
@@ -590,7 +590,7 @@ var PT = {
         );
 
         function doNow(){
-            Justice.init(); 
+            Justice.init();
         }
     }
 
@@ -650,14 +650,14 @@ var PT = {
 
         // if (PT._BreakPoint === 'medium') {
         if ( (PT._Size === 'md') || (PT._Size === 'lg') || (PT._Size === 'xl') ) {
-        
+
             PT.addOnLoad(
                doNow
             );
         }
 
 
-        // WE MUST WAIT UNTIL THE CONTENT IS DONE LOADING BEFORE 
+        // WE MUST WAIT UNTIL THE CONTENT IS DONE LOADING BEFORE
         // CALCULATING THE HEIGHTS OF THE SCROLL SPY SECTIONS:
         function doNow(){
 
@@ -665,7 +665,7 @@ var PT = {
             var _D_ = typeof _DURATION !== 'undefined' ? _DURATION : false;
 
             // _D_ = false;//FORCE FOR TESTING PURPOSES
-            
+
             // var H = $(window).height();
             var ThisH = $(window).height();
 
@@ -687,31 +687,31 @@ var PT = {
                 // //console.log( transitionType );
 
                 switch(transitionType) {
-                    
+
                     case "slide-from-right":
                         SLIDE_FromRight.push(this);
                         break;
-                    
+
                     case "slide-from-left":
                         SLIDE_FromLeft.push(this);
                         break;
-                                    
+
                     case "slide-from-top":
                         SLIDE_FromTop.push(this);
                         break;
-                                    
+
                     case "slide-from-bottom":
                         SLIDE_FromBottom.push(this);
                         break;
-                                                    
+
                     case "fade-in":
                         FADE_In.push(this);
                         break;
-                                                                        
+
                     case "zoom-in":
                         ZOOM_In.push(this);
                         break;
-                    
+
                     default:
                         // default
                         break;
@@ -719,7 +719,7 @@ var PT = {
                 }
 
             });
-     
+
 
 
 
@@ -732,7 +732,7 @@ var PT = {
                 $(SLIDE_FromLeft[i2]).parent().css({'overflow-x':'hidden'});
 
                 var tweenFromLeft = new TweenMax.from(SLIDE_FromLeft[i2], 1, {alpha:0, x:'-=50', ease:Power1.easeOut} );
-                  
+
                 var scene_fromLeft = new ScrollMagic.Scene({
                 // var SM_Scene = new ScrollMagic.Scene({
                     triggerElement: SLIDE_FromLeft[i2]
@@ -763,7 +763,7 @@ var PT = {
                 $(SLIDE_FromRight[i1]).parent().css({'overflow-x':'hidden'});
 
                 var tweenFromRight = new TweenMax.from(SLIDE_FromRight[i1], 1, {alpha:0, x:'+=50', ease:Power1.easeOut} );
-                  
+
                 var scene_fromRight = new ScrollMagic.Scene({
                 // var SM_Scene = new ScrollMagic.Scene({
                     triggerElement: SLIDE_FromRight[i1]
@@ -773,8 +773,8 @@ var PT = {
                 .addTo(PT.SM_CTRL)
                 .reverse(false)
                 // .addIndicators()
-                .setTween(tweenFromRight); 
-                
+                .setTween(tweenFromRight);
+
                 if(_D_){
                     scene_fromRight.reverse(true);
                     scene_fromRight.duration(ThisH/2);
@@ -790,7 +790,7 @@ var PT = {
                 $(SLIDE_FromBottom[i3]).parent().css({'overflow-y':'hidden'});
 
                 var tweenFromBottom = new TweenMax.from(SLIDE_FromBottom[i3], 1, {alpha:0, y:'+=50', ease:Power1.easeOut} );
-                  
+
                 var scene_fromBottom = new ScrollMagic.Scene({
                     triggerElement: SLIDE_FromBottom[i3]
                     ,triggerHook:0.8
@@ -799,8 +799,8 @@ var PT = {
                 .addTo(PT.SM_CTRL)
                 .reverse(false)
                 // .addIndicators()
-                .setTween(tweenFromBottom); 
-                
+                .setTween(tweenFromBottom);
+
                 if(_D_){
                     scene_fromBottom.reverse(true);
                     scene_fromBottom.duration(ThisH/2);
@@ -817,7 +817,7 @@ var PT = {
                 $(SLIDE_FromTop[i4]).parent().css({'overflow-y':'hidden'});
 
                 var tweenFromTop = new TweenMax.from(SLIDE_FromTop[i4], 1, {alpha:0, y:'-=50', ease:Power1.easeOut} );
-                  
+
                 var scene_fromTop = new ScrollMagic.Scene({
                     triggerElement: SLIDE_FromTop[i4]
                     ,triggerHook:0.8
@@ -826,8 +826,8 @@ var PT = {
                 .addTo(PT.SM_CTRL)
                 .reverse(false)
                 // .addIndicators()
-                .setTween(tweenFromTop); 
-                
+                .setTween(tweenFromTop);
+
                 if(_D_){
                     scene_fromTop.reverse(true);
                     scene_fromTop.duration(ThisH/2);
@@ -839,12 +839,12 @@ var PT = {
 
 
 
-            //  .fade-in 
+            //  .fade-in
             for (var i5=0; i5 < FADE_In.length; i5++){
 
                 var tweenFadeIn = new TweenMax.from(FADE_In[i5], 1, {alpha:0, ease:Power1.easeIn} );
                 // var tweenFadeIn = new TweenMax.from(FADE_In[i5], 1, {alpha:0, ease.Linear.easeNone} );
-                
+
                 var scene_f = new ScrollMagic.Scene({
                     triggerElement: FADE_In[i5]
                     ,triggerHook:0.8
@@ -853,8 +853,8 @@ var PT = {
                 .addTo(PT.SM_CTRL)
                 .reverse(true)
                 // .addIndicators()
-                .setTween(tweenFadeIn); 
-                 
+                .setTween(tweenFadeIn);
+
                 if(_D_){
                     scene_f.reverse(true);
                     scene_f.duration(ThisH/2);
@@ -862,14 +862,14 @@ var PT = {
 
             }
 
- 
 
-            //  .zoom-in 
+
+            //  .zoom-in
             for (var i6=0; i6 < ZOOM_In.length; i6++){
                 console.log('ZOOM IN');
                 var tweenZoomIn = new TweenMax.from(ZOOM_In[i6], 1, {alpha:0, scale:0.9, ease:Power1.easeInOut} );
                 // var tweenFadeIn = new TweenMax.from(FADE_In[i6], 1, {alpha:0, ease.Linear.easeNone} );
-                
+
                 var scene_z = new ScrollMagic.Scene({
                     triggerElement: ZOOM_In[i6]
                     ,triggerHook:0.7
@@ -878,8 +878,8 @@ var PT = {
                 .addTo(PT.SM_CTRL)
                 .reverse(true)
                 // .addIndicators()
-                .setTween(tweenZoomIn); 
-                 
+                .setTween(tweenZoomIn);
+
                 if(_D_){
                     scene_z.reverse(true);
                     scene_z.duration(ThisH/2);
@@ -892,9 +892,9 @@ var PT = {
 
             // THIS MIGHT BE BETTER FOR LOOPING THROUGH THE ITEMS
             // $(SLIDE_FromRight).each(function(i, _thing_){
-                
+
             //     $(_thing_).closest('.row').css({'overflow-x':'hidden'});
-                
+
             //     var tweenFromRight = new TweenMax.from(_thing_, 1, {alpha:0, x:'+=50', ease:Power1.easeOut} );
 
             //     var scene_fromRight = new ScrollMagic.Scene({
@@ -902,7 +902,7 @@ var PT = {
             //         ,triggerHook:0.99
             //     })
             //     .addTo(PT.SM_CTRL)
-            //     .setTween(tweenFromRight); 
+            //     .setTween(tweenFromRight);
 
             //     if(_D_){
             //         scene_fromRight.reverse(true);
@@ -955,7 +955,7 @@ var PT = {
 
 
 
- 
+
 
 
 
@@ -969,7 +969,7 @@ var PT = {
                 &:hover, &:focus, &:active, &:focus:hover{
                     // color:$pt-color-primary;
                     background-color:lighten($pt-color-primary, 5%);
-                }   
+                }
             }
         }
         a{
@@ -977,12 +977,12 @@ var PT = {
             &:hover, &:focus, &:active, &:focus:hover{
                 color:white;
                 background-color:$pt-color-primary;
-            }   
+            }
         }
     }
 
     <div class="testyspy">
-        <ul class="nav" data-pt-spy > 
+        <ul class="nav" data-pt-spy >
             <li><a data-pt-spy-to="#section-intro"   href="#section-intro">intro</a></li>
             <li><a data-pt-spy-to="#section-truck"   href="#section-truck">truck</a></li>
             <li><a data-pt-spy-to="#section-brands"  href="#section-brands">brands</a></li>
@@ -995,8 +995,8 @@ var PT = {
 
 
     ,buildNavSpy: function() {
-        
-        // WE MUST WAIT UNTIL THE CONTENT IS DONE LOADING BEFORE 
+
+        // WE MUST WAIT UNTIL THE CONTENT IS DONE LOADING BEFORE
         // CALCULATING THE HEIGHTS OF THE SCROLL SPY SECTIONS:
         PT.addOnLoad(
            doNow
@@ -1011,16 +1011,16 @@ var PT = {
 
             // SCROLL SPY USING SCROLLMAGIC:
             $('[data-pt-spy]').each(function (index, element){
-                
+
                 $(element).find($('[data-pt-spy-to]')).each(function (index, element){
 
                     var SpyZoneID = $(element).data('pt-spy-to');
 
                     var SpyZone = $(SpyZoneID);
-                    
+
                     // var SpyNavItem = $(element);
                     var SpyNavItem = $(element).parent();
-                    
+
 
 
                     if($(SpyZone).length){
@@ -1031,7 +1031,7 @@ var PT = {
                                         .triggerHook(0.2)
                                         // .trigger('hello')
                                         // DURATION IS THE HEIGHT OF THE ANCHORED ZONE
-                                        .duration($(SpyZoneID).outerHeight())  
+                                        .duration($(SpyZoneID).outerHeight())
             // .addIndicators({name:"pt-spy-to " +SpyZoneID, indent:100}) // add indicators (requires plugin)
                                         .addTo(PT.SM_CTRL);
 
@@ -1040,13 +1040,13 @@ var PT = {
                         var spyToNumber = (SpyZone.offset().top) ;
 
                         SpyZone.attr( 'data-pt-spy-me', spyToNumber );
-                        
+
                     }else{
                         //console.log('There is no matching anchor id for the SpyZone ' + SpyLink);
                     }
-        
 
-                    // ANIMATE TO POSITION WHEN CLICKED 
+
+                    // ANIMATE TO POSITION WHEN CLICKED
                     $(element).on('click', function(e) {
                         // prevent default anchor click behavior
                         e.preventDefault();
@@ -1055,7 +1055,7 @@ var PT = {
                         var smsTo = $(this.hash).data('pt-spy-me');
 
                         if (offSet !== undefined){
-                            TweenMax.to(window, 0.5, { scrollTo:{ y:smsTo }, ease:Power4.easeInOut } );                
+                            TweenMax.to(window, 0.5, { scrollTo:{ y:smsTo }, ease:Power4.easeInOut } );
                         }
 
                         // PT._SITE_NAV.find(".navbar-collapse").collapse('hide');
@@ -1091,7 +1091,7 @@ var PT = {
 
 
 
-  
+
 
 
 
@@ -1128,11 +1128,11 @@ var PT = {
             </ul>
         </nav>
 
-    
+
         <div class="main">
             <p>Content.</p>
         </div>
-        
+
 
     </div>
 
@@ -1158,16 +1158,16 @@ var PT = {
             _sidrCover.on('click', function(e){
                 $.sidr('close', 'sidr-main');
             });
-            
+
             $('#sidr-close-btn').on('click', function(e){
                 $.sidr('close', 'sidr-main');
             });
-              
+
 
 
             // TURNS THE NESTED <ul>'s INTO ACCORDION NAV:
             $('#sidr-main nav ul').navgoco();
-     
+
 
 
             // THE ACTUAL SIDR MENU CODE:
@@ -1182,7 +1182,7 @@ var PT = {
               ,onOpen: function () {
                 console.log('onOpen');
                 TweenMax.to(_sidrCover, 0.3, {autoAlpha:1});
-                
+
                 // $('html').removeClass('sidr-is-closed');
                 // $('html').addClass('sidr-is-open');
               }
@@ -1190,7 +1190,7 @@ var PT = {
               ,onClose: function () {
                 console.log('onClose');
                 TweenMax.to(_sidrCover, 0.3, {autoAlpha:0});
-              
+
                 // $('html').removeClass('sidr-is-open');
                 // $('html').addClass('sidr-is-closed');
               }
@@ -1213,15 +1213,15 @@ var PT = {
             console.log('resizer()');
 
             TweenMax.to(['.viewport', '#site-topbar'], 0.3, { left:$('#sidr-main').width() , width:$(window).width() - $('#sidr-main').width() });
-            
+
         }
 
         function startResize() {
             console.log('startResize()');
             $(window).resize(resizer);
-           
+
             TweenMax.to(['.viewport', '#site-topbar'], 0.3, { left:$('#sidr-main').width() , width:$(window).width() - $('#sidr-main').width() });
-        
+
         }
 
         function endResize() {
@@ -1236,7 +1236,7 @@ var PT = {
             {
                 id: 'sidr-show',
                 query: '(min-width: 1200px)',
-                onEnter: function(){  
+                onEnter: function(){
                     startResize();
                     $.sidr('open', 'sidr-main');
                 },
@@ -1266,30 +1266,3 @@ var PT = {
 
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

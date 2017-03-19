@@ -2,19 +2,9 @@
 
 console.log('newnew-vids.js');
 
-// var VID1 = document.getElementById("VID1");
+
+
 var VID2 = document.getElementById("VID1");
-// var VID3 = document.getElementById("VID3");
-
-
-// VID1.defaultPlaybackRate = 0.5;
-// VID1.autoplay = true;
-// VID1.playbackRate = 0.5;
-// VID1.controls = false;
-// VID1.muted = true;
-// VID1.loop = true;
-
-// VID2.defaultPlaybackRate = 2;
 VID2.autoplay = false;
 VID2.playbackRate = 2.5;
 // VID2.controls = false;
@@ -25,37 +15,20 @@ VID2.loop = true;
 
 
 
-    // function vidplay() {
-    //    var video = document.getElementById("Video1");
-    //    var button = document.getElementById("play");
-    //    if (video.paused) {
-    //       video.playbackRate = 5.2;
-    //       video.play();
-    //       button.textContent = "||";
-    //    } else {
-    //       video.pause();
-    //       button.textContent = ">";
-    //    }
-    // }
-    //
-    // function restart() {
-    //     var video = document.getElementById("Video1");
-    //     video.currentTime = 0;
-    // }
-    //
-    // function skip(value) {
-    //     var video = document.getElementById("Video1");
-    //     video.currentTime += value;
-    // }
-
-
-
 
 
 //     PT.log(VID2.duration);
-    // PT.log(VID2.duration/100);
-    // PT.log(VID2.currentTime/VID2.duration);
+// PT.log(VID2.duration/100);
+// PT.log(VID2.currentTime/VID2.duration);
 // TweenMax.to(VID2, 5, {playbackRate:5});
+
+
+
+
+
+
+
+
 
     function buildVid(){
         console.log('buildVid()');
