@@ -1,7 +1,7 @@
 _deploy/
 bower_components/
 lib/
-__pt-sasskits/
+___pt-sasskits/
 .sass-cache/
 .codekit-cache/
 css/
