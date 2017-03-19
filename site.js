@@ -20,9 +20,10 @@ YT:true
 
 
 
-// @codekit-append "newnew-vids.js"
 // @codekit-append "site-navigation.js"
 // @codekit-append "_thatnewnew/homepage.js"
+// @codekit-append "_thatnewnew/homepage-video.js"
+// @codekit-append "_thatnewnew/newnew-vids.js"
 
 
 
@@ -141,7 +142,7 @@ var NWG = {
 
 
 
-    
+
 
 
 

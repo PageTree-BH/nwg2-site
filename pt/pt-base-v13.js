@@ -79,7 +79,7 @@ var PT = {
 	}
 
 
-    ,_isDevMode : true
+    ,_isDevMode : false
 
     ,_isPreloaded : false
 
