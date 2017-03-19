@@ -1,0 +1,569 @@
+
+
+
+
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+
+body{
+    background-color:#000;
+
+
+
+    &.noscroll{
+        overflow:hidden;
+    }
+
+}
+
+
+
+
+
+// BASIC FUCK-OFF BOOTSTRAP STYLES:
+.container {
+    width: 100% !important;
+    max-width: 100%;
+    // max-width:1500px;
+    margin: auto;
+    padding: 0;
+    .row {
+        padding: 0em;
+        margin: 0em;
+    }
+}
+
+.pt-sizer {
+    z-index: 99999;
+    // @include skew();
+}
+
+
+#viewport{
+    max-width:1800px;
+    margin:auto;
+    // border:10px solid red;
+}
+.viewport {
+    background-color: #e8e8e8;
+}
+
+
+.pt-container {
+    position: relative;
+    width: 100%;
+    max-width: $nwg-maxwidth;
+    // max-width:initial;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.pt-outer {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pt-inner {
+    position: relative;
+    width: 100%;
+    max-width: $nwg-maxwidth;
+    // max-width:initial;
+    margin: 0 auto;
+    padding: 0;
+    // border:1px dotted gold;
+}
+
+
+
+
+
+
+.nwg-skew,
+.nwg-skew-1 {
+    @include nwg-skew();
+}
+
+.nwg-skew-2 {
+    @include nwg-skew(+5);
+}
+
+
+.nwg-skew-undo{
+    border:1px solid red;
+}
+
+
+
+
+
+@mixin bg-white() {
+    @include ptZoneColors(#fff, black, black, black);
+}
+
+@mixin bg-darkblue() {
+    @include ptZoneColors($nwg-darkblue, white, white, white);
+}
+
+@mixin bg-lightblue() {
+    @include ptZoneColors($nwg-lightblue, $nwg-darkblue, $nwg-darkblue, $nwg-darkblue);
+}
+
+.bg-darkblue {
+    @include bg-darkblue;
+}
+
+.bg-lightblue {
+    @include bg-lightblue;
+}
+
+
+
+.bg-red{
+    background-color:indianred;
+}
+
+.bg-black{
+    background-color:black;
+}
+
+
+.bg-white{
+    @include bg-white();
+}
+
+
+
+
+
+
+.txt-lightblue{
+    color:$nwg-lightblue;
+}
+.txt-darkblue{
+    color:$nwg-darkblue;
+}
+.txt-highlight{
+    color:$nwg-highlight; // orange
+}
+
+.txt-white{
+    color:white;
+}
+
+.txt-black{
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin nwg-textshadow(){
+//     text-shadow:#474747 3px 5px 2px;
+// }
+
+.nwg-textshadow,
+.nwg-text-shadow{
+    text-shadow:#474747 3px 5px 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.nwg-headline {
+
+    margin-bottom:0.5em;
+
+    >span{
+        color:white;
+        padding:0 0.25em;
+        // font-size:1em;
+        line-height:1.2em;
+        display:inline;
+        // font-style:normal;
+        background-color:rgba($nwg-darkblue, 0.8);
+        box-decoration-break: clone;
+    }
+}
+
+
+
+
+.nwg-headline-big-center {
+
+    z-index:99;
+
+    margin-bottom:0.5em;
+    text-align: center;
+
+    width:100%;
+
+    position:absolute;
+    left:50%;
+
+    transform:translate(-50%, -90%) skewY(-5deg) perspective(1px);
+
+    >span{
+        position:relative;
+        color:white;
+        padding:0 0.25em;
+        line-height:1.2em;
+        display:inline;
+        background-color:rgba($nwg-darkblue, 0.8);
+        box-decoration-break: clone;
+    }
+
+    font-size:3em;
+
+    @include ptBreakpoint($nwg){
+        font-size:5em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+#section-____{
+    position: relative;
+
+    @include ptPadding();
+    // @include ptPadding(2em 1em, 4em 2em);
+
+    // background-image:url($img-url+'building-render-sm.jpg');
+    // background-position:50% 50%;
+    // background-size:cover;
+
+    @include ptBreakpoint($sm){
+        // background-image:url($img-url+'building-render-md.jpg');
+
+        .cssvhunit &{
+            min-height:80vh;
+            @include ptPos(5);
+        }
+
+    }
+
+
+    @include ptBreakpoint($md){
+        // background-image:url($img-url+'building-render-lg.jpg');
+    }
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+        FFFFFFF  OOOOO   OOOOO  TTTTTTT EEEEEEE RRRRRR
+        FF      OO   OO OO   OO   TTT   EE      RR   RR
+        FFFF    OO   OO OO   OO   TTT   EEEEE   RRRRRR
+        FF      OO   OO OO   OO   TTT   EE      RR  RR
+        FF       OOOO0   OOOO0    TTT   EEEEEEE RR   RR
+
+http://patorjk.com/software/taag/#p=display&f=Letters&t=FOOTER
+
+ */
+
+
+footer{
+    position:relative;
+    padding:0 2em;
+    background-color:black;
+}
+
+
+// .footer{
+
+  // display:flex;
+  // flex-direction:column;
+  // align-items:center;
+  // align-content:center;
+  // justify-content:space-around;
+
+  // @include ptBreakpoint($sm){
+  //   flex-direction:row;
+  // }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.big-box{
+    position:relative;
+    width:50%;
+    height:300px;
+}
+
+.simple-cycle{
+    background-color:black;
+    position:absolute; top:0; left:0; bottom:0; right:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    // margin:100px auto;
+
+  >div{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    // align-content:center;
+    >img{
+      width:100%;
+      height:auto;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.testy{
+  display:flex;
+  // position:absolute;
+  // top:0; left:0; bottom:0; right:0;
+  height:100%;
+  height:100vh;
+  width:100%;
+  // height:500px;
+  // max-width:500px;
+  // margin:100px auto;
+  border:1px solid gold;
+  margin:0;
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $numOfPages: 5;
+
+// @for $i from 1 through $numOfPages {
+//   $img: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-#{$i + 3}.jpg);
+
+//   &:nth-child(#{$i}) {
+//     background-image: $img;
+
+//     .ws-bg__part-inner {
+//       background-image: $img;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #igholder-bhaungo{
+//     border:2px solid gold;
+//     min-height: 50px;
+// }

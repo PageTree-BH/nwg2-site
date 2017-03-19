@@ -1,0 +1,935 @@
+
+
+
+
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/ 
+
+
+
+
+
+#section-events-mini-holder,
+.section-events-mini-holder{
+
+    z-index:5;
+
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+    // padding:3em 0;    
+
+    // .pt-container{    
+    //     display:flex;
+    //     flex-direction:column;
+    //     flex-wrap:wrap;
+    //     // align-items:center;
+    //     align-content:center;
+
+    //     // @include ptBreakpoint($nwg){
+    //     @include ptBreakpoint($sm){
+    //         flex-direction:row;
+    //     }
+    // }
+
+
+    &:before{
+        @include pseudoMax();
+        z-index:1;
+
+        background-image:url($img-url+'bg-blue-splat-r4.png');
+        background-repeat:no-repeat;      
+        background-position: left top;
+        background-size:100%;
+    }
+
+    &:after{
+        @include pseudoMax();
+        z-index:1;
+
+        background-image:url($img-url+'bg-blue-splat-r2.png');
+        background-repeat: no-repeat;      
+        background-position: right bottom;
+        background-size:100%;
+    }
+    
+
+
+
+    .pt-container{
+        z-index:5;
+    }
+
+
+    @include ptBreakpoint($nwg){
+        &:before{
+            background-size:50%;
+        }
+        &:after{
+            background-size:50%;
+        }
+    }
+
+
+}
+
+ 
+
+
+
+
+
+#section-events-mini-slider,
+.section-events-mini-slider{
+    // padding:3em 0;
+    // border:1px solid red;
+    width:100%;
+    padding:0 50px;
+}
+
+
+
+
+
+.myslickarrow-prev{
+    // border:1px solid red;
+    position:absolute;
+    left:0px; 
+    top:50%;
+    transform:translateY(-50%);
+
+    color:$nwg-lightblue;
+    &:hover{
+        // color:$nwg-lightblue;
+        color:$nwg-highlight;
+    }
+    z-index:99;
+}
+
+.myslickarrow-next{
+    // border:1px solid red;
+    position:absolute;
+    right:0px; 
+    top:50%;
+    transform:translateY(-50%);
+
+    color:$nwg-lightblue;
+    &:hover{
+        // color:$nwg-lightblue;
+        color:$nwg-highlight;
+    }
+    z-index:99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$nwg-newdarkblue: #001b4f;
+
+
+
+
+
+.section-event-mini-skooter{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        // @include bg-lightblue();
+        background-color:rgba($nwg-lightblue, 0.9);
+        // color:white;
+    }
+    .section-action{
+        position:absolute; 
+        width: 200px;
+        top:0; 
+        right:-50px;
+        
+        @include ptBreakpoint($sm){
+            width:300px;
+            top:0px; 
+            right:-100px;
+        }
+    }
+}
+
+ 
+
+
+
+.section-event-mini-inline{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        // @include bg-lightblue();
+        background-color:rgba($nwg-lightblue, 0.9);
+        // color:white;
+    }
+    .section-action{
+        position:absolute; 
+        width: 300px;
+        top:-80px;
+        right:-50px;
+    
+        @include ptBreakpoint($sm){
+            width:300px;
+            top:-100px;
+            right:-80px;
+        }
+
+    }
+
+    // ~~~~~~~~~~~~~~~~~~~
+    // .section-content{
+    //     color:white;
+    // }
+    
+    // &.nwg-winner{
+    //     .section-action{
+    //         // border:1px solid red;
+    
+    //         position:absolute; 
+    //         top:-150px; right:0%;
+    //         width: 300px;
+    //         bottom: initial;
+
+    //         @include ptBreakpoint($sm){
+    //             width:initial;
+    //             bottom:initial; 
+    //         }
+    //     }
+    // }
+}
+
+
+
+
+
+
+.section-event-mini-fmx{
+    h2{
+        color:white;
+    }
+    .section-info-bg{
+        // @include bg-darkblue();
+        background-color:rgba($nwg-darkblue, 0.9);
+        // color:white;
+    }
+    .section-action{
+        position:absolute; 
+        width: 250px;
+        top:-50px; 
+        right:-20px;            
+        
+        @include ptBreakpoint($sm){
+            width:70%;
+            top:-80px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.section-event-mini-sk8{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        // @include bg-lightblue();
+        background-color:rgba($nwg-lightblue, 0.9);
+        // color:white;
+    }
+    .section-action{
+        position:absolute; 
+        width: 200px;
+        top:-80px; 
+        right:-20px;
+    
+        @include ptBreakpoint($sm){
+            width:50%;
+        }
+
+    }
+
+    // ~~~~~~~~~~~~~~~~~~~
+    // .section-content{
+    //     color:$nwg-newdarkblue;
+    // }
+    
+    // &.nwg-winner{
+    //     .section-action{
+    //         // border:1px solid red;
+    
+    //         position:absolute; 
+    //         top:-150px; right:0%;
+    //         width: 300px;
+    //         bottom: initial;
+
+    //         @include ptBreakpoint($sm){
+    //             // width:100%;
+    //             bottom:initial; 
+    //             // top:initial;
+    //         }
+    //     }
+    // }
+}
+
+
+
+
+
+
+
+.section-event-mini-bmx{
+    h2{
+        color:white;
+    }
+    .section-info-bg{
+        // @include bg-darkblue();
+        background-color:rgba($nwg-darkblue, 0.9);
+        // color:white;
+    }
+    .section-action{
+        // border:1px solid red;
+        position:absolute; top:-50px; right:0%;
+        width: 300px;
+
+        @include ptBreakpoint($sm){
+            width:100%;
+            bottom:-60%; top:initial;
+        }
+        @include ptBreakpoint($lg){
+            bottom:-75%;
+        }
+        @include ptBreakpoint($xl){
+            bottom:-80%;
+        }
+
+        >img{
+            transform: scaleX(-1);
+            filter: FlipH;            
+        }
+
+    }
+
+
+    // ~~~~~~~~~~~~~~~~~~~
+    .section-content{
+        color:white;
+    }
+    
+    &.nwg-winner{
+        .section-action{
+            // border:1px solid red;
+    
+            position:absolute; 
+            top:-150px; right:0%;
+            width: 300px;
+            bottom: initial;
+
+            @include ptBreakpoint($sm){
+                bottom:initial; 
+            }
+            @include ptBreakpoint($lg){
+                bottom:initial;
+            }
+            @include ptBreakpoint($xl){
+                bottom:initial;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+.nwg-winner{
+    // margin-right:100px;
+    .section-action{
+        position:absolute; 
+        top:0; right:0;
+        width: 250px;
+        // border:1px dotted red;
+
+        // top:50%; left:50%;
+        transform:translate(20%, -30%);
+    }
+    .section-content img{
+        width:100%;
+        height:auto;
+        margin:auto;
+    }
+}
+
+
+.section-event-mini-fmx-besttricks{
+    h2{
+        color:white;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-darkblue, 0.9);
+    }
+    .section-content{
+        color:white;
+    }
+    // &.nwg-winner{
+    //     .section-action{
+    //         position:absolute; 
+    //         top:0px; right:0%;
+    //         width: 150px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+.section-event-mini-fmx-freestyle{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-lightblue, 0.9);
+    }    
+    .section-content{
+        color:$nwg-newdarkblue;
+    }
+    // &.nwg-winner{
+    //     .section-action{
+    //         position:absolute; 
+    //         top:0; right:0%;
+    //         width: 100px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-event-mini-bmx-besttricks{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-lightblue, 0.9);
+    }
+    .section-content{
+        color:$nwg-newdarkblue;
+    }
+    // .section-action{
+    //     position:absolute; 
+    //     top:0; right:0;
+    //     width: 150px;
+    // }
+}
+
+
+
+
+.section-event-mini-bmx-triganta{
+    h2{
+        color:white;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-darkblue, 0.9);
+    }
+    .section-content{
+        color:white;
+    }
+    // &.nwg-winner{
+    //     .section-action{
+    //         position:absolute; 
+    //         top:0; right:0;
+    //         width: 150px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-event-mini-skooter{
+    h2{
+        color:white;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-darkblue, 0.9);
+    }
+    .section-content{
+        color:white;
+    }
+
+    // &.nwg-winner{
+    //     .section-action{
+    //         position:absolute; 
+    //         top:0px; right:0;
+    //         width: 150px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+
+.section-event-mini-inline{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-lightblue, 0.9);
+    }
+    .section-content{
+        color:$nwg-newdarkblue;
+    }    
+    // &.nwg-winner{
+    //     .section-action{
+    //         position:absolute; 
+    //         top:0px; right:0%;
+    //         width: 150px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+.section-event-mini-sk8{
+    h2{
+        color:$nwg-darkblue;
+    }
+    .section-info-bg{
+        background-color:rgba($nwg-lightblue, 0.9);
+    }
+
+    .section-content{
+        color:$nwg-newdarkblue;
+    }
+    
+    // &.nwg-winner{
+    //     .section-action{    
+    //         position:absolute; 
+    //         top:0px; right:0%;
+    //         width: 150px;
+    //         // bottom: initial;
+    //     }
+    // }
+}
+
+
+
+
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-info{
+    z-index:5;
+
+    .section-header{
+        z-index:2
+    }
+    .section-info-bg{
+        z-index:1
+    }
+    .section-action{
+        z-index:3
+    }
+    .section-content{
+        z-index:9;    
+    }
+}
+
+
+
+.section-event-mini{
+
+    position:relative;
+
+    // flex:1 1 100%;
+    // flex:1 1 330px;
+
+    // @include ptBreakpoint($sm){
+    //     flex:1 1 30%;
+    // }
+    // @include ptBreakpoint($md){
+    //     flex:1 1 30%;
+    // }
+    // @include ptBreakpoint($xl){
+    //     flex:1 1 20%;
+    // }
+
+
+    // height:300px;
+    margin:4em 0;
+
+    // display:block;
+    // flex-direction:column;
+    // justify-content: center;
+
+    z-index:5;
+
+    padding:6em 0 6em 0;
+
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    .section-header {
+        
+        position:absolute; 
+        top:0;
+        // left:50px;
+        // z-index:15;
+
+        text-transform: uppercase;
+        // transform:translate(-50%, -50%) skewY(-5deg); 
+        // @include nwg-skew();
+
+        // bottom:140px;
+        font-size:4rem;           
+        color:#111;
+
+        transform:translate(0, -50%) skewY(-5deg); 
+        left:-4%;
+        top:-3%;
+
+        @include ptBreakpoint($sm){
+            // font-size:5rem;
+        }
+        @include ptBreakpoint($md){
+            font-size:5rem;            
+        }
+        @include ptBreakpoint($lg){
+            // font-size:6rem;            
+        }
+        
+    }
+    
+
+
+
+
+
+
+
+
+
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    .section-action{
+        // z-index:10;
+        
+        pointer-events: none;
+// border:1px solid red;
+        >img{
+// border:1px solid green;
+            max-width:100%;
+            height:auto;
+        }
+    }
+
+
+
+    .section-content{
+        padding:50px 0 10px 0 ;
+        
+        ol{
+            position:relative;
+            left:20%;
+            font-size:1.2em;
+            margin-top:1em;
+        }
+        
+    }
+
+
+
+
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    .section-info{
+        position:relative;
+        width:90%;    
+        max-width:400px;
+        margin:0 auto;
+        padding:0.5em;
+
+        // height:200px;
+        min-height:200px;
+        
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+
+                
+        // font-size:2em; 
+        text-align:center;
+        
+
+        .section-info-bg{
+            content:'';
+            position:absolute; top:0; left:0; bottom:0; right:0;
+            width:100%;
+            height:100%;
+
+            @include nwg-skew();
+
+        }
+
+
+        ol{
+            text-align: left;
+
+        }
+
+
+
+
+        h2{
+            
+            position:relative;
+            z-index:5;
+            margin:0;
+
+            // @include ptBreakpoint($sm){
+            //     font-size:2rem; 
+            // }
+            // @include ptBreakpoint($nwg){
+            // }
+
+            a{
+                color: inherit;
+                // transform: scale(1);
+                transition: 0.2s;
+                width:100%;
+                &:hover,
+                &:focus{
+                    text-decoration: none;
+                    // transform: scale(1.5);
+                    color: $nwg-highlight;
+                }
+            }  
+        }
+        
+
+
+        
+        hr{
+            position:relative;
+            z-index:5;
+
+            color:white;
+            width:100%;
+            border-top:2px solid white;
+
+            margin:0;
+            padding:0;
+        }
+        
+      
+        // a.btn{
+        //     position:relative;
+        //     z-index:5;
+        //     display:block;
+        //     margin:auto;
+        //     position:absolute;
+        //     bottom:1em;
+
+        //     left:50%;
+        //     transform:translateX(-50%) skewY(-5deg); 
+
+        // }
+
+    }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,922 @@
+
+
+
+
+
+
+//
+// .js .page-home #site-topbar{
+//     top:-100px;
+// }
+
+
+
+
+
+
+/*
+
+    ##     ##  #######  ##     ## ########
+    ##     ## ##     ## ###   ### ##
+    ##     ## ##     ## #### #### ##
+    ######### ##     ## ## ### ## ######
+    ##     ## ##     ## ##     ## ##
+    ##     ## ##     ## ##     ## ##
+    ##     ##  #######  ##     ## ########
+
+    ########  ##          ###    ######## ########
+    ##     ## ##         ## ##      ##    ##
+    ##     ## ##        ##   ##     ##    ##
+    ########  ##       ##     ##    ##    ######
+    ##        ##       #########    ##    ##
+    ##        ##       ##     ##    ##    ##
+    ##        ######## ##     ##    ##    ########
+
+ */
+
+
+.homeplate{
+
+    position:relative;
+    overflow:hidden;
+
+    background-color:black;
+
+    padding:4em 0 8em 0;
+
+    @include ptBreakpoint($sm){
+        padding:4em 0 8em 0;
+    }
+
+
+
+    @include ptBreakpoint($nwg){
+       height:700px;
+       // height:600px;
+    }
+
+    .cssvhunit & {
+        @include ptBreakpoint($nwg){
+            height:80vh;
+            min-height:720px;
+        }
+    }
+
+
+
+    // border:1px solid green;
+
+    .pt-inner{
+        z-index: 10;
+        // border:3px solid green;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // height:100%;
+        pointer-events: none;
+
+    }
+
+
+}
+
+
+
+// .js.cssvhunit {
+.js {
+    // border:5px solid red;
+   .homeplate{
+        // height:100vh;
+
+    }
+
+
+    .homeplate-bg{
+        // opacity:0;
+    }
+    #section-about{
+        // opacity:0;
+    }
+    #site-topbar{
+        // opacity:0;
+    }
+
+    // #site-topbar{
+
+    // }
+
+}
+
+
+
+
+
+
+.preloader-cover{
+    position: fixed;
+    top:0; left:0; bottom:0; right:0;
+    width:100%;
+    height:100%;
+
+    background-color:#fff;
+
+    z-index:9999999;
+
+    display:none;
+
+    @include ptBreakpoint($nwg){
+        display:block;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ##        #######   ######    #######
+    ##       ##     ## ##    ##  ##     ##
+    ##       ##     ## ##        ##     ##
+    ##       ##     ## ##   #### ##     ##
+    ##       ##     ## ##    ##  ##     ##
+    ##       ##     ## ##    ##  ##     ##
+    ########  #######   ######    #######
+
+ */
+
+
+.homeplate-logoholder{
+
+    position: relative;
+    display:block;
+    z-index:2;
+    width:90%;
+    max-width:500px;
+    margin:0px auto 0 auto;
+
+    // border:1px solid red;
+
+    // transform:translate(-50%, -50%);
+    // left:50%;
+    // top:50%;
+
+    >img{
+        // border:1px solid red;
+        width:100%;
+        height:auto;
+    }
+
+    .logo-text{
+        width:100%;
+        height:auto;
+        position:absolute;
+        top:0; left:0; bottom:0; right:0;
+        z-index:2;
+    }
+
+    .logo-globe{
+        position: relative;
+        width:100%;
+        height:auto;
+        z-index:1;
+    }
+
+    @include ptBreakpoint($nwg){
+        // position: absolute;
+        // transform:translate(-50%,-50%);
+        // top:100px;
+        // left:100px;
+        max-width:600px;
+
+        // width:70vh
+    }
+
+    @include ptBreakpoint($lg){
+        // border:1px solid red;
+        max-width:650px;
+    }
+
+
+    .cssvhunit & {
+        @include ptBreakpoint($nwg){
+            width:80vh
+        }
+    }
+
+
+
+    .js & {
+        // border:5px solid red;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ########  ##     ## ######## ########  #######  ##    ##  ######
+    ##     ## ##     ##    ##       ##    ##     ## ###   ## ##    ##
+    ##     ## ##     ##    ##       ##    ##     ## ####  ## ##
+    ########  ##     ##    ##       ##    ##     ## ## ## ##  ######
+    ##     ## ##     ##    ##       ##    ##     ## ##  ####       ##
+    ##     ## ##     ##    ##       ##    ##     ## ##   ### ##    ##
+    ########   #######     ##       ##     #######  ##    ##  ######
+
+*/
+
+
+
+.homeplate-giant-btns{
+
+    position:relative;
+    z-index:5;
+
+
+    display:block;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    justify-content: center;
+
+
+    // top:-50px;
+
+
+    // border:1px solid red;
+
+
+    z-index: 10;
+
+    // .js & .giant-btn {
+    //     // opacity:0;
+    // }
+
+    .giant-btn{
+        z-index: 9;
+        // width:400px;
+        font-size:2rem;
+        border:0;
+        padding:0em 0.3em;
+
+        transform:skewY(-5deg);
+
+        // display:block;
+        // width:400px;
+        // margin:auto;
+        position:relative;
+
+        font-family: $font-header;
+
+        // transition:0.2s;
+
+        &:hover, &:focus{
+            border:0;
+        }
+
+        &.btn-tickets{
+            // left:-10px;
+            .fa{
+                color:$nwg-lightblue;
+                transition:0.2s;
+            }
+            background-color:$nwg-darkblue;
+            color:#fff;
+            &:hover, &:focus{
+                background-color:$nwg-highlight;
+                text-decoration:none;
+
+                .fa{
+                    color:$nwg-darkblue;
+                }
+            }
+        }
+
+
+        &.btn-video{
+            top:2px;
+            // left:50px;
+            .fa{
+                color:$nwg-darkblue;
+                transition:0.2s;
+            }
+            .fa-stop{
+                position: relative;
+                font-size:0.5em;
+                bottom:0.3em;
+                // margin-bottom: 0.2em;
+            }
+            background-color:$nwg-lightblue;
+            color:#fff;
+            &:hover, &:focus{
+                background-color:$nwg-highlight;
+                text-decoration:none;
+
+                .fa{
+                    color:$nwg-lightblue;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    @include ptBreakpoint($md){
+        // border:1px solid red;
+    top:-80px;
+    // left:80px;
+
+        .giant-btn{
+            font-size:2.5rem;
+
+            &.btn-tickets{
+                // position: absolute;
+                // top:initial;
+                // left:initial;
+                // right:initial;
+                // bottom:initial;
+    left:80px;
+            }
+            &.btn-video{
+                // position: absolute;
+                // top:initial;
+                // left:initial;
+                // right:initial;
+                // bottom:initial;
+
+
+    // top:5px;
+    // right:0;
+    left:130px;
+
+            }
+        }
+
+
+        &.vid-is-on{
+            position: absolute;
+            top:initial;
+            left:0; bottom:20px; right:0;
+            flex-direction: row;
+
+            .giant-btn{
+                &.btn-tickets{
+                    left:-5px;
+                }
+                &.btn-video{
+                    left:5px;
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+
+
+
+    // @include ptBreakpoint($lg){
+    // }
+
+
+    .js & {
+        .giant-btn{
+            opacity:0;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+    .giant-btn{
+        z-index: 9;
+        // width:400px;
+        font-size:2rem;
+        border:0;
+        padding:0em 0.3em;
+
+        transform:skewY(-5deg);
+
+        position:relative;
+
+        font-family: $font-header;
+
+        transition:0.2s;
+
+        &:hover, &:focus{
+            border:0;
+        }
+
+
+
+        &.btn-tickets{
+            // left:-10px;
+            .fa{
+                color:$nwg-lightblue;
+                transition:0.2s;
+            }
+            background-color:$nwg-darkblue;
+            color:#fff;
+            &:hover, &:focus{
+                background-color:$nwg-highlight;
+                text-decoration:none;
+
+                .fa{
+                    color:$nwg-darkblue;
+                }
+            }
+        }
+
+
+
+        &.btn-video{
+            top:2px;
+            // left:50px;
+            .fa{
+                color:$nwg-darkblue;
+                transition:0.2s;
+            }
+            .fa-stop{
+                position: relative;
+                font-size:0.5em;
+                bottom:0.3em;
+                // margin-bottom: 0.2em;
+            }
+            background-color:$nwg-lightblue;
+            color:#fff;
+            &:hover, &:focus{
+                background-color:$nwg-highlight;
+                text-decoration:none;
+
+                .fa{
+                    color:$nwg-lightblue;
+                }
+            }
+        }
+
+
+
+
+
+        @include ptBreakpoint($md){
+            // border:1px solid red;
+            font-size:2.5rem;
+
+            &.btn-tickets{
+                position: absolute;
+                top:initial;
+                left:initial;
+                right:initial;
+                bottom:initial;
+
+                bottom:0.5em;
+                transform:translateX(-100%);
+                left:50%;
+            }
+
+            &.btn-video{
+                position: absolute;
+                top:initial;
+                left:initial;
+                right:initial;
+                bottom:initial;
+
+                bottom:0.5em;
+                transform:translateX(0%);
+                left:52%;
+            }
+        }
+    }
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    #### ##    ## ########  #######
+     ##  ###   ## ##       ##     ##
+     ##  ####  ## ##       ##     ##
+     ##  ## ## ## ######   ##     ##
+     ##  ##  #### ##       ##     ##
+     ##  ##   ### ##       ##     ##
+    #### ##    ## ##        #######
+
+*/
+
+    .no-flexbox .homeplate-info {
+
+        display:block;
+        >a{
+            padding:0 15px;
+        }
+    }
+
+
+    .homeplate-info{
+
+        z-index:99;
+
+        width:100%;
+        max-width:390px;
+        margin:0 0 3em 0;
+        padding:1em;
+
+        position:absolute;
+        top:-150px;
+        left:50%;
+        transform:translateX(-50%);
+
+        background-color:rgba(0,0,0,0.8);
+        color:white;
+
+        text-align: center;
+
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-around;
+
+
+        @include ptBreakpoint($nwg){
+            transform:translateX(0);
+            position: relative;
+            top:0;
+            left:0;
+        }
+
+        >a{
+            flex:1 0 50%;
+            margin-bottom:0.5em;
+            font-size:1.5em;
+            color:white;
+            width:50%;
+
+            &:hover, &:focus{
+                color:lightblue;
+            }
+
+            i{
+                margin-left:0;
+                margin-right:0.5em;
+            }
+        }
+
+        .where-when{
+            border-top:1px solid white;
+            padding-top:0.5em;
+            font-size:2.3em;
+            width:100%;
+            flex:1 0 100%;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ########   ######
+    ##     ## ##    ##
+    ##     ## ##
+    ########  ##   ####
+    ##     ## ##    ##
+    ##     ## ##    ##
+    ########   ######
+
+ */
+
+
+.homeplate-bg{
+
+  // background-image:url($img-url+'header-bg-arena.jpg');
+  background-image:url($img-url+'hp-header-bg-LG.jpg');
+  background-position:center center;
+  background-size:cover;
+
+  // position: absolute;
+  // top:0; left:0; bottom:0; right:0;
+  // width: 100%;
+  // height: 100%;
+
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+
+  z-index:1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ##     ## #### ########  ########  #######
+    ##     ##  ##  ##     ## ##       ##     ##
+    ##     ##  ##  ##     ## ##       ##     ##
+    ##     ##  ##  ##     ## ######   ##     ##
+     ##   ##   ##  ##     ## ##       ##     ##
+      ## ##    ##  ##     ## ##       ##     ##
+       ###    #### ########  ########  #######
+
+ */
+
+
+.homeplate-video{
+    // border:10px solid red;
+
+    position:absolute;
+    top:0;
+    // // top:10%;
+    // // top:50%;
+    left:0;
+    right:0;
+    bottom:0;
+
+    // transform:translateY(-50%);
+
+    width:100%;
+    height:100%;
+
+    z-index:9;
+
+    display:none;
+    opacity:0;
+    // transition:1s;
+
+    &.showme{
+        display:block;
+        opacity:1;
+    }
+
+    .closeBtn{
+        position: absolute;
+        top:100px;
+        right:100px;
+        z-index: 5;
+    }
+
+
+
+    #player{
+        // border:1px solid green;
+        z-index:1;
+
+        position:absolute;
+        top:50%;
+        left:50%;
+        // right:0;
+        // bottom:0;
+
+        width:100%;
+        height:100%;
+
+        transform:translate(-50%, -50%);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-video-holder{
+    // border:2px solid red;
+    z-index:9999;
+
+    position: fixed;
+    top:0; bottom:0; right:0; left:0;
+    width:100%;
+    height:100%;
+
+    background-color:rgba(0,0,0,0.9);
+
+    display: none;
+
+
+
+    &.showme{
+        display:block;
+    }
+
+
+
+    .mobile-video-closebtn{
+        z-index:9;
+
+        position: absolute;
+        top:50px;
+        right:50px;
+        font-size:3rem;
+    }
+
+
+
+
+    .mobile-video-inner{
+        z-index:1;
+
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        // width:100%;
+        // max-width:100%;
+        // height:auto;
+
+        // border:1px solid red;
+
+        iframe{
+            position: relative;
+            display:block;
+            width:560px;
+            height:315px;
+            margin:auto;
+        }
+    }
+
+
+}

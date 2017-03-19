@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+
+		<head>
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+				<meta name="description" content="">
+				<meta name="keywords" content="">
+
+				<title>NWG 2</title>
+
+
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+				<!-- // <script src="assets/js/modernizr-3.3.1.min.js"></script> -->
+				<script src="assets/js/modernizr-custom-slim.js"></script>
+				<script src="assets/js/picturefill.min.js"></script>
+
+				<!-- // <script src="https://www.youtube.com/iframe_api"></script> -->
+
+
+
+				<!-- THE PAGETREE CMS AUTOMATICALLY LOADS A NUMBER OF CSS AND JS FILE AUTOMATICALLY -->
+				<link rel="stylesheet" media="screen" href="assets/local/PT-CSS-LOCAL-BUNDLE.min.css">
+
+				<link rel="stylesheet" media="screen" href="assets/css/tachyons.min.css">
+
+
+				<!-- THIS IS THE SITE SPECIFIC STYLES -->
+				<link rel="stylesheet" media="screen" href="assets/site.css">
+
+		</head>
+
+		<!-- THE CMS CAN ADD CUSTOM CLASSES TO THE BODY FOR THEMES AND PAGES -->
+		<body class="theme- page-home ">
+
+		<!-- VIEWPORT -->
+		<div id="viewport" class="viewport">
+
+			<!-- @----include sasskits/nwg-modal.kit -->
+			<!-- @include sasskits/nwg-nav.kit -->
+
+
+
+
+			<div class="preloader-cover"></div>
+
+
+
+
+
+
+
+			<header id="homeplate" class="homeplate" data-nwg-hpintro="true">
+
+				<div class="pt-inner">
+					<div class="homeplate-logoholder">
+						<img class="logo-text" src="assets/img/intro/nwg-logo-words.png" 	alt="">
+						<img class="logo-globe" src="assets/img/intro/nwg-logo-globe.png" 	alt="">
+					</div>
+				</div>
+
+				<div class="homeplate-giant-btns">
+					<a href="#" class="giant-btn btn-tickets">BUY TICKETS <i class="fa fa-caret-right"></i></a>
+					<a href="#" class="giant-btn btn-video homeplate-video-button">WATCH VIDEO <i class="fa fa-caret-right"></i></a>
+				</div>
+
+				<div class="homeplate-bg">
+				</div>
+
+	  			<div class="homeplate-video">
+	  				<div id="player"></div>
+	  			</div>
+
+			</header>
+
+
+
+
+
+
+
+
+			<div class="mobile-video-holder">
+				<a class="mobile-video-closebtn" href="#"><i class="fa fa-close"></i></a>
+				<div class="mobile-video-inner">
+					<div id="mobile-player"></div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+<article class="main container">
+
+
+
+
+
+
+
+
+	<section class="partners">
+		<h4>PROUD PARTNERS</h4>
+		<ul class="partners-group">
+			<li><img class="" src="assets/img/partners/utah-sports-logo-footer.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-monster-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-oberto-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-vividseats-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-monster-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-valvoline-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-oberto-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-vividseats-color.png" alt=""></li>
+		</ul>
+	</section>
+
+
+
+
+
+
+	<!-- <div class="about-news-slider-holder"> -->
+
+		<div class="nwg-slick" data-nwg-events-slider >
+			<div class="news-item"><img src="assets/img/_news/news1.png" alt="" ></div>
+			<div class="news-item"><img src="assets/img/_news/news2.png" alt="" ></div>
+			<div class="news-item"><img src="assets/img/_news/news3.png" alt="" ></div>
+			<div class="news-item"><img src="assets/img/_news/news1.png" alt="" ></div>
+			<div class="news-item"><img src="assets/img/_news/news2.png" alt="" ></div>
+			<div class="news-item"><img src="assets/img/_news/news3.png" alt="" ></div>
+		</div>
+
+	<!-- </div> -->
+
+
+
+
+				<!-- <div id="buttonbar">
+				    <button id="restart" onclick="restart();">[]</button>
+				    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+				    <button id="play" onclick="vidplay()">&gt;</button>
+				    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+				</div> -->
+
+
+
+	<section id="section-fmx" class="section-nwg">
+		<div class="myVideoHolder" data-nwg-video-holder>
+			<video id="VID1" class="fillvid" >
+					 <!-- <source src="assets/video/road-to-nwg.mp4" type="video/mp4" /> -->
+				 <source src="assets/video/b-roll-epic-clouds.mp4" type="video/mp4" />
+			</video>
+		</div>
+
+		<h1 class="section-header">FMX</h1>
+
+		<div class="section-action">
+			<img class="action-person" src="assets/img/section-fmx-action-person2.png" alt="">
+			<img class="action-shadow" src="assets/img/section-fmx-action-shadow2.png" alt="">
+		</div>
+
+<!--
+		<div class="section-bg" >
+			<img class="visible-sm" src="assets/img/section-fmx-bg-sm.jpg" alt="">
+			<img class="visible-xs" src="assets/img/section-fmx-bg-xs.jpg" alt="">
+		</div>
+		<div class="section-info">
+
+			<div class="section-info-headshot" data-pt-imgswap>
+				<img src="assets/img/section-fmx-headshot.jpg" alt="">
+			</div>
+
+			<div class="section-info-block">
+				<h2><a href="/event/fmx">Freestyle</a></h2>
+				<hr>
+				<h2><a href="/event/fmx-best-trick">Best Trick</a></h2>
+			</div>
+
+		</div>
+ -->
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+	<section id="section-bmx" class="section-nwg">
+
+		<h1 class="section-header">BMX</h1>
+
+		<div class="section-action">
+			<img class="action-person" src="assets/img/section-bmx-action-person2.png" alt="">
+			<img class="action-shadow" src="assets/img/section-bmx-action-shadow2.png" alt="">
+		</div>
+
+		<div class="section-bg" >
+			<img class="visible-sm" src="assets/img/section-bmx-bg-sm.jpg" alt="">
+			<img class="visible-xs" src="assets/img/section-bmx-bg-xs.jpg" alt="">
+
+			<!-- <img src="assets/img/section-bmx-bg.jpg" alt=""> -->
+		</div>
+
+		<div class="section-info">
+
+			<div class="section-info-block">
+				<h2><a href="/event/bmx-triganta">Triganta</a></h2>
+				<hr>
+				<h2><a href="/event/bmx-best-tricks">Best Tricks</a></h2>
+			</div>
+
+			<div class="section-info-headshot" data-pt-imgswap>
+				<img src="assets/img/section-bmx-headshot.jpg" alt="">
+			</div>
+		</div>
+
+	</section>
+
+
+</article><!-- .main.container -->
+
+
+
+
+
+
+<section id="section-news2">
+
+
+	<section class="article-section" data-nwg-animate-article-section="">
+
+		<div class="article-bg">
+			<img src="http://www.nitroworldgames.com/userfiles/285/module_articles/images/large_24fd9039e73248fb6cc2d927da15327f.jpg" alt="">
+
+		</div>
+
+		<div class="article-infoblock">
+			<a class="article-link" href="/articles/view/98">
+				<h1 class="article-headline"><span>First 2017 Semifinalists Are Set in FMX, BMX, Skate</span></h1>
+			</a>
+			<div class="article-summary">
+				<a class="article-link" href="/articles/view/98">
+					<div class="article-type"><i class="fa fa-align-left"></i></div>
+
+					<p>The second- and third-place finishers from last year's FMX, BMX Best Tricks, BMX Triple Hit, and Skate Best Tricks events have been invited straight to the 2017 semifinals.</p>
+
+				</a><a href="/articles/view/98" class="btn btn-lightblue">Read More</a>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="article-section" data-nwg-animate-article-section="">
+		<div class="article-bg">
+			<img class="" src="http://www.nitroworldgames.com/userfiles/285/module_articles/images/large_b8ac734f23705a0937701e616583f3b9.jpg">
+		</div>
+		<div class="article-infoblock">
+			<a class="article-link" href="/articles/view/97">
+				<h1 class="article-headline"><span>Reigning FMX, BMX, and Skate Champions Invited to Compete at the 2017 Finals</span></h1>
+			</a>
+			<div class="article-summary">
+				<a class="article-link" href="/articles/view/97">
+					<div class="article-type"><i class="fa fa-align-left"></i></div>
+					<p>The winners of the FMX, BMX, and skate events from last year will have a chance to defend their titles this summer in Salt Lake City.</p>
+				</a><a href="/articles/view/97" class="btn btn-lightblue">Read More</a>
+			</div>
+		</div>
+	</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <div class="footer-inner" >
+
+        <div class="logoholder"><a href="/home"><img src="assets/img/logo-nwg2-sm.png" alt=""></a></div>
+
+		<nav class="nwg-nav">
+
+            <ul class="nwg-pagelinks">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Venue</a></li>
+                <li><a href="#">Buy Tickets</a></li>
+            </ul>
+        </nav>
+
+	    <div class="social-media-icons">
+            <div><a href="https://twitter.com/nitrocircus" target="_blank"><i class="fa fa-twitter"></i></a></div>
+            <div><a href="https://www.facebook.com/NitroCircus" target="_blank"><i class="fa fa-facebook"></i></a></div>
+            <div><a href="http://instagram.com/nitrocircus" target="_blank"><i class="fa fa-instagram"></i></a></div>
+            <div><a href="http://www.youtube.com/nitrocircus" target="_blank"><i class="fa fa-youtube"></i></a></div>
+        </div>
+    </div>
+
+	<div class="partners">
+		<h4>PROUD PARTNERS</h4>
+
+		<ul class="partners-group">
+			<li><img class="" src="assets/img/partners/utah-sports-logo-footer.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-monster-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-oberto-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-vividseats-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-monster-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-valvoline-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-oberto-color.png" alt=""></li>
+			<li><img class="" src="assets/img/partners/partners-logo-vividseats-color.png" alt=""></li>
+		</ul>
+
+	</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+<!-- .viewport -->
+</div>
+
+
+
+
+
+
+
+			<!-- JQUERY AND BOOTSTRAP ARE ALREADY BEING IMPORTED BY THE PAGETREE CMS ENGINE ( DO NOT INCLUDE WHEN INTEGRATING INTO THE CMS ) -->
+			<script src="assets/local/PT-JS-LOCAL-BUNDLE.min.js"></script>
+
+			<!-- PT BASE SITE  -->
+			<script src="assets/site.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<script>
+				// THIS SCRIPT HAS BEEN ADDED TO THE MAIN SITE.JS FILE:
+
+				var HP_player;
+				var Mobile_player;
+
+				var VID_HOLDER;
+
+				var MobileVid_HOLDER;
+
+
+				var tag = document.createElement('script');
+
+				tag.src = "https://www.youtube.com/iframe_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+
+					function onYouTubeIframeAPIReady() {
+						console.log('!!YOUTUBE API IS READY!!');
+
+						HP_player = new YT.Player('player', {
+							height:'100%',
+							width:'100%',
+							videoId:'GudH-ELXsKE',
+							playerVars: {
+								'autoplay': 0,
+								'rel':0,
+								'controls': 0,
+								'modestbranding':1,
+								'showinfo':0,
+								'iv_load_policy':3,
+								'playsinline':0
+							},
+							events:{
+							  'onStateChange': onPlayerStateChange
+							}
+						});
+
+						Mobile_player = new YT.Player('mobile-player', {
+							height:'100%',
+							width:'100%',
+							videoId:'GudH-ELXsKE',
+							playerVars: {
+								'autoplay': 0,
+								'rel':0,
+								'controls': 0,
+								'modestbranding':1,
+								'showinfo':0,
+								'iv_load_policy':3,
+								'playsinline':0
+							},
+							events:{
+							}
+						});
+
+					}
+
+
+
+					function onPlayerStateChange(event) {
+						if (event.data == YT.PlayerState.ENDED ) {
+
+							$('.homeplate-video-button').html('<i class="fa fa-play"></i>Play Video').removeClass('isPlaying');
+
+							TweenMax.to(VID_HOLDER, 0.2, { autoAlpha:0, onComplete:function(){
+									VID_HOLDER.removeClass('showme');
+								}
+							});
+						}
+					}
+
+
+					function hideHeaderPlateVid(){
+
+						$('.homeplate-video-button').html('<i class="fa fa-play"></i>Play Video').removeClass('isPlaying');
+
+						pauseVid();
+
+
+						TweenMax.to(".pt-inner", 2, { autoAlpha:1 });
+
+						TweenMax.to(VID_HOLDER, 2, { autoAlpha:0, onComplete:function(){
+								VID_HOLDER.removeClass('showme');
+								stopVid();
+							}
+						});
+
+					}
+
+
+
+
+					function showHeaderPlateVid(){
+
+						VID_HOLDER.addClass('showme');
+
+						$('.homeplate-video-button').html('<i class="fa fa-stop"></i>Stop Video').addClass('isPlaying');
+
+						playVid();
+
+						TweenMax.to(".pt-inner", 2, { autoAlpha:0 });
+
+						TweenMax.set(VID_HOLDER, {autoAlpha:0});
+
+						TweenMax.to(VID_HOLDER, 2, { autoAlpha:1 });
+
+					}
+
+
+
+					function pauseVid() {
+						HP_player.pauseVideo();
+					}
+
+					function stopVid() {
+						HP_player.stopVideo();
+					}
+
+					function restartVid() {
+						HP_player.seekTo(30);
+						HP_player.playVideo();
+					}
+
+					function playVid() {
+						HP_player.playVideo();
+					}
+
+
+
+
+
+
+
+
+				$(function() {
+
+					VID_HOLDER = $('.homeplate-video');
+
+					MobileVid_HOLDER = $('.mobile-video-holder');
+
+
+					$('.homeplate-video-button').on('click', function(e){
+
+						e.preventDefault();
+
+						if(Modernizr.touchevents) {
+
+							MobileVid_HOLDER.addClass('showme');
+
+						}else{
+
+							$('.homeplate-video-button').html('IS NOT TOUCH');
+
+							if( $(this).hasClass('isPlaying') ){
+								hideHeaderPlateVid();
+							}else{
+								showHeaderPlateVid();
+							}
+						}
+					});
+
+
+					$('.closeBtn').on('click', function(e){
+						e.preventDefault();
+						hideHeaderPlateVid();
+					});
+
+
+					$('.mobile-video-closebtn').on('click', function(e){
+
+						e.preventDefault();
+
+						MobileVid_HOLDER.removeClass('showme');
+
+						Mobile_player.stopVideo();
+
+					})
+
+
+				});
+
+
+
+			</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</body>
+</html>

@@ -1,0 +1,336 @@
+
+// 
+
+
+
+.theme-tickets{
+    background-color:#000;
+    .viewport{
+        background-color:#000;
+        // border:5px solid green;
+    }
+
+    .main{
+        // background-color:black;
+    }
+}
+
+ 
+  
+
+#tickets-road-vid{
+    // border:5px solid red;
+    width:100%;
+    height:auto;
+    display:none;
+    @include ptBreakpoint($nwg){
+        // .js{
+            display:block;
+            position:absolute;
+            transform:translate(-50%, -50%);
+            left:50%;
+            top:50%; 
+          
+        // }
+    }
+}
+
+
+
+#pageheader-tickets{
+    position: relative;
+    overflow: hidden;
+    // padding-top:3em;
+
+    .header-bg{
+
+        background-image:url( $img-url + "/tickets/ticketspage-header-bg-road-lg.jpg");
+        background-size:cover;
+        background-position:center;
+
+        height:400px;
+        
+        z-index: 1;
+        width:100%;
+        overflow:hidden;
+        position:relative;
+
+        img{
+            position:relative;
+            width:100%;
+            height:height;
+        }
+
+    }    
+
+
+    .header-info{
+        z-index: 2;
+        position: absolute;
+        top:-5em;
+
+        padding:0 0 0;
+        
+        // margin:-4em auto;
+        margin:2em auto 0 auto;
+        width:100%;
+        max-width:700px;
+        
+
+transform:translate(-50%, -50%);
+left:50%;
+top:50%;
+
+text-align:center;
+
+
+        h1{            
+            color:#000;
+            @include nwg-skew();
+            // font-size:5em;      
+            position:absolute;
+            top:0;
+            width:100%;
+            
+        }
+
+
+    }
+
+    .logo{
+        width:90%;
+        max-width:300px;
+        height:auto;
+        margin:auto;
+    }
+
+    @include ptBreakpoint($nwg){
+        .logo{
+            max-width:350px;
+        }
+        .header-bg{
+            overflow:hidden;
+            
+            width:100%;
+            height:500px;
+
+            img{
+                position:absolute;
+
+                width:100%;
+                height:height;
+                
+                top:50%;
+                transform:translate(0, -50%);
+            }
+        }  
+
+
+        .header-info{
+            // border:1px dotted red;
+            position:absolute;
+            margin:0;
+            width:100%;
+            max-width:$nwg-maxwidth;
+            // border:1px solid red;
+            // transform:translateX(-50%) skewY (-5deg) perspective(1px);
+            // transform:translateX(-50%) perspective(1px);
+
+
+    // transform:translate(-50%, -50%);
+    // left:50%;
+    // top:50%;
+
+            h1{      
+                font-size:7em;      
+                // position:absolute;
+                top:-20px;
+                // width:100%;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.partners-ads-slider{
+    // border:1px solid white;
+
+    margin:auto;
+    max-width:720px;
+    width:80%;
+    margin:0 auto;
+    padding:0;
+    list-style:none;
+
+    margin-top:5em;
+
+    img{
+        width:100%;
+        height:auto;
+    }
+    .slick-list{
+        border:1px solid white;
+    }
+    .slick-arrow{
+        // border:1px solid red;
+        // font-size:2rem;
+        width:50px;
+        height:100%;
+        z-index:3;
+        &:before{
+            color:$nwg-lightblue;
+            font-size:3rem;
+            @include ptBreakpoint($nwg){
+              font-size:5rem;    
+            }
+        }
+        &.slick-prev{
+            // right:initial;
+            transform:translate(-50%, -50%)
+        }
+        &.slick-next{
+            // right:initial;
+            transform:translate(50%, -50%)
+        }
+
+
+    }
+
+
+    @include ptBreakpoint($nwg){
+        margin-top:0;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+.tickets-infoblock{
+    
+    position:relative;
+    z-index:9;
+    
+    width:95%;
+    transform:translate(-50%, 0) skewY(-5deg) ;
+    left:50%;
+
+    background-color:rgba($nwg-darkblue, 0.9);
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-content:center;
+    align-items:center;
+    // flex-wrap:wrap;
+
+    padding:0.5em;
+
+    color:white;
+    font-size:1.9rem;
+    text-align:center;
+
+    >div{
+        margin:0.5em
+    }
+
+    img{
+        display:block;
+        width:100%;
+        height:auto;
+        margin:auto;
+    }
+
+    a.btn{
+        font-size:1em;
+        border:0;
+        font-family: $font-header;
+        line-height: 1.8em;
+    }
+    a{
+        color:white;
+        &:hover, &:focus{
+            text-decoration:none;
+        }
+    }
+    small{
+        display:block;
+        font-size:0.7em;
+    }
+
+    @include ptBreakpoint($nwg){
+    
+        flex-direction:row;
+        transform:translate(-50%, -50%) skewY(-5deg) ;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 

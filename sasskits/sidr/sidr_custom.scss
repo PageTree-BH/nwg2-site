@@ -1,0 +1,942 @@
+
+// Fonts
+// $sidr-font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+$sidr-font-size: 1.2rem;
+
+ 
+// Colors
+$sidr-background: rgba(0,0,0,0.9);
+$sidr-background-shadow-color: #222;
+$sidr-text-color: #fff;
+$sidr-box-shadow-color: #000;
+$sidr-input-background-color: #000;
+
+
+
+
+// Width
+$sidebar-width: 300px;
+// $sidebar-width-neg: -300px;
+$sidebar-width-neg: -$sidebar-width;
+
+// $sidebar-width: 25%;
+// $sidebar-width-neg: -25%;
+
+
+
+@import 'sidr_base';
+
+
+
+$topbar-height: 80px;
+
+
+
+
+// THESE ARE AUTOMATIC FROM THE SIDR PLUGGIN:
+body{
+  &.sidr-closed{
+  }
+  &.sidr-open{
+  }
+}
+
+
+.caret{
+	border-top-color:$sidr-text-color;
+}
+
+
+.sidr{
+    z-index:2000;
+	ul{
+		border:0;
+		li{
+			border:0;
+            &:hover,
+            &.active,
+            &.sidr-class-active {
+                > a,
+                > span {
+					color:$nwg-highlight;
+                }
+				
+                ul li {
+                    &:hover,
+                    &.active,
+                    &.sidr-class-active {        
+						color:$nwg-highlight;
+                    }
+                }
+            }
+
+            a,
+            span {
+            	// color:red;
+            }
+
+			// SECOND LEVEL LINKS:
+            ul {
+
+                li {
+
+                    &:last-child {
+                    }
+
+                    &:hover,
+                    &.active,
+                    &.sidr-class-active {
+                        
+                        > a,
+                        > span {
+							color:$nwg-highlight;
+                        }
+                    }
+
+                    a,
+                    span {
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.header{
+	// margin-top: $topbar-height;
+}
+
+@media screen and ( min-height: 600px ){
+	
+	#site-topbar{
+		// position:fixed;
+	}
+	.header{
+		// margin-top: $topbar-height;
+	}
+}
+
+
+
+
+
+#site-topbar{
+   
+    &.bg-solid2{
+        background-color:rgba(0,0,0,0.7);
+    }
+
+    &.bg-solid{
+        background-color:rgba(0,0,0,0.7);
+    }
+	
+	.js & {
+		// height:$topbar-height;
+		display:flex;
+		justify-content:flex-start;
+		align-content:center;
+		align-items:center;
+
+		// @include ptBreakpoint($sm){
+		// 	justify-content:flex-end;
+		// }
+
+	}
+
+	position:fixed;
+
+	background-color:rgba(0,0,0,0.8);
+	// height:100px;
+	width:auto;
+	padding:0 1em;
+	width:100%;
+	left:0;
+    right:0;
+    top:0;
+    z-index:1001;
+
+	
+
+}
+
+
+
+
+
+
+.site-topbar-inner{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:nowrap;    
+    // align-items: center;
+    
+    width:100%;
+    margin:auto;
+
+
+
+    max-width:$nwg-maxwidth;
+    justify-content: space-between;
+
+
+
+    .logoholder{
+        // width:100%;
+        height:auto;
+        margin-right:2em;
+        margin-top:0.2em;
+        margin-bottom:0.2em;
+        // margin-left:1em;
+        img{
+            width:150px;
+            height:auto;
+            position: relative;
+            display:block;
+            // margin:auto;
+        }
+    }
+
+    .social-media-icons{
+        display:none;
+    }
+
+    .nwg-nav{
+		display:none;    
+    }
+
+    @include ptBreakpoint($nwg) {
+        
+        .logoholder{
+            // order:1;
+            flex:1 1 auto;
+        }
+
+        .social-media-icons {
+            // border:1px solid red;
+
+            flex:1 1 auto;
+            display:flex;
+            align-items:center;
+            justify-content: flex-end;
+
+            margin-left:1em;
+        }
+        
+        .nwg-nav {
+            display:flex;
+            justify-content: center;
+            flex:1 1 auto;
+            flex-direction: column;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nwg-nav {
+    font-family: $font-header;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    margin: 1em 0;
+    // padding:0 2.5em;
+
+    display:none;
+
+    @include ptBreakpoint($nwg){
+        display:block;
+    }
+
+
+    ul {
+        position: relative;
+        
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // justify-content: space-between;
+        // flex-wrap: nowrap;
+        flex-wrap: wrap;
+        width:100%;
+        // max-width:600px;
+        max-width:95%;
+        // border:1px solid red;
+
+        @include ptBreakpoint($lg){
+        }
+    }
+
+
+
+    li {
+        // margin-right:0.8em;
+        // margin:0 1em;
+        // position: relative;
+        a {
+            color: white;
+            padding: 0.5em 1.5em;
+            // padding: 0.5em 1.5em;
+            &:hover,
+            &:focus {
+                color: $nwg-highlight;
+                text-decoration: none;
+            }
+        
+            ~ul{
+                // border:1px solid red;
+            }
+        }
+        // &:last-of-type{
+        //     a{
+        //         color:$nwg-lightblue;
+        //         &:hover,
+        //         &:focus {
+        //             color: $nwg-highlight;
+        //             text-decoration: none;
+        //         }
+        //     }
+        // }
+    }
+
+
+
+
+
+
+
+// DROPDOWN:
+    // ul>li>ul{
+    ul>li>ul{
+        
+        // display:none;
+        border-top:1px solid white;
+        margin: 0;
+        padding: 0;
+
+        padding-top:0.5em;
+        margin-top:0.5em;
+
+        // @include ptBreakpoint($nwg){
+            display:block;
+            position:absolute;
+            width:100%;
+
+            // border:1px dotted red;
+            // background-color:rgba($nwg-lightblue, 0.95);
+            // background-color:rgba(0,0,0,1);
+             
+            // width:100%;
+            left:0;
+            // top:50px;
+            // transform:translateX(-50%);
+            
+            font-size:0.8em;            
+
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap:wrap;
+
+            // align-items:center;
+            // align-content:center;
+            
+            // text-align: center;
+
+        // }
+
+
+        // li {
+        //     padding:0.3em;
+        //     margin: 0 1em;
+        //     text-align:center;
+        //     a{
+        //         padding:0;
+        //     }
+        // }
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nwg-nav .nwg-pagelinks{
+    display:flex;
+	margin-bottom:0.2em;
+
+	// a[data-toggle="collapse"] {
+	// 	color:$nwg-highlight;
+		
+	// 	&.collapsed{
+	// 		color:white;
+	// 	}
+	// }
+
+	// li{
+ //        &:last-of-type{
+ //            a{
+ //                color:$nwg-lightblue;
+ //                &:hover,
+ //                &:focus {
+ //                    color: $nwg-highlight;
+ //                    text-decoration: none;
+ //                }
+ //            }
+ //        }
+ //    }
+}
+
+
+
+.nwg-nav .nwg-eventslinks {
+
+	position: relative;
+    display:flex;
+    font-size:0.9em;
+	margin:0 auto;
+	width:100%;
+	max-width:700px;
+	justify-content:space-between;
+	// align-items:center;
+	// align-content:center;
+	overflow:hidden !important;
+	
+    border-top:1px solid transparent;
+    transition:0.1s;
+
+	&.collapse{
+
+	}
+	&.collapsing{
+
+	}
+	&.in{
+	    border-top:1px solid $nwg-highlight;
+	}
+    
+
+    li {
+        padding:0.5em 0 0 0;
+        margin: 0 0;
+        text-align:center;
+        a{
+            padding:0;
+            margin:0 1em;
+        }
+    }
+}
+
+
+
+
+
+// .navtxt-lightblue.navtxt-lightblue{
+// 	a{	
+// 		color:$nwg-lightblue;
+// 	    &:hover,
+// 	    &:focus {
+// 	        color: $nwg-highlight;
+// 	        text-decoration: none;
+// 	    }
+// 	}
+// }
+
+
+
+ 
+
+
+
+
+
+
+
+// // I CREATED THESE CLASSES MYSELF:
+// html{
+//   &.sidr-is-open{
+//     // overflow:hidden;
+//   }
+//   &.sidr-is-closed{
+//     // overflow:scroll;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+#sidr-menu-btn{
+
+	// display:none;
+
+	// .js & {
+	// 	display:flex;
+	//   	justify-content:flex-end;
+	//   	align-content:center;
+	//   	align-items:center;
+	// }
+
+	position:absolute;
+	right:0; top:0;
+	// background-color: rgba(0,0,0,0.2);
+	// background-color:darken($bci-orange, 10%);
+
+	// height:$topbar-height;
+	padding:0.5em;
+	font-size:2em;
+
+	z-index:1002;
+
+	color:white;
+
+	transition:0.1s;
+
+	&:hover, &:focus{
+		// color:black;
+		text-decoration: none;
+		// background-color:darken($bci-orange, 30%);
+	}
+
+	@include ptBreakpoint($nwg){
+		display:none;
+	}
+  
+}
+
+
+
+#sidr-close-btn{
+	position:relative;
+	// right:-$topbar-height; 
+	// right:0; 
+	// top:0;
+
+	// float:left;
+	font-size:2em;
+	margin:3em 0 3em 0em;
+
+	padding:0.5em 0.5em 0.5em 0.5em;
+	// background-color:darken($bci-orange, 10%);
+  
+	// height:$topbar-height;
+	// width:$topbar-height;
+
+	z-index:99;
+
+	color:white;
+
+	// transition:0.1s;
+
+	&:hover, &:focus{
+		text-decoration: none;
+		// background-color:darken($bci-orange, 30%);
+	}
+
+	// 
+	// @include ptBreakpoint($sm){
+	// 	font-size:1em;
+	// }
+	// @include ptBreakpoint($lg){
+	// 	display:none !important;
+	// }
+
+}
+
+ 
+
+
+
+#sidr-main{
+	// position:fixed;
+	// overflow-x:visible;
+	// overflow-y:scroll;
+	// background-color:$bci-orange;
+	// padding-bottom:1em;
+	// position:absolute;
+	padding-top:1em;
+	padding-bottom:1em;
+
+	// a{
+	// 	color:white;
+	// 	&:hover, &:focus{
+	// 		color:$nwg-lightblue;
+	// 	}
+	// }
+	
+
+
+	// .js & {
+	// 	a{
+	// 		color:white;
+	// 		&:hover, &:focus{
+	// 			color:white;
+	// 		}
+	// 	}
+	// }
+ 
+
+
+	// .logoholder{
+
+	// 	position: relative;
+	// 	margin:auto;
+	// 	width:100%;
+	// 	max-width:300px;
+	// 	padding:1em;
+
+	// 	img{
+	// 		width:100%;
+	// 		height:auto;
+	// 	}
+	// 	@include ptBreakpoint($sm){
+	// 		display:none;
+	// 	}
+	// }
+
+
+}
+
+
+
+
+
+
+
+
+// THIS IS CREATED AND ADDED AT RUN TIME VIA JS:
+.sidr-cover{
+  // display:none; 
+  position:fixed; top:0; left:0; bottom:0; right:0;
+  background-color:rgba(0,0,0,0.8);
+  z-index:1000;
+  width:100%;
+  height:100%;
+  // opacity:0;
+
+	// cursor: w-resize;
+	// cursor: url($img-url + 'logo-bci-white.png'), auto;  
+	cursor: url($img-url + 'close-lg.cur'), auto;  
+
+  @include ptBreakpoint($lg){
+    display:none !important;
+  }
+
+
+}
+
+
+ 
+
+.scrollzone{
+	position: absolute;
+	top:0; right:0; 
+	width:4em; 
+	// height:100%;
+	background-color:rgba(0,0,0,0.1);
+	z-index:98;
+
+	display:flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-inner{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap:nowrap;    
+    width:100%;
+    margin:auto;
+
+
+    max-width:$nwg-maxwidth;
+    justify-content: space-between;
+
+
+    .logoholder{
+
+        flex:1 1 auto;
+        height:auto;
+        margin-right:2em;
+        margin-top:0.2em;
+        margin-bottom:0.2em;
+
+        img{
+            width:150px;
+            height:auto;
+            position: relative;
+            display:block;
+            margin:auto;
+        }
+    }
+
+
+    .social-media-icons{
+        flex:1 1 auto;
+        display:flex;
+        align-items:center;
+        margin-left:1em;
+
+    }
+
+
+    .nwg-nav{
+        flex:1 1 auto;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        .nwg-pagelinks {
+            // flex-direction: column;
+            
+        }
+        .nwg-eventslinks {
+
+            // position: relative;
+            // display:flex;
+            // font-size:0.9em;
+            // margin:0 auto;
+            // width:100%;
+            // max-width:700px;
+            // justify-content:space-between;
+            flex-direction: column;
+            // align-items:center;
+            // align-content:center;
+
+            
+            border-top:1px solid white;
+            // transition:0.1s;
+        }
+
+    }
+
+    @include ptBreakpoint($nwg) {
+        
+        flex-direction: row;
+        
+        .logoholder{
+            img{
+                margin:auto;
+            }
+        }
+
+        .social-media-icons {
+            justify-content: flex-end;
+        }
+        
+        .nwg-nav {
+            .nwg-eventslinks {
+                flex-direction: row;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin navActive(){
+//     border-bottom:2px solid $nwg-highlight;
+// }
+
+
+
+.page-about     .nav-about      {   
+    // @include navActive(); 
+}
+.page-events    .nav-events     {   
+    // @include navActive(); 
+}
+.page-venue     .nav-venue      {   
+    // @include navActive(); 
+}
+.page-articles  .nav-articles   {   
+    // @include navActive(); 
+}
+.page-tickets   .nav-tickets    {   
+    // @include navActive(); 
+}
+
+
+.page-event-fmx                 .nav-event-fmx                  {  
+    // @include navActive();       
+}
+.page-event-fmx-best-trick      .nav-event-fmx-best-trick       {  
+    // @include navActive();       
+}
+.page-event-bmx-best-tricks     .nav-event-bmx-best-tricks      {  
+    // @include navActive();       
+}
+.page-event-bmx-triganta        .nav-event-bmx-triganta         {  
+    // @include navActive();       
+}
+.page-event-skate-best-tricks   .nav-event-skate-best-tricks    {  
+    // @include navActive();       
+}
+.page-event-inline-best-tricks  .nav-event-inline-best-tricks   {  
+    // @include navActive();       
+}
+.page-event-scooter-best-tricks .nav-event-scooter-best-tricks  {  
+    // @include navActive();       
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

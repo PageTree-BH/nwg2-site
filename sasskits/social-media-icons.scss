@@ -1,0 +1,197 @@
+
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+$white: #fff;
+$color: $pt-color-primary;
+// $color: purple;
+
+/* 
+  <ul class="social-media-icons">
+      <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+  </ul>
+ */
+
+
+
+
+ul.social-media-icons {
+
+  list-style: none;
+  // margin:1em;
+  padding:1em;
+
+  // display:flex;
+  // width:300px;
+  display:inline-flex;
+  flex-direction:row;
+  justify-content: center;
+  flex-wrap:nowrap;
+
+  font-size:2.3rem;
+
+  li a{      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-decoration:none;
+    margin:0.5rem;
+    padding:0;
+
+    border:1px solid transparent;
+    color:$white;
+    background-color:$color;
+
+    &:hover, &:focus {
+      background-color: $white;
+      color:$color;
+    }
+  }
+
+
+
+  &.transparent{
+    li a{      
+      color:$white;
+      background:transparent;
+      
+      &:hover,&:focus{
+        color:$color;
+        background:transparent;
+      }
+    } 
+  }
+
+
+
+
+  &.invert{
+    li a{      
+      color:$color;
+      background:$white;
+      
+      &:hover,&:focus{
+        color:$white;
+        background:$color;
+      }
+    }    
+    &.transparent{
+      li a{      
+        color:$color;
+        background:transparent;
+        
+        &:hover,&:focus{
+          color:$white;
+          background:transparent;
+        }
+      }    
+    }
+  }
+
+
+
+
+
+
+
+  $new-color:darkgreen;
+  &.new-color{
+    
+    li a{      
+      color:$white;
+      background:$new-color;
+      
+      &:hover,&:focus{
+        color:$new-color;
+        background:$white;
+      }
+    }  
+
+    &.invert {
+      li a{      
+        color:$new-color;
+        background:$white;
+        &:hover,&:focus{
+          color:$white;
+          background:$new-color;
+        }
+      }  
+    }  
+
+
+
+
+    &.transparent{
+      li a{      
+        color:$white;
+        background:transparent;
+        
+        &:hover,&:focus{
+          color:$new-color;
+          background:transparent;
+        }
+      } 
+    }
+
+
+
+
+    &.invert{
+      li a{      
+        color:$new-color;
+        background:$white;
+        &:hover,&:focus{
+          color:$white;
+          background:$new-color;
+        }
+      }    
+      
+      &.transparent{
+        li a{      
+          color:$new-color;
+          background:transparent;
+          
+          &:hover,&:focus{
+            color:$white;
+            background:transparent;
+          }
+        }    
+      }
+    }
+
+
+  }
+
+
+
+
+}
+    
+
+
+

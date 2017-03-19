@@ -1,0 +1,74 @@
+
+
+// COLORS:
+
+
+
+$nwg-lightblue: #6cc7e9; //#66d5fa;
+$nwg-highlight: #fe9310;
+$nwg-darkblue: #002e75;
+
+
+
+$nwg-maxwidth: 1300px;
+
+$nwg-darkgrey: #181818;
+
+$pt-color-primary	:	lightgreen	;
+$pt-color-secondary	:	lightblue	;
+$pt-color-highlight	: 	gold 	;
+
+$pt-color-white		: #fff		;
+$pt-color-offwhite	: #fdf6ee 	;
+$pt-color-black		: #000		;
+
+$pt-color-gray-light:		#eeeeee	;
+$pt-color-gray-mid:			#a9a9a9	;
+$pt-color-gray-dark:		#333333 ;
+
+$pt-text-color-light	: #999		;
+$pt-text-color-mid		: #333743 	;
+$pt-text-color-dark		: #656b6f 	;
+
+$pt-text-color : $pt-text-color-mid ;
+
+$pt-bg-light 	:	$pt-color-gray-light 	;
+$pt-bg-mid 		:	$pt-color-gray-mid 		;
+$pt-bg-dark 	:	$pt-color-gray-dark		;
+
+
+
+// PAGETREE CMS IMAGE PATH: /app/webroot/userfiles/###/Image/
+// Example of how to use -- background: url("#{$img-url}/background-image.png") repeat top left;
+$img-url: "img/";
+// $img-url: "/app/webroot/userfiles/285/File/assets/img/";
+
+$fonts-url: "fonts/";
+// $fonts-url: "/app/webroot/userfiles/285/File/assets/fonts/";
+
+
+
+
+// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+
+@mixin nwg-skew($n:-5){
+  transform: skewY($n + deg);
+}
+
+
+
+
+@mixin pseudoMax(){
+    content:'';
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-

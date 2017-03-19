@@ -1,0 +1,204 @@
+ 
+
+
+
+ .nwg-modal{
+
+    background-color:rgba(0,0,0,0.8);
+
+    position:fixed;
+    top:0; left:0; bottom:0; right:0;
+    width:100%; height:100%;
+
+    z-index:999999;
+
+
+    img{
+        max-width:100%;
+    }
+        
+
+    display:none;
+    // opacity:0;
+    
+    // pointer-events: none;
+ 
+}
+ 
+ 
+
+.nwg-modal-inner{
+
+    background-color:rgba(0,0,0,0.9);
+
+    width:95%;
+    max-width:700px;
+    height:auto;
+    // min-height:500px;
+    // margin:auto;
+
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left:50%;
+    top:50%;
+
+    border-radius:5px;
+    
+    padding-top:3em;
+
+}
+
+
+.nwg-modal-viewholder{
+
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+
+    
+
+    max-width:400px;
+    margin:auto;
+    
+    padding:0.5em;
+
+    img{
+        margin:1em auto 0 auto ;
+        // flex: 1 1 40%;
+        // border:1px solid red;
+    }
+}
+
+
+
+.nwg-modal-form{
+    position:relative;
+    display:block;
+
+    width:100%;
+    // flex:0 0 100%;
+
+    padding-top:2em;
+    text-align: center;
+
+    form{
+        border-top:1px solid $nwg-darkblue;
+        padding:2em 0;
+
+        position:relative;
+        margin:auto;
+
+    }
+    
+    input{
+        // text-transform:lowercase;
+        // text-align:center;
+        padding:0.4em 1em;
+        border-radius:5px;
+        border:2px solid transparent;
+        margin-right:1em;
+        color: #999;
+            
+        font-family: $font-body;
+    
+        &.error-outline{
+            border:2px solid red;
+        }
+    }
+
+    .btn{
+        background-color:$nwg-lightblue;
+        color:$nwg-darkblue;
+        border-radius:5px;
+    }
+
+}
+
+
+
+.nwg-modal-action-fmx{
+    position:absolute; bottom:30px; left:-50px;
+    width:170px;
+    height:auto;
+
+    display:none;
+    @include ptBreakpoint($sm){
+        display:block;
+    }
+}
+
+.nwg-modal-action-skate{
+    position:absolute; top:-30px; right:50px;
+    width:120px;
+    height:auto;
+
+    display:none;
+    @include ptBreakpoint($sm){
+        display:block;
+    }
+}
+
+.nwg-modal-action-bmx{
+    position:absolute; top:50px; left:-30px;
+    width:200px; 
+    height:auto;
+
+    transform: scaleX(-1);
+    filter: FlipH;
+
+    display:none;
+    @include ptBreakpoint($sm){
+        display:block;
+    }
+}
+
+
+
+
+
+
+.nwg-modal-close{
+    font-size:1.5em;
+    position:absolute; top:0.5em; right:0.5em;
+    background-color:white;
+    color:black;
+    width:1.5em;
+    height:1.5em;
+    border-radius:50%;
+    text-align:center;
+
+    >.fa-close{
+        position:relative;
+        left:1px;
+    }
+}
+
+ 
+
+.nwg-modal-form-success{
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    // border:1px solid red;
+    
+    font-size:1.5em;
+    
+    padding:1em;
+
+    // @include ptPos(5);
+    color:$nwg-highlight;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    // flex-wrap:wrap;
+
+}
+
+
+
+
+
+
+
+
+
