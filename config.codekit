@@ -2144,17 +2144,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/_deploy\/assets\/pt-base-lib-bundle-v13.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v13.min.js",
-		"outputAbbreviatedPath": "\/_deploy\/assets\/pt-base-lib-bundle-v13.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/_deploy\/assets\/pt-base-v13.min.js": {
 		"fileType": 64,
 		"ignore": 1,

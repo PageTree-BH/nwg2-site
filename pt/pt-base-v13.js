@@ -189,7 +189,7 @@ var PT = {
             console.log.apply(console, arg);
 
         }else{
-            // console.log("ooooooh, I am sorry, but we are in dev mode.");
+            console.log("ooooooh, I am sorry, but we are in dev mode.");
         }
 
     }
