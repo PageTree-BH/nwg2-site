@@ -84,17 +84,22 @@ var PT = {
     ,_isPreloaded : false
 
 
+    ,_ResetOBJs:[]
+
+    ,_ResetSMs:[]
+
+    ,_ResetTLMs:[]
+
+
+
     // SIMPLE STATE MANAGER.js
     ,_SSM: ssm
-
 
     // xs,sm,md,lg,xl
     ,_Size:'xs'
 
-
     // THIS IS THE GLOBAL SCROLLMAGIC CONTROLLER FOR ALL SCROLLING INTERACTION IN THIS FILE:
     ,SM_CTRL: new ScrollMagic.Controller()
-
 
 
 	,init: function() {
@@ -123,7 +128,6 @@ var PT = {
         PT.buildTransitions(true);
 
         PT.buildNavSpy();
-
 
         // PT.buildSIDR();
 
@@ -315,6 +319,52 @@ var PT = {
 
 
 
+    /*
+
+        ########  ########  ######  ######## ########
+        ##     ## ##       ##    ## ##          ##
+        ##     ## ##       ##       ##          ##
+        ########  ######    ######  ######      ##
+        ##   ##   ##             ## ##          ##
+        ##    ##  ##       ##    ## ##          ##
+        ##     ## ########  ######  ########    ##
+
+
+           ###    ##    ## #### ##     ##    ###    ######## ####  #######  ##    ##  ######
+          ## ##   ###   ##  ##  ###   ###   ## ##      ##     ##  ##     ## ###   ## ##    ##
+         ##   ##  ####  ##  ##  #### ####  ##   ##     ##     ##  ##     ## ####  ## ##
+        ##     ## ## ## ##  ##  ## ### ## ##     ##    ##     ##  ##     ## ## ## ##  ######
+        ######### ##  ####  ##  ##     ## #########    ##     ##  ##     ## ##  ####       ##
+        ##     ## ##   ###  ##  ##     ## ##     ##    ##     ##  ##     ## ##   ### ##    ##
+        ##     ## ##    ## #### ##     ## ##     ##    ##    ####  #######  ##    ##  ######
+
+    */
+
+
+
+        ,resetANIMATIONS: function() {
+            PT.log('resetANIMATIONS()', 'orange');
+
+
+            $.each( PT._ResetSMs , function( index, value) {
+                value.destroy(true);
+            });
+
+            $.each( PT._ResetTLMs , function( index, value) {
+                value.kill();
+            });
+
+            $.each( PT._ResetOBJs , function( index, value) {
+                $(value).removeAttr("style");
+            });
+
+
+            PT._ResetSMs   = [];
+            PT._ResetTLMs  = [];
+            PT._ResetOBJs  = [];
+
+        }
+
 
 
 
@@ -351,7 +401,6 @@ var PT = {
                 onEnter: function(){
                     PT.log('~ xs', 'orange');
                     PT._Size = 'xs';
-                    // PT.runImgSwapUploadCareResponsive();
                 }
             },
             {
@@ -360,16 +409,18 @@ var PT = {
                 onEnter: function(){
                     PT.log('~ sm', 'orange');
                     PT._Size = 'sm';
-                    // PT.runImgSwapUploadCareResponsive();
                 }
             },
             {
                 id: 'md',
                 query: '(min-width: 992px) and (max-width: 1200px)',
                 onEnter: function(){
-                    PT.log('~ md', 'orange');
+                    PT.log('~ md : onEnter', 'orange');
                     PT._Size = 'md';
-                    // PT.runImgSwapUploadCareResponsive();
+                },
+                onLeave: function(){
+                    PT.log('~ md : onLeave', 'orange');
+                    PT.resetANIMATIONS();
                 }
             },
             {
@@ -378,7 +429,6 @@ var PT = {
                 onEnter: function(){
                     PT.log('~ lg', 'orange');
                     PT._Size = 'lg';
-                    // PT.runImgSwapUploadCareResponsive();
                 }
             }
             ,{
@@ -387,7 +437,6 @@ var PT = {
                 onEnter: function(){
                     PT.log('~ lg', 'orange');
                     PT._Size = 'xl';
-                    // PT.runImgSwapUploadCareResponsive();
                 }
             }
         ]);
@@ -1094,6 +1143,14 @@ var PT = {
                     // MAYBE THIS SHOULD BE DESTROYED AFTER IT RUNS
                     // scene_fromLeft.on('end', function(e){scene_fromLeft.destroy()} );
                 }
+
+
+                // PT._ResetOBJs.push(thisOBJ);
+                // PT._ResetTLMs.push(thisTLM);
+                // PT._ResetSMs.push(thisSM);
+
+
+
             });
 
 
@@ -1119,6 +1176,13 @@ var PT = {
                     scene_fromRight.reverse(true);
                     scene_fromRight.duration(H/2);
                 }
+
+                // PT._ResetOBJs.push(thisOBJ);
+                // PT._ResetTLMs.push(thisTLM);
+                // PT._ResetSMs.push(thisSM);
+
+
+
             });
 
 
@@ -1144,6 +1208,13 @@ var PT = {
                     scene_fromBottom.reverse(true);
                     scene_fromBottom.duration(H/2);
                 }
+
+
+                // PT._ResetOBJs.push(thisOBJ);
+                // PT._ResetTLMs.push(thisTLM);
+                // PT._ResetSMs.push(thisSM);
+
+
             });
 
 
@@ -1170,6 +1241,14 @@ var PT = {
                     scene_fromTop.reverse(true);
                     scene_fromTop.duration(H/2);
                 }
+
+                // PT._ResetOBJs.push(thisOBJ);
+                // PT._ResetTLMs.push(thisTLM);
+                // PT._ResetSMs.push(thisSM);
+
+
+
+
             });
 
 
@@ -1191,6 +1270,17 @@ var PT = {
                     scene_f.reverse(true);
                     scene_f.duration(H/2);
                 }
+
+
+
+
+
+                // PT._ResetOBJs.push(thisOBJ);
+                // PT._ResetTLMs.push(thisTLM);
+                // PT._ResetSMs.push(thisSM);
+
+
+
             });
 
 
@@ -1198,20 +1288,30 @@ var PT = {
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             $(ZOOM_In).each(function(i, _thing_){
 
-                var tweenFadeIn = new TweenMax.fromTo(_thing_, 1, {alpha:0, scale:0.9}, {alpha:1, scale:1, ease:Power1.easeIn} );
+                var thisOBJ = _thing_;
+                var thisTLM = new TweenMax.fromTo(thisOBJ, 1, {alpha:0, scale:0.9}, {alpha:1, scale:1, ease:Power1.easeIn} );
 
-                var scene_f = new ScrollMagic.Scene({
-                    triggerElement: _thing_
+                var thisSM = new ScrollMagic.Scene({
+                    triggerElement: thisOBJ
                     ,triggerHook:0.9
                 })
                 .addTo(PT.SM_CTRL)
                 .reverse(true)
-                .setTween(tweenFadeIn);
+                .setTween(thisTLM);
 
                 if(_D_){
-                    scene_f.reverse(true);
-                    scene_f.duration(H/2);
+                    thisSM.reverse(true);
+                    thisSM.duration(H/2);
                 }
+
+
+
+                PT._ResetOBJs.push(thisOBJ);
+                PT._ResetTLMs.push(thisTLM);
+                PT._ResetSMs.push(thisSM);
+
+
+
             });
 
 

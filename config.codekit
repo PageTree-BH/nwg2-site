@@ -168,15 +168,6 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
-	"\/_deploy\/articles.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/articles.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_deploy\/assets\/cookies.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2215,29 +2206,38 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_deploy\/styleguide.html": {
+	"\/_deploy\/page-articles.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/styleguide.html",
+		"inputAbbreviatedPath": "\/_deploy\/page-articles.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_deploy\/venue.html": {
+	"\/_deploy\/page-home.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/venue.html",
+		"inputAbbreviatedPath": "\/_deploy\/page-home.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_deploy\/videos.html": {
+	"\/_deploy\/page-styleguide.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_deploy\/videos.html",
+		"inputAbbreviatedPath": "\/_deploy\/page-styleguide.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_deploy\/site-navigation.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/site-navigation.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2288,15 +2288,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
-		},
-	"\/articles.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/articles.kit",
-		"outputAbbreviatedPath": "\/_deploy\/articles.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/bower_components\/tachyons\/bower.json": {
 		"fileType": 524288,
@@ -6018,6 +6009,24 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/page-articles.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-articles.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-articles.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page-home.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-home.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-home.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-styleguide.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -6764,7 +6773,7 @@
 		},
 	"\/site-navigation.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/site-navigation.kit",
 		"outputAbbreviatedPath": "\/_deploy\/site-navigation.html",
@@ -6800,7 +6809,7 @@
 		},
 	"\/site.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/site.kit",
 		"outputAbbreviatedPath": "\/_deploy\/site.html",
