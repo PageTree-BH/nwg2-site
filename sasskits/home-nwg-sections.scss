@@ -71,19 +71,62 @@
 
 
 .sectionNWG{
+    position: relative;
+    height:95vh;
+    width:100%;
+    z-index:5;
+    overflow:hidden;
+    // padding-top:300px;
 
+    &:before{
+        content:'';
+        position: absolute;
+        left:0; right:0;
+        top:-245px;
+        width:100%;
+        height:300px;
+        background:black;
+        transform:skewY($nwg-skew) ;
+        z-index:9;
+    }
 }
-.sectionNWG__header{
-
+.sectionNWG__headline{
+    position: relative;
+    z-index:2;
+    color:white;
+    font-size:10rem;
+    margin:0;
 }
 .sectionNWG__action{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    z-index:2;
 
 }
 .sectionNWG__bg{
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    width:100%; height:100%;
+    z-index:1;
 
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 .sectionNWG__content{
-
+    position: relative;
+    z-index:10;
+    transform:skewY($nwg-skew) ;
+    margin-top:50px;
+    margin-left:5%;
 }
 
 
@@ -284,12 +327,24 @@
 
         }
 
+        >video{
+
+        }
+
+
+
+
         @include ptBreakpoint($nwg){
             position:absolute;
             top:0; left:0; bottom:0; right:0;
             width:100%; height:100%;
             overflow:hidden;
         }
+
+
+
+
+
     }
 }
 

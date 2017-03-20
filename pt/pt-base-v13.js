@@ -679,7 +679,7 @@ var PT = {
 
 
                         if(!PT.isDevMode){
-                            sm_scene.addIndicators({name:"pt-spy-to "+SpyZoneID, indent:100})
+                            sm_scene.addIndicators({name:"pt-spy-to "+SpyZoneID, indent:100});
                         }
 
 
