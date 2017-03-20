@@ -73,7 +73,19 @@
 /* SIDR.JS    SIDEBAR MENU PLUGIN:*/
 // @codekit-prepend "../lib/sidr/jquery.sidr.min.js"
 
+
+
+/* OBJECT-FIT-POLYFILL:*/
+// @codekit-prepend "../lib/object-fit-polyfill-master/dist/objectFitPolyfill.min.js"
+
+
+/* POSITION STICKY POLYFILL:*/
+// @codekit-prepend "../lib/stickyfill-master/dist/stickyfill.min.js"
+
+
+
 /* A SIMPLE COOKIES.JS PLUGIN FROM MOZILLA :
     https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
 */
 // @codekit-prepend "../lib/cookies.js"
+ 

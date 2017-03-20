@@ -8,7 +8,8 @@ $nwg-lightblue: #6cc7e9; //#66d5fa;
 $nwg-highlight: #fe9310;
 $nwg-darkblue: #002e75;
 
-
+$nwg-black: #000000;
+$nwg-white: #ffffff;
 
 $nwg-maxwidth: 1300px;
 
@@ -49,11 +50,16 @@ $fonts-url: "fonts/";
 
 
 
-// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
 
+
+$nwg-skew : -5deg;
 
 @mixin nwg-skew($n:-5){
   transform: skewY($n + deg);
+}
+
+@mixin nwg-textshadow(){
+    text-shadow:#474747 3px 5px 2px;
 }
 
 
@@ -66,9 +72,3 @@ $fonts-url: "fonts/";
     width:100%;
     height:100%;
 }
-
-
-
-
-
-// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-

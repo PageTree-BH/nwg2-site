@@ -7,36 +7,36 @@
 
 
 
-#header-home{
-    z-index:50;
-}
-#section-about{
-    z-index:50;
-}
-
-
-#section-fmx{
-    z-index:5;
-}
-#section-sk8{
-    z-index:5;
-}
-#section-bmx{
-    z-index:5;
-}
-
-
-#section-news{
-    z-index:50;
-}
-#section-quotes{
-    z-index:50;
-}
-
-
-.footer{
-    z-index:50;
-}
+// #header-home{
+//     z-index:50;
+// }
+// #section-about{
+//     z-index:50;
+// }
+//
+//
+// #section-fmx{
+//     z-index:5;
+// }
+// #section-sk8{
+//     z-index:5;
+// }
+// #section-bmx{
+//     z-index:5;
+// }
+//
+//
+// #section-news{
+//     z-index:50;
+// }
+// #section-quotes{
+//     z-index:50;
+// }
+//
+//
+// .footer{
+//     z-index:50;
+// }
 
 
 
@@ -67,69 +67,39 @@
 
 
 
-/* 
-.section-nwg{
 
-    display:flex;
-    flex-direction:column;
 
-    @include ptBreakpoint($nwg){
-        flex-direction:row;
-        
-    }
 
-    .section-header{
-        order:1;
-    }
-
-    .section-action{
-
-    }
-
-    .section-info{
-        order:2;
-    }
-
-    .section-bg{
-        order:1;
-    }
+.sectionNWG{
 
 }
+.sectionNWG__header{
+
+}
+.sectionNWG__action{
+
+}
+.sectionNWG__bg{
+
+}
+.sectionNWG__content{
+
+}
+
+
+
+
+
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-
-
-
-
-
-
-
-
-
-
-
-/* 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-*/
-
-
-
-
-
-
-// .section-nwg.section-nwg-brief{
-//     width:100%;
-//    @include ptBreakpoint($nwg){
-//     width:29%;
-//     border:1px solid red;
-//     float:left;
-//    }
-// }
 
 
 
@@ -140,21 +110,14 @@
     position: relative;
     overflow:hidden;
 
-    border:5px solid white;
+    // border:5px solid white;
     background-color:white;
 
     @include ptBreakpoint($nwg){
-        
+
         border:0px solid white;
 
         @include ptPos(5);
-        
-        // @include ptViewport(height, 95vh);
-        // max-height:800px;
-
-        // .cssvhunit & {
-        //     height:95vh;
-        // }
 
         height:800px;
 
@@ -162,55 +125,50 @@
 
 
 
-
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     .section-header {
-        
-        position:absolute; 
+
+        position:absolute;
         left:50%;
 
         text-transform: uppercase;
-        transform:translate(-50%, -50%) skewY(-5deg); 
+        transform:translate(-50%, -50%) skewY(-5deg);
 
         // bottom:75px;
         bottom:200px;
-        font-size:4rem;           
+        font-size:4rem;
 
         @include ptBreakpoint($sm){
-            // bottom:170px;
-            font-size:6rem;            
+            font-size:6rem;
         }
 
         @include ptBreakpoint($nwg){
-            font-size:8rem;            
-            // bottom:initial;
+            font-size:8rem;
         }
-
     }
 
 
- 
+
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     .section-info{
         position:relative;
-        width:100%;    
+        width:100%;
         margin:0 auto;
         display:flex;
         flex-direction:row;
 
         max-width:500px;
         min-height:280px;
-        font-size:2em; 
+        font-size:2em;
 
         @include ptBreakpoint($sm){
             top:-30px;
         }
-        
 
         @include ptBreakpoint($nwg){
             top:initial;
-            font-size:4em; 
+            font-size:4em;
             max-width:600px;
         }
 
@@ -221,23 +179,21 @@
             }
         }
 
-        .section-info-block{
-            flex:1 1 70%;
-            display:flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items:center;
-            align-content:center;
-            background-color:lightblue; 
-    
-            padding:2rem 1rem 2rem 1rem;
-
-            @include ptBreakpoint($nwg){
-                padding:4rem 3rem 3rem 3rem;
-                // min-height:280px;
-            }
-    
-        }
+        // .section-info-block{
+        //     flex:1 1 70%;
+        //     display:flex;
+        //     flex-direction:column;
+        //     justify-content: center;
+        //     align-items:center;
+        //     align-content:center;
+        //     background-color:lightblue;
+        //
+        //     padding:2rem 1rem 2rem 1rem;
+        //
+        //     @include ptBreakpoint($nwg){
+        //         padding:4rem 3rem 3rem 3rem;
+        //     }
+        // }
 
         h2{
             color:white;
@@ -245,7 +201,7 @@
             text-transform: uppercase;
             margin:0;
             padding:0;
-            
+
             >a{
                 color:inherit;
                 white-space: nowrap;
@@ -256,7 +212,7 @@
             }
 
             @include ptBreakpoint($sm){
-                font-size:2.5rem; 
+                font-size:2.5rem;
             }
 
             @include ptBreakpoint($nwg){
@@ -264,20 +220,17 @@
             }
         }
 
-        hr{
-            color:white;
-            width:100%;
-            border-top:2px solid white;
-            margin:0.5rem;
-            padding:0;
-        }
+        // hr{
+        //     color:white;
+        //     width:100%;
+        //     border-top:2px solid white;
+        //     margin:0.5rem;
+        //     padding:0;
+        // }
 
-        a.btn{
-            margin-top:1em;
-        }
-
-
-
+        // a.btn{
+        //     margin-top:1em;
+        // }
     }
 
 
@@ -297,23 +250,18 @@
         display:none;
 
         pointer-events: none;
-    
+
         @include ptBreakpoint($nwg){
             display:block;
         }
 
         .action-person{
-            // border:1px solid orange;
             position: relative;
             z-index:2;
         }
 
         .action-shadow{
-            // border:1px solid green;
             position: absolute;
-            // top:0; left:0;
-            // top:40px;
-            // left:40px;
             z-index:1;
         }
 
@@ -327,401 +275,345 @@
 
 
 
-
-
-
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    .section-bg{ 
+    .section-bg{
 
         >img{
             width:100%;
             height:auto;
+
         }
 
         @include ptBreakpoint($nwg){
-            // border:2px dashed gold;
-
             position:absolute;
-            top:0; left:0; bottom:0; right:0; 
+            top:0; left:0; bottom:0; right:0;
             width:100%; height:100%;
             overflow:hidden;
-
-            // // .no-touchevents &{
-            // //   // background-attachment:fixed;
-            // // }
-
-            // >img{
-            //   // display:none;
-            // }
         }
     }
-
-
-
-
-
-
-
-
-
 }
 
 
 
 
-// .section-action{
-//     @include ptBreakpoint($nwg){
-//         // transform: scale(1.5) !important;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// #section-fmx{
+//
+//
+//     .section-header{
+//         color:black;
+//         // bottom:75px;
 //     }
+//
+//     .section-info{
+//         .section-info-block{
+//             @include ptZoneColors ( rgba($nwg-darkblue, 0.9), white, white, white);
+//         }
+//     }
+//
+//     .section-bg{
+//         // background-image:url($img-url+'section-fmx-bg.jpg');
+//     }
+//
+//     @include ptBreakpoint($sm){
+//         .section-header{
+//             // bottom:100px;
+//         }
+//     }
+//
+//     @include ptBreakpoint($nwg){
+//
+//         background-image:url($img-url+'bg-blue-splat.jpg');
+//         background-size:40% 100%;
+//         background-repeat:no-repeat;
+//         background-position:100% 50%;
+//
+//
+//         // padding-top:300px;
+//
+//
+//         .section-header{
+//             left:60%;
+//             top:30%;
+//             bottom:initial;
+//         }
+//
+//         .section-info{
+//             position:relative;
+//             left:15%;
+//         }
+//
+//         .section-bg{
+//             position:absolute;
+//             width:60%;
+//
+//             background-image:url($img-url+'section-fmx-bg.jpg');
+//
+//             background-size:cover;
+//             background-repeat:no-repeat;
+//             background-position:90% 50%;
+//
+//             .no-touchevents &{
+//                 background-attachment:fixed;
+//                 background-size:cover;
+//                 background-position:-400px 0;
+//             }
+//
+//             >img{
+//                 display:none;
+//             }
+//
+//         }
+//
+//         .section-action{
+//             display:block;
+//             position:absolute;
+//             top:20%;
+//             right:-5%;
+//             left:initial;
+//             bottom:initial;
+//
+//
+//             .action-person{
+//                 position: relative;
+//             }
+//
+//             .action-shadow{
+//                 position: absolute;
+//                 top:40px;
+//                 left:-40px;
+//             }
+//
+//             @include ptBreakpoint($lg){
+//                 right:5%;
+//             }
+//
+//         }
+//
+//     }
+//
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#section-fmx{
-
-
-    .section-header{
-        color:black;
-        // bottom:75px;
-    }
-
-    .section-info{
-        .section-info-block{
-            @include ptZoneColors ( rgba($nwg-darkblue, 0.9), white, white, white);
-        }
-    }
-
-    .section-bg{
-        // background-image:url($img-url+'section-fmx-bg.jpg'); 
-    }
-
-    @include ptBreakpoint($sm){  
-        .section-header{
-            // bottom:100px;
-        }      
-    }
-
-    @include ptBreakpoint($nwg){    
-
-        background-image:url($img-url+'bg-blue-splat.jpg');
-        background-size:40% 100%;
-        background-repeat:no-repeat;      
-        background-position:100% 50%;
-
-
-        // padding-top:300px;
-
-
-        .section-header{
-            left:60%;
-            top:30%;
-            bottom:initial;
-        }
-
-        .section-info{
-            position:relative;
-            left:15%;
-        }
-
-        .section-bg{
-            position:absolute;
-            width:60%;
-
-            background-image:url($img-url+'section-fmx-bg.jpg'); 
-
-            background-size:cover;
-            background-repeat:no-repeat;      
-            background-position:90% 50%;
-
-            .no-touchevents &{
-                background-attachment:fixed;
-                background-size:cover;
-                background-position:-400px 0;
-            }
-
-            >img{
-                display:none;
-            }
-
-        }
-
-        .section-action{
-            display:block;
-            position:absolute; 
-            top:20%; 
-            right:-5%; 
-            left:initial;
-            bottom:initial;
-
-        
-            .action-person{
-                position: relative;
-            }
-
-            .action-shadow{
-                position: absolute;
-                top:40px;
-                left:-40px;
-            }
-
-            @include ptBreakpoint($lg){
-                right:5%; 
-            }
-        
-        }
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#section-sk8{
-
-    .section-header{
-        color:white;
-        // bottom:30px;
-    }
-
-    .section-info{
-        .section-info-block{
-          @include ptZoneColors ( rgba($nwg-lightblue, 0.9) , $nwg-darkblue, $nwg-darkblue, $nwg-darkblue);
-        }
-    }
-    @include ptBreakpoint($sm){  
-        .section-header{
-            // bottom:45px;
-        }      
-    }
-    @include ptBreakpoint($nwg){
-
-        .section-header{
-            top:30%;
-            left:60%;
-            bottom:initial;
-        }
-
-        .section-info{
-            position:relative;
-            max-width:400px;
-
-            // top:-3%; left:43%;
-            // border:1px solid red;
-        }
-
-        .section-bg{
-            width:100%;
-            // background-image:url($img-url+'section-sk8-bg.jpg'); 
-            background-image:url($img-url+'section-sk8-bg-lg.jpg'); 
-            
-            background-size:cover;
-            background-repeat:no-repeat;      
-            background-position:50% 50%;
-
-            .no-touchevents &{
-                background-position:80% 50%;
-                background-attachment:fixed;
-            }
-
-            >img{
-                display:none;
-            }
-
-        }
-
-        .section-action{
-            display:block;
-            position:absolute; 
-            top:30%; 
-            right:20%; 
-            left:initial;
-            bottom:initial;
-
-            .action-person{
-                position: relative;
-            }
-
-            .action-shadow{
-                position: absolute;
-                top:40px;
-                left:-40px;
-            }
-
-        }
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#section-bmx{
-    
-    .section-header{
-        color:black;
-        // bottom:75px;
-    }
-    
-    .section-info{
-        .section-info-block{
-            @include ptZoneColors ( rgba($nwg-darkblue, 0.9), white, white, white);
-        }
-    }
-
-    @include ptBreakpoint($sm){  
-        .section-header{
-            // bottom:100px;
-        }      
-    }
-
-
-    @include ptBreakpoint($nwg){    
-
-        background-image:url($img-url+'bg-blue-splat.jpg');
-        background-size:40% 100%;
-        background-repeat:no-repeat;      
-        background-position:0 50%;
-
-        .section-header{
-            top:25%;
-            left:20%;
-            bottom:initial;
-        }
-
-        .section-info{
-            position:relative;
-            right:15%;
-            
-            // top:-8%; 
-            // left:12%;
-        }
-
-        .section-bg{
-            position:absolute;
-            width:61%;
-            left:39%;
-
-            background-image:url($img-url+'section-bmx-bg.jpg'); 
-
-            background-size:cover;
-            background-repeat:no-repeat;      
-            background-position:10% 50%;
-
-            .no-touchevents &{
-                background-attachment:fixed;
-                background-size:cover;
-
-                background-position:150px 0;
-
-                @include ptBreakpoint($lg){ 
-                    background-position:300px 0;
-                }
-                @include ptBreakpoint($xl){ 
-                    background-position:400px 0;
-                }
-            }
-
-            >img{
-                display:none;
-            }
-        }
-
-
-        .section-action{
-            display:block;
-            position:absolute; 
-            // right:initial; 
-            // bottom:initial;
-            top:6%; 
-            left:12%;
-        
-            .action-person{
-                position: relative;
-            }
-
-            .action-shadow{
-                position: absolute;
-                top:40px;
-                left:-40px;
-            }
-
-        }
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// #section-sk8{
+//
+//     .section-header{
+//         color:white;
+//         // bottom:30px;
+//     }
+//
+//     .section-info{
+//         .section-info-block{
+//           @include ptZoneColors ( rgba($nwg-lightblue, 0.9) , $nwg-darkblue, $nwg-darkblue, $nwg-darkblue);
+//         }
+//     }
+//     @include ptBreakpoint($sm){
+//         .section-header{
+//             // bottom:45px;
+//         }
+//     }
+//     @include ptBreakpoint($nwg){
+//
+//         .section-header{
+//             top:30%;
+//             left:60%;
+//             bottom:initial;
+//         }
+//
+//         .section-info{
+//             position:relative;
+//             max-width:400px;
+//
+//             // top:-3%; left:43%;
+//             // border:1px solid red;
+//         }
+//
+//         .section-bg{
+//             width:100%;
+//             // background-image:url($img-url+'section-sk8-bg.jpg');
+//             background-image:url($img-url+'section-sk8-bg-lg.jpg');
+//
+//             background-size:cover;
+//             background-repeat:no-repeat;
+//             background-position:50% 50%;
+//
+//             .no-touchevents &{
+//                 background-position:80% 50%;
+//                 background-attachment:fixed;
+//             }
+//
+//             >img{
+//                 display:none;
+//             }
+//
+//         }
+//
+//         .section-action{
+//             display:block;
+//             position:absolute;
+//             top:30%;
+//             right:20%;
+//             left:initial;
+//             bottom:initial;
+//
+//             .action-person{
+//                 position: relative;
+//             }
+//
+//             .action-shadow{
+//                 position: absolute;
+//                 top:40px;
+//                 left:-40px;
+//             }
+//
+//         }
+//
+//     }
+//
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// #section-bmx{
+//
+//     .section-header{
+//         color:black;
+//         // bottom:75px;
+//     }
+//
+//     .section-info{
+//         .section-info-block{
+//             @include ptZoneColors ( rgba($nwg-darkblue, 0.9), white, white, white);
+//         }
+//     }
+//
+//     @include ptBreakpoint($sm){
+//         .section-header{
+//             // bottom:100px;
+//         }
+//     }
+//
+//
+//     @include ptBreakpoint($nwg){
+//
+//         background-image:url($img-url+'bg-blue-splat.jpg');
+//         background-size:40% 100%;
+//         background-repeat:no-repeat;
+//         background-position:0 50%;
+//
+//         .section-header{
+//             top:25%;
+//             left:20%;
+//             bottom:initial;
+//         }
+//
+//         .section-info{
+//             position:relative;
+//             right:15%;
+//
+//             // top:-8%;
+//             // left:12%;
+//         }
+//
+//         .section-bg{
+//             position:absolute;
+//             width:61%;
+//             left:39%;
+//
+//             background-image:url($img-url+'section-bmx-bg.jpg');
+//
+//             background-size:cover;
+//             background-repeat:no-repeat;
+//             background-position:10% 50%;
+//
+//             .no-touchevents &{
+//                 background-attachment:fixed;
+//                 background-size:cover;
+//
+//                 background-position:150px 0;
+//
+//                 @include ptBreakpoint($lg){
+//                     background-position:300px 0;
+//                 }
+//                 @include ptBreakpoint($xl){
+//                     background-position:400px 0;
+//                 }
+//             }
+//
+//             >img{
+//                 display:none;
+//             }
+//         }
+//
+//
+//         .section-action{
+//             display:block;
+//             position:absolute;
+//             // right:initial;
+//             // bottom:initial;
+//             top:6%;
+//             left:12%;
+//
+//             .action-person{
+//                 position: relative;
+//             }
+//
+//             .action-shadow{
+//                 position: absolute;
+//                 top:40px;
+//                 left:-40px;
+//             }
+//
+//         }
+//
+//     }
+
+// }

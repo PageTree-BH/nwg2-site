@@ -16,7 +16,7 @@ YT:true
 
 
 // LET'S NOT IMPORT THIS HERE SO THAT WE DONT COMPILE IT EACH TIME.
-// @  codekit-prepend "pt/pt-base-v13.js"
+// @codekit-prepend "pt/pt-base-v13.js"
 
 
 
@@ -31,8 +31,8 @@ YT:true
 // @        codekit-append "sasskits/nwg-modal.js"
 
 
-// PT._isDevMode = true;
 
+// PT._isDevMode = true;
 
 $(function() {
 

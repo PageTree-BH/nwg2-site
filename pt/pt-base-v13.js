@@ -121,9 +121,9 @@ var PT = {
 
         PT.buildSlicks();
 
-        PT.runImgSwaps();
+        // PT.runImgSwaps();
 
-        PT.runStickies();
+        // PT.runStickies();
 
         PT.buildTransitions(true);
 
@@ -285,7 +285,7 @@ var PT = {
  */
 
     ,checkPreloader:function(){
-        PT.log('PT.checkPreloader()', 'green');
+        PT.log('PT.checkPreloader() - this function is empty.', 'green');
 
         // var _pl = $('.pt-preloader');
         //
@@ -490,73 +490,71 @@ var PT = {
 */
 
 
-
-    ,runStickies:function(){
-
-        $('[data-pt-sticky]').each(function(i, val){
-            PT.makeSticky( $(this) );
-        });
-
-    }
-
-
-    ,makeSticky: function(item){
-        PT.log('PT.makeSticky() ' + item, 'green');
-
-        var thisItem = $(item);
-        var thisData = thisItem.data('pt-sticky');
-        // var thisOffset = thisData.offset;
-
-        var scene1 = new ScrollMagic.Scene({
-            triggerElement: item
-            ,triggerHook: 'onLeave'
-        })
-        .setPin(item, {pushFollowers: false})
-        .setClassToggle(thisItem, "isStuck")
-        .addTo(PT.SM_CTRL);
-
-
-
-        if( thisData.offset != undefined){
-            if( $.isNumeric( thisData.offset ) ){
-                scene1.offset( thisData.offset );
-            }else{
-                scene1.offset( - $( thisData.offset ).height() );
-            }
-        }
-
-        if( thisData.offset2 != undefined){
-            if( $.isNumeric( thisData.offset2 ) ){
-                scene1.offset( parseInt(scene1.offset() ) + parseInt(thisData.offset2) );
-            }else{
-                scene1.offset( parseInt( scene1.offset() ) + (- parseInt( $( thisData.offset2 ).height()) ) );
-            }
-        }
-
-        if( thisData.duration != undefined){
-            if( $.isNumeric( thisData.duration ) ){
-                scene1.duration( thisData.duration );
-            }else{
-                scene1.duration( $( thisData.duration ).height()  );
-            }
-        }
-
-        if(PT._isDevMode){
-            // .addIndicators({name:"pt-spy-to " +SpyZoneID, indent:100})
-            scene1.addIndicators({name:"PT.makeSticky " + thisItem });
-        }
-
-        if( thisData.fullWidth ){
-
-            // console.log(scene1.state());
-            $(window).resize( function(){
-                if( scene1.state() === "DURING") {
-                    TweenMax.set(thisItem, {width:'100%'} );
-                }
-            });
-        }
-
-    }
+    //
+    // ,runStickies:function(){
+    //
+    //     $('[data-pt-sticky]').each(function(i, val){
+    //         PT.makeSticky( $(this) );
+    //     });
+    // }
+    //
+    //
+    // ,makeSticky: function(item){
+    //     PT.log('PT.makeSticky() ' + item, 'green');
+    //
+    //     var thisItem = $(item);
+    //     var thisData = thisItem.data('pt-sticky');
+    //
+    //     var scene1 = new ScrollMagic.Scene({
+    //         triggerElement: item
+    //         ,triggerHook: 'onLeave'
+    //     })
+    //     .setPin(item, {pushFollowers: false})
+    //     .setClassToggle(thisItem, "isStuck")
+    //     .addTo(PT.SM_CTRL);
+    //
+    //
+    //
+    //     if( thisData.offset != undefined){
+    //         if( $.isNumeric( thisData.offset ) ){
+    //             scene1.offset( thisData.offset );
+    //         }else{
+    //             scene1.offset( - $( thisData.offset ).height() );
+    //         }
+    //     }
+    //
+    //     if( thisData.offset2 != undefined){
+    //         if( $.isNumeric( thisData.offset2 ) ){
+    //             scene1.offset( parseInt(scene1.offset() ) + parseInt(thisData.offset2) );
+    //         }else{
+    //             scene1.offset( parseInt( scene1.offset() ) + (- parseInt( $( thisData.offset2 ).height()) ) );
+    //         }
+    //     }
+    //
+    //     if( thisData.duration != undefined){
+    //         if( $.isNumeric( thisData.duration ) ){
+    //             scene1.duration( thisData.duration );
+    //         }else{
+    //             scene1.duration( $( thisData.duration ).height()  );
+    //         }
+    //     }
+    //
+    //     if(PT._isDevMode){
+    //         // .addIndicators({name:"pt-spy-to " +SpyZoneID, indent:100})
+    //         scene1.addIndicators({name:"PT.makeSticky " + thisItem });
+    //     }
+    //
+    //     if( thisData.fullWidth ){
+    //
+    //         // console.log(scene1.state());
+    //         $(window).resize( function(){
+    //             if( scene1.state() === "DURING") {
+    //                 TweenMax.set(thisItem, {width:'100%'} );
+    //             }
+    //         });
+    //     }
+    //
+    // }
 
 
 
@@ -780,60 +778,60 @@ var PT = {
 
  */
 
-    ,imgSwap: function(_img, _div) {
-        // PT.log('PT.imgSwap()');
-        var IMG = _img;
-        var DIV = _div;
-        var IMGurl = IMG.attr('src');
-
-        IMG.css('display', 'none');
-        // IMG.css('visibility', 'hidden');
-
-        DIV.css('background-image', 'url("'+IMGurl+'")' )
-            .css('background-size', 'cover')
-            .css('background-position','center');
-
-    }
-
-
-    // RUNS PT.imgSwap ON A PRESET BUNCH OF CLASSSES;
-    ,runImgSwaps: function() {
-        PT.log('PT.runImgSwaps() { ', 'green');
-
-        /*
-            <div data-pt-imgswap ><img src="http://placehold.it/500x300/?text=Img 4b "></div>
-        */
-        $('[data-pt-imgswap]').each(function(i, val){
-            PT.imgSwap( $(val).find('img:first'), $(val) );
-        });
-
-
-        /*
-            <ul data-pt-imgswap-list>
-                <li><img src="http://placehold.it/500x300/?text=Img 4b "></li>
-                <li><img src="http://placehold.it/500x300/?text=Img 5b "></li>
-                <li><img src="http://placehold.it/500x300/?text=Img 6b"></li>
-            </ul>
-        */
-        $('ul[data-pt-imgswap-list] li').each(function(i, val){
-            console.log('ul[data-pt-imgswap-list] > li');
-            PT.imgSwap( $(val).find('img:first'), $(val) );
-        });
-
-
-        /*
-            <div data-pt-imgswap-list>
-                <div><img src="http://placehold.it/500x300/?text=Img 4b "></div>
-                <div><img src="http://placehold.it/500x300/?text=Img 5b "></div>
-                <div><img src="http://placehold.it/500x300/?text=Img 6b "></div>
-            </div>
-        */
-        $('div[data-pt-imgswap-list] > div').each(function(i, val){
-            console.log('div[data-pt-imgswap-list] > div');
-            PT.imgSwap( $(val).find('img:first'), $(val) );
-        });
-
-    }
+    // ,imgSwap: function(_img, _div) {
+    //     // PT.log('PT.imgSwap()');
+    //     var IMG = _img;
+    //     var DIV = _div;
+    //     var IMGurl = IMG.attr('src');
+    //
+    //     IMG.css('display', 'none');
+    //     // IMG.css('visibility', 'hidden');
+    //
+    //     DIV.css('background-image', 'url("'+IMGurl+'")' )
+    //         .css('background-size', 'cover')
+    //         .css('background-position','center');
+    //
+    // }
+    //
+    //
+    // // RUNS PT.imgSwap ON A PRESET BUNCH OF CLASSSES;
+    // ,runImgSwaps: function() {
+    //     PT.log('PT.runImgSwaps() { ', 'green');
+    //
+    //     /*
+    //         <div data-pt-imgswap ><img src="http://placehold.it/500x300/?text=Img 4b "></div>
+    //     */
+    //     $('[data-pt-imgswap]').each(function(i, val){
+    //         PT.imgSwap( $(val).find('img:first'), $(val) );
+    //     });
+    //
+    //
+    //     /*
+    //         <ul data-pt-imgswap-list>
+    //             <li><img src="http://placehold.it/500x300/?text=Img 4b "></li>
+    //             <li><img src="http://placehold.it/500x300/?text=Img 5b "></li>
+    //             <li><img src="http://placehold.it/500x300/?text=Img 6b"></li>
+    //         </ul>
+    //     */
+    //     $('ul[data-pt-imgswap-list] li').each(function(i, val){
+    //         console.log('ul[data-pt-imgswap-list] > li');
+    //         PT.imgSwap( $(val).find('img:first'), $(val) );
+    //     });
+    //
+    //
+    //     /*
+    //         <div data-pt-imgswap-list>
+    //             <div><img src="http://placehold.it/500x300/?text=Img 4b "></div>
+    //             <div><img src="http://placehold.it/500x300/?text=Img 5b "></div>
+    //             <div><img src="http://placehold.it/500x300/?text=Img 6b "></div>
+    //         </div>
+    //     */
+    //     $('div[data-pt-imgswap-list] > div').each(function(i, val){
+    //         console.log('div[data-pt-imgswap-list] > div');
+    //         PT.imgSwap( $(val).find('img:first'), $(val) );
+    //     });
+    //
+    // }
 
 
 
@@ -2074,7 +2072,7 @@ var PT = {
 
 
     ,addRandomClass: function(_obj, _arr) {
-        PT.log('addRandomClass()');
+        PT.log('addRandomClass()', "yellow");
         var arr = _arr;
         var obj = $(_obj);
         obj.addClass( arr[ Math.floor(Math.random() * arr.length)  ]  );
