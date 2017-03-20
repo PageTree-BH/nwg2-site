@@ -32,7 +32,7 @@ YT:true
 
 
 
-// PT._isDevMode = true;
+PT._isDevMode = true;
 
 $(function() {
 

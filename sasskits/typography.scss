@@ -112,6 +112,12 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+blockquote{
+    padding: 1em 2em;
+    margin: 0 0 2em;
+    font-size: 1.5em;
+    border-left: 5px solid $nwg-darkblue;
+}
 
 
 @mixin bg-white() {
@@ -178,7 +184,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-.txt-textshadow{
+.txt-shadow{
     // text-shadow:#474747 3px 5px 2px;
     @include nwg-textshadow();
 }
@@ -218,17 +224,29 @@ h1,h2,h3,h4,h5,h6{
 
     font-size:3rem;
     margin:1em auto;
-    text-align: center;
 
     width:100%;
 
     position:relative;
-    left:50%;
-
+    // left:50%;
     // transform:translate(-50%, -90%) skewY($nwg-skew) perspective(1px);
-    transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
+    // transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
 
+    transform:skewY($nwg-skew) perspective(1px);
 
+    &.align-left{
+
+    }
+    &.align-center{
+        text-align: center;
+        left:50%;
+        transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
+    }
+    &.align-right{
+        text-align: right;
+        left:100%;
+        transform:translate(-100%, 0) skewY($nwg-skew) perspective(1px);
+    }
     @include ptBreakpoint($nwg){
         font-size:5rem;
     }
