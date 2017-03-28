@@ -12,7 +12,7 @@ Modernizr:true, jQuery:true, ssm:true,
 YT:true
 
 */
-
+ 
 
 
 // LET'S NOT IMPORT THIS HERE SO THAT WE DONT COMPILE IT EACH TIME.
@@ -21,9 +21,12 @@ YT:true
 
 
 // @codekit-append "site-navigation.js"
+
 // @codekit-append "_thatnewnew/homepage.js"
-// @codekit-append "_thatnewnew/homepage-video.js"
-// @codekit-append "_thatnewnew/newnew-vids.js"
+
+// @     codekit-append "_thatnewnew/homepage-video.js"
+
+// @codekit-append "_thatnewnew/buildBgVids.js"
 
 
 

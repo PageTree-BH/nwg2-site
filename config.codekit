@@ -2238,6 +2238,17 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
+	"\/_thatnewnew\/buildBgVids.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_thatnewnew\/buildBgVids.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/buildBgVids.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/_thatnewnew\/footer.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -2249,7 +2260,7 @@
 		},
 	"\/_thatnewnew\/homepage-video.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_thatnewnew\/homepage-video.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/homepage-video.min.js",
@@ -2264,17 +2275,6 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/_thatnewnew\/homepage.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/homepage.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/_thatnewnew\/newnew-vids.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_thatnewnew\/newnew-vids.js",
-		"outputAbbreviatedPath": "\/_deploy\/assets\/newnew-vids.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

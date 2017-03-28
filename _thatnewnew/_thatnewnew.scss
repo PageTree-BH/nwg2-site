@@ -13,61 +13,10 @@
 }
 
 
-//
-// .myVideoHolder{
-//     position:relative;
-//     display:block;
-//     width:100%;
-//     margin:0;
-//     padding:0;
-//
-//     &:after{
-//         content:" ";
-//         display:block;
-//         position: absolute;
-//         top:0; left:0; bottom:0; right:0;
-//         width:100%; height:100%;
-//         background-color:blue;
-//         opacity:0.1;
-//         z-index: 5;
-//     }
-//
-//     video.fillvid{
-//         position:relative;
-//         display:block;
-//         width:100%;
-//         height:auto;
-//         z-index:1;
-//     }
-// }
-
-//
-// .section-nwg .myVideoHolder{
-//     position:absolute;
-//     top:0; left:0; bottom:0; right:0;
-//     width:100%; height:100%;
-//     overflow:hidden;
-//     z-index: -1;
-//     // opacity:0;
-//     // visibility:hidden;
-//
-//
-//     video{
-//         // position:fixed;
-//         // top:0; left:0; bottom:0; right:0;
-//         // width:100%; height:100%;
-//
-//     }
-// }
-
-
-
-
-
-
-
-
-
+.svg-clipped {
+    clip-path: url(#svgPath);
+    -webkit-clip-path: url(#svgPath);
+}
 
 
 

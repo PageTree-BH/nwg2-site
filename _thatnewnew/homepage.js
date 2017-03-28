@@ -72,8 +72,10 @@
         // }
 
 
-if(true){
+if(false){
     okDO();
+}else{
+    ThisCOVER.remove();
 }
 
 
