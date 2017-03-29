@@ -51,26 +51,46 @@ NWG.buildNavigation_ = function() {
         var topBarHeight = "-" + topBar.outerHeight() + 'px';
         topBar.addClass('fixy-top');
 
-        var triggerPos = 100;
+        // var triggerPos = topBar.outerHeight();
+        // var triggerPos = topBar.outerHeight();
+        var triggerPos = 0;
         var i1 = 0;
         var i2 = 0;
 
-        var myScene = new ScrollMagic.Scene();
+        var myScene = new ScrollMagic.Scene({
+            triggerHook:0.5
+        });
         myScene.addTo(PT.SM_CTRL);
+        myScene.setPin(topBar, {pushFollowers: false});
+        // myScene.offset(triggerPos);
+        // myScene.offset(10);
+        myScene.addIndicators();
+
+        // myScene.on("enter", function (event) {
+        //     $('.viewport').css({'padding-top':'100px'});
+        //     topBar.addClass('fixy-top');
+        // });
+        //
+        // myScene.on("leave", function (event) {
+        //     $('.viewport').css({'padding-top':'0px'});
+        //     topBar.removeClass('fixy-top');
+        // });
+
+
         myScene.on("update", function() {
             var x1 = PT.SM_CTRL.info("scrollDirection");
             var x2 = $(window).scrollTop();
             var x3 = triggerPos;
 
             if ( x1 === "REVERSE" && x2 >= x3 && i1 === 0) {
-                // console.log("REVERSE");
-                    TweenMax.fromTo(topBar, 0.6, {top: topBarHeight}, {top: "0px", ease: Power1.easeInOut});
+                    // TweenMax.fromTo(topBar, 0.6, {top: topBarHeight}, {top: "0px", ease: Power1.easeInOut});
+                    TweenMax.to(topBar, 0.6, {top: "0px", ease: Power1.easeInOut});
                 i1++;
                 i2 = 0;
             }
             if ( x1 === "FORWARD" && x2 > x3 && i2 === 0) {
-                // console.log("FORWARD");
-                    TweenMax.fromTo(topBar, 0.6, {top: "0px"}, {top: topBarHeight, ease: Power1.easeInOut});
+                    // TweenMax.fromTo(topBar, 0.6, {top: "0px"}, {top: topBarHeight, ease: Power1.easeInOut});
+                    TweenMax.to(topBar, 0.6, {top: topBarHeight, ease: Power1.easeInOut});
                 i1 = 0;
                 i2++;
             }

@@ -24,19 +24,32 @@
     font-style: normal;
 }
 $font-header: 'archiveregular';
+$font-header1: $font-header;
+
 $font-header2: 'bebas_neueregular';
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $font-paragraph: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-body: $font-paragraph;
-$font-button: $font-header2;
+$font-button: $font-header1;
 
 :root {
-    font-size: 16px;
+    font-size: 12px;
+    @include ptBreakpoint($sm){
+        font-size:14px;
+    }
+    @include ptBreakpoint($md){
+        font-size:16px;
+    }
+    @include ptBreakpoint($lg){
+        font-size:18px;
+    }
 }
 
-// html {
-//     font: 100%/1;
-// }
+html {
+    // font: 100%/1;
+}
+
+
 
 body {
     font-family: $font-paragraph;
@@ -94,7 +107,7 @@ h6,
 }
 
 p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: $font-paragraph;
     letter-spacing: 0.1em;
     line-height: 1.5rem;
@@ -102,13 +115,30 @@ p{
 
 
 h1,h2,h3,h4,h5,h6{
-    >span{
+    letter-spacing: 0.05em;
+    // line-height: 1em;
+
+    span{
+        position: relative;
         color:white;
-        padding:0 0.25em;
-        line-height:1.2em;
+        padding:0.3em 0.8em;
+        line-height:1.7em;
         display:inline;
         background-color:rgba($nwg-darkblue, 0.8);
         box-decoration-break: clone;
+
+    }
+    a{
+        color:white;
+        text-decoration:none;
+        transition:0.2s;
+
+        &:hover, &:focus{
+            text-decoration:none;
+            span{
+                background-color:black;
+            }
+        }
     }
 }
 
@@ -160,11 +190,22 @@ blockquote{
 
 
 
+.nwg-skew {
+    transform: skewY($nwg-skew);
+}
 
 
 
 
-
+.txt-center{
+    text-align: center;
+}
+.txt-left{
+    text-align:left;
+}
+.txt-right{
+    text-align:right;
+}
 
 .txt-lightblue{
     color:$nwg-lightblue;
@@ -219,39 +260,39 @@ blockquote{
 
 
 
-
-.nwg-headline{
-
-    font-size:3rem;
-    margin:1em auto;
-
-    width:100%;
-
-    position:relative;
-    // left:50%;
-    // transform:translate(-50%, -90%) skewY($nwg-skew) perspective(1px);
-    // transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
-
-    transform:skewY($nwg-skew) perspective(1px);
-
-    &.align-left{
-
-    }
-    &.align-center{
-        text-align: center;
-        left:50%;
-        transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
-    }
-    &.align-right{
-        text-align: right;
-        left:100%;
-        transform:translate(-100%, 0) skewY($nwg-skew) perspective(1px);
-    }
-    @include ptBreakpoint($nwg){
-        font-size:5rem;
-    }
-
-}
+//
+// .nwg-headline{
+//
+//     font-size:3rem;
+//     margin:1em auto;
+//
+//     width:100%;
+//
+//     position:relative;
+//     // left:50%;
+//     // transform:translate(-50%, -90%) skewY($nwg-skew) perspective(1px);
+//     // transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
+//
+//     transform:skewY($nwg-skew) perspective(1px);
+//
+//     &.align-left{
+//
+//     }
+//     &.align-center{
+//         text-align: center;
+//         left:50%;
+//         transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
+//     }
+//     &.align-right{
+//         text-align: right;
+//         left:100%;
+//         transform:translate(-100%, 0) skewY($nwg-skew) perspective(1px);
+//     }
+//     @include ptBreakpoint($nwg){
+//         font-size:5rem;
+//     }
+//
+// }
 
 
 
@@ -293,7 +334,8 @@ blockquote{
     padding: 0.5em 1em;
     text-align: center;
     font-family: $font-button;
-
+    display:inline-block;
+    cursor: pointer;
     border: 0;
     border-radius: 0;
 

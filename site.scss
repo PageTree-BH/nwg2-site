@@ -6,10 +6,14 @@
 
 // @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 
-// @import "bourbon";
-// @import "bourbon", "neat";
+// @ import "bourbon";
+// @ import "bourbon", "neat";
+
+
 
 // @import "../bower_components/tachyons/css/tachyons.min.css";
+
+
 
 
 @import "SITE-VARS";
@@ -21,12 +25,18 @@ $nwg: $md;
 
 @import "pt/_pt-Library.scss";
 
-@import "sasskits/typography.scss";
+
+
 
 @import "sasskits/_site-base.scss";
 
 
-@import "sasskits/NWG-HomePlate.scss";
+@import "sasskits/typography.scss";
+
+
+
+// @import "sasskits/NWG-HomePlate.scss";
+@import "_thatnewnew/NWG-HomePlate.scss";
 
 
 @import "sasskits/nwg-nav.scss";
@@ -35,10 +45,10 @@ $nwg: $md;
 // @import "sasskits/ab-sections.scss";
 
 
-@import "sasskits/home-nwg-sections.scss";
+@import "sasskits/sectionNWG.scss";
 
 
-@import "sasskits/nwg-modal.scss";
+// @import "sasskits/nwg-modal.scss";
 
 
 
@@ -56,22 +66,9 @@ $nwg: $md;
 
 
 
-
-// NAVIGATION OPTIONS:
-// sidr.js BASED SIDE MENU:
-// @import "sasskits/sidr/sidr_custom";
-
-// BootStrap BASED TOP MENU:
-// @import "sasskits/top-navigation";
-
-
-
 // ALTERNATE TO FLEXSLIDER:
 @import "sasskits/slick/slick-theme";
 @import "sasskits/slick/slick";
-
-
-
 
 
 

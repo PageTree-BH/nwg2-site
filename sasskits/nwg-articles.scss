@@ -20,6 +20,65 @@
     // .main contenbt wrapper
 }
 
+.article-container{
+    padding:0 1em;
+    max-width:1000px;
+    margin:auto;
+    z-index:2;
+    position: relative;
+    top:-2em;
+
+    background:$nwg-white;
+
+
+    img{
+        margin:2em auto;
+    }
+
+
+
+    .article-headline{
+
+        @include nwg-skew();
+
+        font-size:2em;
+
+        color:white;
+
+        position: relative;
+        width:auto;
+        max-width:80%;
+        margin-top:-1.5em;
+        margin-bottom:2em;
+
+
+        >span{
+            padding:0 0.25em;
+            // font-size:1em;
+            line-height:1.2em;
+            display:inline;
+            // font-style:normal;
+            background-color:rgba($nwg-darkblue, 0.8);
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+
+
+        @include ptBreakpoint($sm){
+            font-size:3em;
+        }
+        @include ptBreakpoint($md){
+            font-size:3.5em;
+        }
+
+
+
+    }
+
+
+}
+
+
 
 
 
@@ -34,9 +93,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 .article-header{
     // border:1px solid red;
-    
+
     position: relative;
     background-color:black;
 
@@ -62,7 +131,7 @@
         // max-height:500px;
        img{
             // position: absolute;
-            // top:50%; 
+            // top:50%;
             // transform:translateY(-50%);
             position: relative;
             width:100%;
@@ -73,8 +142,8 @@
         }
 
     }
-    
-    
+
+
     @include ptBreakpoint($nwg){
         // height:60vh;
         margin-top:0;
@@ -85,7 +154,7 @@
                 // width:initial;
                 position: absolute;
                 top:50%;
-                left:50%; 
+                left:50%;
                 transform:translate(-50%, -50%);
             }
         }
@@ -95,62 +164,6 @@
 
 
 
-
-
-.article-container{
-    padding:0 1em;
-    max-width:1000px;
-    margin:auto;
-    z-index:2;
-    position: relative;
-    top:-2em;
-
-    img{
-        margin:2em auto;
-    }
-
-
-
-    .article-headline{
-
-        @include nwg-skew();
-
-        font-size:2em;
-
-        color:white;
-     
-        position: relative;
-        width:auto;
-        max-width:80%;
-        margin-top:-1.5em;
-        margin-bottom:2em;
-        
-       
-        >span{ 
-            padding:0 0.25em;
-            // font-size:1em;
-            line-height:1.2em;
-            display:inline;
-            // font-style:normal;
-            background-color:rgba($nwg-darkblue, 0.8);
-            box-decoration-break: clone;
-            -webkit-box-decoration-break: clone;
-        }
-
-        
-        @include ptBreakpoint($sm){
-            font-size:3em;
-        }
-        @include ptBreakpoint($md){
-            font-size:3.5em;
-        }
-
-
-
-    }
-
-
-}
 
 
 
@@ -167,7 +180,7 @@
 
 
 .nwg-gallery{
-        
+
     .slider{
         .slick-track{
             display:flex;
@@ -204,8 +217,8 @@
         figcaption{
             position: absolute;
             width:100%;
-            bottom:0; 
-            left:0; 
+            bottom:0;
+            left:0;
             right:0;
             background-color:rgba(0,0,0,0.6);
             color:white;
@@ -298,14 +311,14 @@
 // .articles-holder{
 //     position: relative;
 //     // width: auto;
-    
+
 //     display: flex;
 //     // justify-content: center;
 //     flex-wrap: wrap;
 
 //     flex-direction: column;
 //     @include ptBreakpoint($sm){
-//         flex-direction: row;    
+//         flex-direction: row;
 //     }
 
 // }
@@ -328,16 +341,16 @@
 
 .article-tease,
 .article-blurb {
-    
+
     font-smoothing: antialiased;
 
     position: relative;
     border:0;
-    margin:3em 5em; 
+    margin:3em 5em;
     // flex:1;
     display:inline-block;
     // width:100%;
-    
+
 
 
     a{
@@ -350,7 +363,7 @@
         transition:0.2s;
 
         transform: scale(1) translate3d( 0, 0, 0);
-        
+
         &:hover, &:focus{
             transform: scale(1.2) translate3d( 0, 0, 0);
             .article-bg{
@@ -384,11 +397,11 @@
 
         transition:0.1s;
         position: relative;
-        
+
         >img{
             width:100%;
             height:auto;
-            
+
             position: absolute;
             top:50%; left:50%;
             transform:translate(-50%, -50%);
@@ -396,7 +409,7 @@
         }
     }
 
-    
+
 
 
 
@@ -410,17 +423,17 @@
         transform:translateX(-50%) skewY(-5deg) translate3d( 0, 0, 0);
         top:75%;
         // margin-top: -40px;
-        
+
         width:150%;
         // max-width:150%;
         // min-width:100%;
-        
+
         margin:0; padding:0;
         background-color: transparent;
-        
-    
+
+
         font-size:1.2rem;
-        
+
         white-space:normal;
         transition:0.2s;
 
@@ -433,10 +446,10 @@
             box-decoration-break: clone;
             padding:0.2em;
         }
-    
+
     }
 
-    
+
 
 }
 
@@ -490,24 +503,24 @@
 .article-section{
 
     &.lefty{
-        
+
     }
 
     &.righty{
-        
+
     }
 
     &.centery{
 
     }
-    
+
 
     &.color1{
-        
+
     }
 
     &.color2{
-        
+
     }
 
     &.color3{
@@ -529,7 +542,7 @@
 
 
 
- 
+
 .article-section{
     // border:2px solid gold;
     overflow:hidden;
@@ -540,7 +553,7 @@
     flex-direction: column;
 
     // @include ptViewport(min-height, 50vh);
-    // min-height:500px;  
+    // min-height:500px;
 
     padding:1em;
 
@@ -570,14 +583,14 @@
         transform: skewY(-5deg) perspective(1px);
         display:flex;
         flex-direction:column;
-        
+
         position: relative;
         z-index:5;
 
 
     }
 
- 
+
 
         .article-headline{
             // width:60%;
@@ -590,13 +603,13 @@
             // margin-left:0.5em;
             // margin-bottom:1em;
             z-index:5;
-            
+
             left:2.5%;
 
             font-size:2.2em;
             color:white;
 
-            >span{ 
+            >span{
                 padding:0 0.25em;
                 // font-size:1em;
                 line-height:1.2em;
@@ -608,7 +621,7 @@
 
         }
 
-        
+
 
         .article-type{
             // position:relative;
@@ -631,17 +644,17 @@
             // transform:translateY(-50%);
 
         }
-        
-        
-        
-        
+
+
+
+
         .article-summary{
-            
+
             position:relative;
             z-index:5;
-            // border:5px solid gold;        
+            // border:5px solid gold;
             padding:1em 6em 2em 2em;
-            
+
             margin-bottom:4em;
             width:95%;
             margin-left:auto;
@@ -649,7 +662,7 @@
 
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // COLORS:
             background-color:rgba($nwg-lightblue, 0.9);
-            
+
             h2,h3,h4{
                 color:lightblue;
                 // font-size:1.5em;
@@ -670,15 +683,15 @@
                 }
             }
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            
+
         }
 
 
-    
+
 
 
     @include ptBreakpoint($nwg){
-        
+
         // padding:2em 3em 5em 3em;
         padding:0;
 
@@ -695,24 +708,24 @@
                 max-width:100%;
                 height:auto;
                 // position: absolute;
-                // top:50%; 
+                // top:50%;
                 // transform:translateY(-50%);
             }
         }
 
         .article-infoblock{
             // border:1px solid green;
-            position:absolute; 
+            position:absolute;
             left:3em;
             top:50%;
-            transform:translateY(-50%) skewY(-5deg) perspective(1px); 
-            width:100%;           
+            transform:translateY(-50%) skewY(-5deg) perspective(1px);
+            width:100%;
         }
-    
+
         .article-headline{
             margin:1em 0 0.2em 0;
             font-size:3.5em;
-            left:0;            
+            left:0;
         }
 
         .article-summary{
@@ -728,12 +741,12 @@
         .article-type{
             width:100px;
             height:100px;
-            font-size:3em;    
+            font-size:3em;
             top:10%;
             // transform:translateY(-50%);
             right:-80px;
         }
-    
+
     }
 
 }
@@ -762,7 +775,7 @@
 
 
 
-/* 
+/*
 *
 *
 *
@@ -792,11 +805,11 @@
     background-image:url($img-url+'track1.jpg');
     background-position:center center;
     background-size:cover;
-    
+
     padding:3em 0;
 
     @include ptPos(5);
-    
+
     // display:flex;
     // flex-direction:column;
 
@@ -810,7 +823,7 @@
     }
 
     &:before{
-        @include ptPseudoMax();     
+        @include ptPseudoMax();
         background-color:rgba(0, 0, 0, 0.7);
         z-index:0;
     }
@@ -824,11 +837,11 @@
     .articles-holder{
         position: relative;
         // width: auto;
-        
+
         display: flex;
         // justify-content: center;
         flex-wrap: wrap;
-        
+
         width:100%;
         // border:1px solid red;
 
@@ -836,8 +849,8 @@
         align-items:center;
 
         @include ptBreakpoint($sm){
-            flex-direction: row;  
-            justify-content:center;  
+            flex-direction: row;
+            justify-content:center;
         }
     }
 
@@ -890,16 +903,16 @@
 
 
 
-/* 
+/*
 
 .homeplate{
 
     @include ptBreakpoint($nwg){
 
-        .homeplate-articles{    
+        .homeplate-articles{
             width:30%;
             flex-direction:column;
-            align-items:center;        
+            align-items:center;
             margin-bottom:0;
             margin-right:5%;
             margin-top:80px;
@@ -920,7 +933,7 @@
 
 
 
-/* 
+/*
 
 .homeplate-articles {
     position: relative;
@@ -930,7 +943,7 @@
     flex-wrap: wrap;
     width: auto;
     margin-bottom: 3em;
-    
+
     .article-something {
         display: flex;
         justify-content: center;
@@ -941,7 +954,7 @@
         height: 200px;
         width: 200px;
         position: relative;
-    
+
         .btn {
             margin-top: 60%;
             font-size:1.8rem;
@@ -962,7 +975,7 @@
 
 
 
-/* 
+/*
 .articles-holder{
     position: relative;
     display: flex;
@@ -1002,47 +1015,3 @@
 }
 
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

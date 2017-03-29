@@ -4,11 +4,14 @@
         // build_Homepage_video
     // );
 
+	var tag = document.createElement('script');
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	tag.src = "https://www.youtube.com/iframe_api";
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
-    // NWG.build_HomePage_Video = function(){
-    // function build_Homepage_video(){
-console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
+    // NWG.buildYouTubeVid = function(){
+    function buildYouTubeVid(){
+console.log("~~~~~~~~~ buildYouTubeVid ()");
 		var HP_player;
 		var Mobile_player;
 
@@ -18,15 +21,11 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 
 		var HP_videoId = 'GudH-ELXsKE';
 
-		var tag = document.createElement('script');
-
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
 
-		function onYouTubeIframeAPIReady() {
+
+		// function onYouTubeIframeAPIReady() {
 			console.log('!!YOUTUBE API IS READY!!');
 
 			HP_player = new YT.Player('player', {
@@ -64,7 +63,7 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 				}
 			});
 
-		}
+		// }
 
 
 
@@ -196,5 +195,7 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 
 
 
-    // }
-    // build_Homepage_video();
+    }
+    // buildYouTubeVid();
+
+PT.addOnLoad( buildYouTubeVid );

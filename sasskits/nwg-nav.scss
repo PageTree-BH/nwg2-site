@@ -29,9 +29,10 @@ $sidebar-width-neg: -$sidebar-width;
 @import 'sidr/sidr_base';
 
 
+
 // CURRENTLY UNUSED:
 $topbar-height: auto;
-// $topbar-height: 100px;
+$topbar-height: 100px;
 
 $topbar-bg : rgba(0,0,0,0.95);
 
@@ -61,10 +62,12 @@ body{
         display:block;
     }
 }
-
+$nwg-overwrite : $nwg-lightblue;
 
 
 .sidr{
+    $nwg-highlight : $nwg-overwrite;
+
     z-index:2000;
 	ul{
 		border:0;
@@ -142,7 +145,6 @@ body{
 		// margin-top: $topbar-height;
 	}
 }
-
 
 
 
@@ -286,9 +288,12 @@ body{
 
 
 .nwg-nav {
+    $nwg-highlight : $nwg-overwrite;
+
     font-family: $font-header;
     text-transform: uppercase;
-    font-size: 1.1em;
+font-size: 1.4em;
+    letter-spacing: 0.05em;
     margin: 1em 0;
     // padding:0 2.5em;
 
@@ -455,6 +460,7 @@ body{
 
 
 .nwg-nav .nwg-eventslinks {
+    $nwg-highlight : $nwg-overwrite;
 
 	position: relative;
     display:flex;
@@ -683,7 +689,7 @@ body{
 
 		position: relative;
 		// margin:auto;
-		width:150px;
+// width:100px;
 		// max-width:100px;
 		padding:5px;
         // border:1px solid red;

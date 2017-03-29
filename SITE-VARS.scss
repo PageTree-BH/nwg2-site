@@ -11,7 +11,6 @@ $nwg-darkblue: #002e75;
 $nwg-black: #000000;
 $nwg-white: #ffffff;
 
-$nwg-maxwidth: 1300px;
 
 $nwg-darkgrey: #181818;
 
@@ -51,8 +50,14 @@ $fonts-url: "fonts/";
 
 
 
+$nwg-maxwidth: 1300px;
 
 $nwg-skew : -5deg;
+
+
+
+
+
 
 @mixin nwg-skew($n:-5){
   transform: skewY($n + deg);
@@ -61,8 +66,6 @@ $nwg-skew : -5deg;
 @mixin nwg-textshadow(){
     text-shadow:#474747 3px 5px 2px;
 }
-
-
 
 
 @mixin pseudoMax(){

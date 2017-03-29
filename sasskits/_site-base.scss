@@ -1,6 +1,17 @@
 
 
-
+// BASIC FUCK-OFF BOOTSTRAP STYLES:
+// .container {
+//     width: 100% !important;
+//     max-width: 100%;
+//     // max-width:1500px;
+//     margin: auto;
+//     padding: 0;
+//     .row {
+//         padding: 0em;
+//         margin: 0em;
+//     }
+// }
 
 
 
@@ -15,47 +26,24 @@ html {
     box-sizing: inherit;
 }
 
-
-
-
 body{
-    background-color:#000;
+    background:black;
     &.noscroll{
         overflow:hidden;
     }
 }
 
 
-
-
-
-// BASIC FUCK-OFF BOOTSTRAP STYLES:
-.container {
-    width: 100% !important;
-    max-width: 100%;
-    // max-width:1500px;
-    margin: auto;
-    padding: 0;
-    .row {
-        padding: 0em;
-        margin: 0em;
+.viewport{
+    background:black;
+    >section,
+    >article,
+    >header
+    {
+        z-index: 10;
     }
 }
 
-.pt-sizer {
-    z-index: 99999;
-    // @include skew();
-}
-
-#viewport{
-    max-width:1800px;
-    margin:auto;
-    // border:10px solid red;
-}
-
-.viewport {
-    background-color: #e8e8e8;
-}
 
 
 .pt-container {
@@ -64,30 +52,27 @@ body{
     max-width: $nwg-maxwidth;
     // max-width:initial;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2.5%;
+    // border:1px dotted lightgreen;
 }
-
+//
 .pt-outer {
     position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
 }
-
+//
 .pt-inner {
     position: relative;
     width: 100%;
     max-width: $nwg-maxwidth;
-    // max-width:initial;
     margin: 0 auto;
     padding: 0;
-    // border:1px dotted gold;
 }
 
 
-
-.site-footer{
-    position:relative;
-    padding:0 2em;
-    background-color:black;
+.svg-clipped {
+    clip-path: url(#svgPath);
+    -webkit-clip-path: url(#svgPath);
 }

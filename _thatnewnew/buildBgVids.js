@@ -9,7 +9,7 @@
         console.log('buildBgVids()');
             // $('[data-nwg-video-holder]').each(function(i, val){
             // $('.sectionNWG').each(function(i, val){
-            $('[data-bgVidSpeed]').each(function(i, val){
+            $('[data-bgvid_______]').each(function(i, val){
 
                 var ThisDIV = $(val);
 
@@ -17,9 +17,9 @@
                 // var ThisVID = ThisDIV.find('.sectionNWG__bgvideo')[0];
                 var ThisVID = ThisDIV.find('video')[0];
 
-                var playbackStyle = ThisDIV.data('bgvidspeed');
+                var playbackStyle = ThisDIV.data('bgvid');
 
-        console.log(ThisDIV.find('video source')[0]);
+        // console.log(ThisDIV.find('video source')[0]);
         if( ThisDIV.find('video source')[0] ){
 
 
@@ -27,7 +27,7 @@
                 ThisVID.autoplay = false;
                 ThisVID.controls = false;
                 ThisVID.muted = true;
-                ThisVID.loop = true;
+                // ThisVID.loop = true;
 
                 var ThisTLM = new TimelineMax({ease:Power2.easeIn});
                     // ThisTLM.fromTo(ThisDIV, 1, {opacity:0}, {opacity:1 }, 'a');
@@ -36,30 +36,55 @@
                 var ThisDuration = ThisDIV.outerHeight() + $(window).height();
 
                 var ThisSCENE = new ScrollMagic.Scene({
-                    triggerElement: ThisDIV,
-                    triggerHook:1
-                })
-                .duration( ThisDuration )
-                .setTween( ThisTLM )
-                .addTo(PT.SM_CTRL);
+                    triggerElement: ThisDIV
+                    // triggerHook:1
+                });
+
+                // ThisSCENE.duration( ThisDuration );
+                ThisSCENE.setTween( ThisTLM );
+                ThisSCENE.addTo(PT.SM_CTRL);
+                ThisSCENE.duration( ThisDuration );
 
                 if(PT._isDevMode){
-                    ThisSCENE.addIndicators({name: "VideoHolder Trigger"});
+                    ThisSCENE.addIndicators({name: "buildBgVids_______"});
                 }
 
+                if(playbackStyle === "once"){
+                    ThisVID.playbackRate = 0.5;
+                    ThisSCENE.triggerHook( 0.5 );
+                    ThisSCENE.on("enter", function (event) {
+                        ThisVID.play();
+                    });
+                    ThisSCENE.on("leave", function (event) {
+                        ThisVID.pause();
+                    });
 
+                }else{
+                    ThisSCENE.duration( ThisDuration );
+                }
 
                 if(playbackStyle === "scrub"){
                     ThisSCENE.on("progress", function (event) {
-                        // console.log('progress ' + event.progress);
-                        // THIS WILL TIE THE VIDEO WITH THE SCROLL BAR:
                         ThisVID.currentTime = ThisVID.duration * event.progress;
                     });
-                }else{
+                }
 
-                    if(playbackStyle){
-                        ThisVID.playbackRate = parseFloat(playbackStyle);
-                    }
+                if(playbackStyle === "scrubforward"){
+                    ThisSCENE.on("progress", function (event) {
+                        if( (ThisVID.duration * event.progress) > (ThisVID.currentTime) ){
+                            ThisVID.currentTime = ThisVID.duration * event.progress;
+                        }
+                    });
+                }
+
+                if(playbackStyle === "none"){
+                }
+                if(playbackStyle === "half"){
+
+                    // if(playbackStyle){
+                        // ThisVID.playbackRate = parseFloat(playbackStyle);
+                    // }
+                    ThisVID.playbackRate = 0.5;
 
                     ThisSCENE.on("enter", function (event) {
                         // console.log('enter');

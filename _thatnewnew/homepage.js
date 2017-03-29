@@ -71,23 +71,25 @@
         //     ThisCOVER.remove();
         // }
 
-
-if(false){
-    okDO();
-}else{
-    ThisCOVER.remove();
-}
+// console.log($(ThisHP).data('-nwg-hpintro') === "true");
+// if( $(ThisHP).data('-nwg-hpintro') === "true" ){
+    if(false){
+        okDO();
+    }else{
+        ThisCOVER.remove();
+    }
 
 
         function okDO() {
             // console.log('okDO build intro ');
-// document.body.scrollTop = 0;
-$(document).scrollTop(0);
-$(window).scrollTop(0);
-$('html').scrollTop(0);
-$('body').scrollTop(0);
 
-TweenMax.set(window, {scrollTo:{y:0}});
+            // NONE OF THIS IS WORKING ?:
+            // document.body.scrollTop = 0;
+            // $(document).scrollTop(0);
+            // $(window).scrollTop(0);
+            // $('html').scrollTop(0);
+            // $('body').scrollTop(0);
+            // TweenMax.set(window, {scrollTo:{y:0}});
 
             // $('body').addClass('noscroll');
 
@@ -223,7 +225,7 @@ var i = 0;
             // ThisTLM_OUTRO.to(ThisABOUT,         1,  {autoAlpha:1}, 'c');
 
             ThisTLM_OUTRO.fromTo(ThisBtn_TICKETS,   0.5,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
-            ThisTLM_OUTRO.fromTo(ThisBtn_VIDEO,     0.8,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
+            ThisTLM_OUTRO.fromTo(ThisBtn_VIDEO,     0.7,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
 
             ThisTLM_OUTRO.fromTo(ThisTOPBAR,            1,  {top:-ThisTOPBAR.outerHeight()}, {top:0, ease:Power1.easeOut}, 'c+=0.2' );
 
@@ -233,7 +235,7 @@ var i = 0;
 
 
 
-        }
+        }//okDO();
 
 
 
