@@ -71,9 +71,10 @@
         //     ThisCOVER.remove();
         // }
 
-// console.log($(ThisHP).data('-nwg-hpintro') === "true");
-// if( $(ThisHP).data('-nwg-hpintro') === "true" ){
-    if(false){
+PT.log(ThisHP.data('nwg-hpintro'), 'red');
+
+if( ThisHP.data('nwg-hpintro') === true ){
+    // if(true){
         okDO();
     }else{
         ThisCOVER.remove();
@@ -81,7 +82,7 @@
 
 
         function okDO() {
-            // console.log('okDO build intro ');
+            console.log('okDO build intro ');
 
             // NONE OF THIS IS WORKING ?:
             // document.body.scrollTop = 0;
@@ -98,6 +99,8 @@
             var ThisLOGO_TEXT       = ThisLOGO.find('.logo-text');
             var ThisLOGO_GLOBE      = ThisLOGO.find('.logo-globe');
 
+            var ThisINFO      = ThisHP.find('.homeplate-info');
+
             var ThisBG      =   ThisHP.find('.homeplate-bg');
 
             // var ThisABOUT   =   $("#section-about");
@@ -112,11 +115,12 @@ ThisTOPBAR.css({ 'top' : -ThisTOPBAR.outerHeight()});
             var hp_h = ThisHP.innerHeight();
 
 
-var loopThisMany = 2;
+var loopThisMany = 1;
 var i = 0;
 
             ThisLOGO._origL = ThisLOGO.position().left;
             ThisLOGO._origT = ThisLOGO.position().top;
+
 
 
 
@@ -144,7 +148,7 @@ var i = 0;
                 ,onComplete:function(){
                     console.log("LOOP COMPLETE FUNC() " + PT._isPreloaded) ;
                     i++;
-                    if((PT._isPreloaded) && (loopThisMany >= i)){
+                    if((PT._isPreloaded) && (loopThisMany < i)){
                         // console.log(" DONE ");
                         ThisTLM_LOOP.kill();
                         ThisTLM_OUTRO.play();
@@ -196,6 +200,7 @@ var i = 0;
             ThisTLM_INTRO.set(ThisHP, {height:$(window).innerHeight() });
 
             // ThisTLM_INTRO.set([ThisBG, ThisABOUT], {autoAlpha:0 });
+            ThisTLM_INTRO.set(ThisINFO, {autoAlpha:0 });
 
             ThisTLM_INTRO.to(ThisCOVER, 1, {delay:2, autoAlpha:0});
 
@@ -223,6 +228,7 @@ var i = 0;
             ThisTLM_OUTRO.to([ThisLOGO_TEXT, ThisLOGO_GLOBE], 1, { rotation:0, scale:1, clearProps:'all' }, 'c');
 
             // ThisTLM_OUTRO.to(ThisABOUT,         1,  {autoAlpha:1}, 'c');
+            ThisTLM_OUTRO.to(ThisINFO,         1,  {autoAlpha:1}, 'c');
 
             ThisTLM_OUTRO.fromTo(ThisBtn_TICKETS,   0.5,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
             ThisTLM_OUTRO.fromTo(ThisBtn_VIDEO,     0.7,  {opacity:0}, {  opacity:1 }, 'c+=0.2');

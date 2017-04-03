@@ -28,7 +28,9 @@ $font-header1: $font-header;
 
 $font-header2: 'bebas_neueregular';
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$font-paragraph: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-paragraph: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-paragraph: $font-header2;
+
 $font-body: $font-paragraph;
 $font-button: $font-header1;
 
@@ -52,7 +54,7 @@ html {
 
 
 body {
-    font-family: $font-paragraph;
+    font-family: $font-body;
     // letter-spacing: 0.1em;
 }
 
@@ -113,6 +115,11 @@ p{
     line-height: 1.5rem;
 }
 
+.txt-x2{
+    font-size:2em;
+    line-height:2em;
+}
+
 
 h1,h2,h3,h4,h5,h6{
     letter-spacing: 0.05em;
@@ -126,8 +133,15 @@ h1,h2,h3,h4,h5,h6{
         display:inline;
         background-color:rgba($nwg-darkblue, 0.8);
         box-decoration-break: clone;
-
     }
+
+    &.span-bg-lightblue span {
+        background-color:rgba($nwg-lightblue, 0.8);
+    }
+    &.span-bg-black span {
+        background-color:rgba($nwg-black, 0.8);
+    }
+
     a{
         color:white;
         text-decoration:none;
@@ -193,6 +207,9 @@ blockquote{
 .nwg-skew {
     transform: skewY($nwg-skew);
 }
+.nwg-skew-neg {
+    transform: skewY($nwg-skew);
+}
 
 
 
@@ -216,10 +233,10 @@ blockquote{
 .txt-highlight{
     color:$nwg-highlight;
 }
-.txt-white{
+.txt-white.txt-white{
     color: $nwg-white;
 }
-.txt-black{
+.txt-black.txt-black{
     color: $nwg-black;
 }
 
@@ -339,7 +356,7 @@ blockquote{
     border: 0;
     border-radius: 0;
 
-    margin:0.5em;
+    margin:0.5em 0;
 
     // border:1px dotted black;
     // background-color:lightgray;

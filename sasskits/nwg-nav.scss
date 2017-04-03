@@ -332,6 +332,10 @@ font-size: 1.4em;
         max-width:95%;
         // border:1px solid red;
 
+        @include ptBreakpoint($nwg){
+            flex-wrap: nowrap;
+        }
+
         @include ptBreakpoint($lg){
         }
     }

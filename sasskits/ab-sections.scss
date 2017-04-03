@@ -15,7 +15,7 @@
 
 
 // .ab-card{
-  
+
 //   position:relative;
 
 //   display:flex;
@@ -27,7 +27,7 @@
 //   width:100%;
 
 //   @include ptBreakpoint($sm){
-    
+
 //     flex-direction:row;
 //     flex-wrap:wrap;
 
@@ -49,20 +49,30 @@
 
 // }
 
-  
 
 
 
 
+.svgImg{
+  width:100%;
+  display:block;
+  image{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+  }
+}
 
 
     // background-image:url($img-url+'suttle-white.jpg');
 
 
-.ab-5050, 
-.ab-4060, 
-.ab-6040, 
-.ab-3070, 
+.ab-5050,
+.ab-4060,
+.ab-6040,
+.ab-3070,
 .ab-7030 {
 
   // @extend .ab-card;
@@ -77,7 +87,7 @@
 
   width:100%;
   // background-color:white;
-  
+
 
   // border:1px solid black;
   margin:0 0 2em 0;
@@ -85,7 +95,7 @@
 
 
   @include ptBreakpoint($sm){
-    
+
     flex-direction:row;
     flex-wrap:wrap;
 
@@ -165,27 +175,27 @@
                   }
   }
 
-  .ab-5050 {    
+  .ab-5050 {
             .ab-a{  width:50%;  }
             .ab-b{  width:50%;  }
   }
 
-  .ab-4060 {    
+  .ab-4060 {
             .ab-a{  width:40%;  }
             .ab-b{  width:60%;  }
   }
 
-  .ab-6040 {    
+  .ab-6040 {
             .ab-a{  width:60%;  }
             .ab-b{  width:40%;  }
   }
 
-  .ab-3070 {    
+  .ab-3070 {
             .ab-a{  width:30%;  }
             .ab-b{  width:70%;  }
   }
 
-  .ab-7030 {    
+  .ab-7030 {
             .ab-a{  width:70%;  }
             .ab-b{  width:30%;  }
   }
@@ -200,7 +210,7 @@
 
 
 .ab-txt{
-  
+
   // text-align:center;
 
   // img{
@@ -218,11 +228,11 @@
 
 
   padding:1em;
-  
+
   @include ptBreakpoint($sm){
     padding:2em;
   }
-  
+
   @include ptBreakpoint($md){
     padding:5em;
   }
@@ -241,9 +251,9 @@
 
   img{
     position:relative;
-    display:block;    
+    display:block;
     margin:auto;
-    
+
     width:100%;
     max-width:100%;
     height:auto;
@@ -251,7 +261,7 @@
 
   @include ptBreakpoint($sm){
      // @include ptPos(5);
-    
+
     img{
       position:absolute;
       top:50%;
@@ -292,39 +302,3 @@
   flex:1 1 100%;
   text-align:center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

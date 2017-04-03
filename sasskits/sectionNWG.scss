@@ -1,8 +1,11 @@
 
 
-
-
-
+.css-clipp{
+    // -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    //   transform:skewY(-5deg);
+}
 
 
 // .section-nwg{
@@ -34,7 +37,10 @@
 
 
 
-
+.quoteNWG~.sectionNWG{
+    // border:10px solid gold;
+    padding-top:6%;
+}
 .sectionNWG{
     position: relative;
     // height:60vw;
@@ -43,28 +49,67 @@
     width:100%;
     z-index:5;
     overflow:hidden;
-    // padding-top:300px;
+    // padding-top:5%;
+    padding-bottom:5%;
 
-    &:before{
-        content:'';
-        position: absolute;
-        left:0; right:0;
-        width:100%;
-        height:100px;
-            height:300px;
-            top:-245px;
-            background:black;
-            transform:skewY($nwg-skew) ;
-        z-index:9;
-    }
+    // &:before{
+    //     content:'';
+    //     position: absolute;
+    //     left:0; right:0;
+    //     width:100%;
+    //     height:100px;
+    //         height:300px;
+    //         top:-245px;
+    //         background:black;
+    //         transform:skewY($nwg-skew) ;
+    //     z-index:9;
+    // }
+
+    // &.flipped{
+        // border:10px solid gold;
+        // .sectionNWG__content{
+        //     text-align:right;
+        // }
+        // .sectionNWG__articles{
+        //     // right:initial;
+        //     // left:5%;
+        //     text-align:left;
+        // }
+    // }
 
     @include ptBreakpoint($md){
         min-height:700px;
     }
+}
 
+
+.sectionNWG__info,
+.sectionNWG__content{
+    position: relative;
+    z-index:10;
+    transform:skewY($nwg-skew);
+    margin-top:5%;
+    margin-right:5%;
+    margin-left:5%;
+    margin-bottom:5%;
+    // border:1px dotted gold;
+    // padding-top:7%;
+
+    text-align: left;
+
+
+    @include ptBreakpoint($md){
+        // width:40%;
+    }
+
+    .flip-left &{
+        text-align:right;
+        // float:right;
+    }
 
 
 }
+
 
 .sectionNWG__headline{
     position: relative;
@@ -74,13 +119,16 @@
     margin:0 0 0 0;
     line-height:0.7em;
     pointer-events: none;
+
 }
 
+
+
 .sectionNWG__articles{
-    // position: relative;
-    position: absolute;
-    right:5%;
-    bottom:10%;
+    position: relative;
+    // position: absolute;
+    // right:5%;
+    // bottom:10%;
 
     transform: skewY($nwg-skew);
     text-align: right;
@@ -89,27 +137,29 @@
     // transform:translate(0, -50%);
     z-index:5;
 
+
+    @include ptBreakpoint($nwg){
+        position: absolute;
+        right:1%;
+        bottom:10%;
+    }
+
+    .flip-left &{
+        text-align:left;
+        @include ptBreakpoint($nwg){
+            position: absolute;
+            left:1%;
+            bottom:10%;
+        }
+    }
+
     ul{
         list-style: none;
     }
     h1,h2,h3,h4,h5,h6{
         display:inline-block;
     }
-
-    // a{
-    //     color:white;
-    //     text-decoration:none;
-    //     transition:0.2s;
-    //
-    //     &:hover, &:focus{
-    //
-    //         span{
-    //             background-color:black;
-    //         }
-    //     }
-    // }
 }
-
 
 
 
@@ -118,14 +168,26 @@
 
 
 .sectionNWG__action{
-    position: relative;
-    // position: absolute;
-    // left:50%;
-    // top:50%;
-    // transform:translate(-50%, -50%);
+    display:none;
+    @include ptBreakpoint($md){
+        // display:block;
+    }
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
     z-index:2;
     pointer-events:none;
 }
+
+
+
+
+
+
+
+
+
 
 .sectionNWG__bg{
     position:absolute;
@@ -133,7 +195,13 @@
     width:100%; height:100%;
     z-index:1;
 
+
+    transform:skewY(-5deg)  translateY(14%);
+    overflow: hidden;
+
+
     video{
+        // clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -141,8 +209,13 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        z-index:1;
+        // z-index:1;
         // opacity:0.5;
+
+        display:none;
+        @include ptBreakpoint($md){
+            display:block;
+        }
     }
 
     &:after{
@@ -154,15 +227,9 @@
         opacity:0.5;
         z-index: 2;
     }
+    background-color:black;
 }
 
-.sectionNWG__content{
-    position: relative;
-    z-index:10;
-    transform:skewY($nwg-skew) ;
-    margin-top:50px;
-    margin-left:5%;
-}
 
 .sectionNWG__bgvideo{
     // clip-path: url(#svgPath);

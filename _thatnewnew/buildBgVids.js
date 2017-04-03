@@ -9,7 +9,7 @@
         console.log('buildBgVids()');
             // $('[data-nwg-video-holder]').each(function(i, val){
             // $('.sectionNWG').each(function(i, val){
-            $('[data-bgvid_______]').each(function(i, val){
+            $('[data-bgvid]').each(function(i, val){
 
                 var ThisDIV = $(val);
 
@@ -49,6 +49,14 @@
                     ThisSCENE.addIndicators({name: "buildBgVids_______"});
                 }
 
+
+
+                if(playbackStyle === "none"){
+                }
+
+
+
+
                 if(playbackStyle === "once"){
                     ThisVID.playbackRate = 0.5;
                     ThisSCENE.triggerHook( 0.5 );
@@ -63,11 +71,18 @@
                     ThisSCENE.duration( ThisDuration );
                 }
 
+
+
+
+
                 if(playbackStyle === "scrub"){
                     ThisSCENE.on("progress", function (event) {
                         ThisVID.currentTime = ThisVID.duration * event.progress;
                     });
                 }
+
+
+
 
                 if(playbackStyle === "scrubforward"){
                     ThisSCENE.on("progress", function (event) {
@@ -77,8 +92,9 @@
                     });
                 }
 
-                if(playbackStyle === "none"){
-                }
+
+
+
                 if(playbackStyle === "half"){
 
                     // if(playbackStyle){

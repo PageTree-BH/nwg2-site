@@ -1,6 +1,6 @@
 
- 
- 
+
+
 // BREAKPOINT SIZER :
 
 $xs: ( min:  300px );
@@ -25,7 +25,7 @@ $xl-only: ( min: map-get($xl, min) );
 @mixin ptBreakpoint($map) {
 	$query: "";
 
-	@if map-has-key($map, min) { 
+	@if map-has-key($map, min) {
 		$query: append($query, "(min-width: #{map-get($map, min)})")
 	}
 
@@ -154,8 +154,8 @@ $xl-only: ( min: map-get($xl, min) );
 
 
 @mixin ptZone($n){
-	position:relative;    
-	width:100%;     
+	position:relative;
+	width:100%;
 	min-height:$n+vh;
 	@include ptViewport(min-height, $n);
 	// @include viewport-unit(height, $n+vh);
@@ -178,7 +178,7 @@ $xl-only: ( min: map-get($xl, min) );
     }
     h3, h4, h5{
         color:$h3;
-    } 
+    }
     p{
         color:$p;
     }
@@ -212,7 +212,7 @@ $xl-only: ( min: map-get($xl, min) );
         @include ptBreakpoint($lg){
         	padding:$plg;
         }
-    }  
+    }
 
 }
 
@@ -248,7 +248,7 @@ $xl-only: ( min: map-get($xl, min) );
 
 /**
  * https://gist.github.com/BenMorel/e9e34c08360ebbbd0634
- * 
+ *
  * Fix for vw, vh, vmin, vmax on iOS 7.
  * http://caniuse.com/#feat=viewport-units
  *
@@ -321,3 +321,273 @@ $xl-only: ( min: map-get($xl, min) );
 
 
 
+
+
+
+    /*
+    *
+    *
+    *
+    *
+    *
+        SASS Responsive Padding & Margins Utility Classes
+
+        I sorta half-nabbed a Bootstrap 4 utility SASS function and
+        combined it with my Breakpoint mixin to extend it into a responsive utility class.
+
+
+        .pt-[margin or padding]-[side]-[multiplyer]
+
+    .pt(PageTree)
+
+    -[padding or margin]
+    -p = padding
+    -m = margin
+
+    -[side]
+    -a = all
+    -x = left & right
+    -y = top & bottom
+    -t = top
+    -l = left
+    -r = right
+    -b = bottom
+
+    -ra = Responsive All
+    -rx = Responsive X (Left & Right)
+    -ry = Responsive Y (Top & Bottom)
+
+
+    -[multiplyer by base number * each breakpoint]
+    -1 = 1rem
+    -2 = 2rem
+    -3 = 3rem
+    -4 = 4rem
+
+
+    EXAMPLES
+    .wg-p-a-0    [ padding-all-0 ]
+    .wg-p-a-2    [ padding-all-2rem ]
+
+    .wg-p-ry-1    [ padding-ResponsiveY-(1rem/2rem/4/rem/8rem) ]
+
+
+
+*/
+
+ 
+
+
+
+
+$spacer:                     1rem !default;
+$spacer-x:                   $spacer !default;
+$spacer-y:                   $spacer !default;
+
+$spacers: (
+  0: ( x: 0,                  y: 0 ),
+  1: ( x: $spacer-x,          y: $spacer-y ),
+  2: ( x: ($spacer-x * 1.5),  y: ($spacer-y * 1.5) ),
+  3: ( x: ($spacer-x * 3),    y: ($spacer-y * 3) ),
+  4: ( x: ($spacer-x * 4),    y: ($spacer-y * 4) )
+) !default;
+
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+
+    @each $size, $lengths in $spacers {
+        $length-x:   map-get($lengths, x);
+        $length-y:   map-get($lengths, y);
+
+        .pt-#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x ; }
+        .pt-#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y ; }
+        .pt-#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x ; }
+        .pt-#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y ; }
+        .pt-#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x ; }
+
+        .pt-#{$abbrev}-x-#{$size} {
+          #{$prop}-right:  $length-x ;
+          #{$prop}-left:   $length-x ;
+        }
+
+        .pt-#{$abbrev}-y-#{$size} {
+          #{$prop}-top:    $length-y ;
+          #{$prop}-bottom: $length-y ;
+        }
+
+
+
+        // RESPONSIVE ALL
+
+        .pt-#{$abbrev}-ra-#{$size} {
+
+            #{$prop}: $length-y $length-x ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}: $length-y*2 $length-x*2 ;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}: $length-y*3 $length-x*3 ;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}: $length-y*5 $length-x*5 ;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}: $length-y*6 $length-x*6 ;
+            }
+        }
+
+
+
+        // RESPONSIVE X      (LEFT AND RIGHT)
+
+        .pt-#{$abbrev}-rx-#{$size} {
+
+
+            #{$prop}: $length-x ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-left:  $length-x*2 ;
+                #{$prop}-right:  $length-x*2 ;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-left:  $length-x*3 ;
+                #{$prop}-right:  $length-x*3 ;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-left:  $length-x*5 ;
+                #{$prop}-right:  $length-x*5 ;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-left:  $length-x*6 ;
+                #{$prop}-right:  $length-x*6 ;
+            }
+        }
+
+
+
+        // RESPONSIVE Y   (TOP AND BOTTOM)
+
+        .pt-#{$abbrev}-ry-#{$size} {
+
+
+            #{$prop}: $length-y ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-top: $length-y*2;
+                #{$prop}-bottom: $length-y*2;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-top: $length-y*3;
+                #{$prop}-bottom: $length-y*3;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-top: $length-y*5;
+                #{$prop}-bottom: $length-y*5;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-top: $length-y*6;
+                #{$prop}-bottom: $length-y*6;
+            }
+        }
+
+
+
+
+
+
+
+
+        .pt-#{$abbrev}-rt-#{$size} {
+
+            #{$prop}: $length-y ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-top: $length-y*2;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-top: $length-y*3;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-top: $length-y*5;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-top: $length-y*6;
+            }
+        }
+
+
+
+
+
+
+        .pt-#{$abbrev}-rr-#{$size} {
+
+            #{$prop}: $length-x ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-right: $length-x*2;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-right: $length-x*3;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-right: $length-x*5;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-right: $length-x*6;
+            }
+        }
+
+
+
+
+
+
+        .pt-#{$abbrev}-rb-#{$size} {
+
+            #{$prop}: $length-y ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-bottom: $length-y*2;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-bottom: $length-y*3;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-bottom: $length-y*5;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-bottom: $length-y*6;
+            }
+        }
+
+
+
+
+
+
+        .pt-#{$abbrev}-rl-#{$size} {
+
+            #{$prop}: $length-x ;
+
+            @include ptBreakpoint($sm){
+                #{$prop}-left: $length-x*2;
+            }
+            @include ptBreakpoint($md){
+                #{$prop}-left: $length-x*3;
+            }
+            @include ptBreakpoint($lg){
+                #{$prop}-left: $length-x*5;
+            }
+            @include ptBreakpoint($xl){
+                #{$prop}-left: $length-x*6;
+            }
+        }
+
+
+
+
+    }
+
+}
