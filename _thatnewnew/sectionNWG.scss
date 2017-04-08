@@ -52,33 +52,10 @@
     // padding-top:5%;
     padding-bottom:5%;
 
-    // &:before{
-    //     content:'';
-    //     position: absolute;
-    //     left:0; right:0;
-    //     width:100%;
-    //     height:100px;
-    //         height:300px;
-    //         top:-245px;
-    //         background:black;
-    //         transform:skewY($nwg-skew) ;
-    //     z-index:9;
-    // }
-
-    // &.flipped{
-        // border:10px solid gold;
-        // .sectionNWG__content{
-        //     text-align:right;
-        // }
-        // .sectionNWG__articles{
-        //     // right:initial;
-        //     // left:5%;
-        //     text-align:left;
-        // }
-    // }
-
-    @include ptBreakpoint($md){
+    @include ptBreakpoint($nwg){
         min-height:700px;
+        height:80vh;
+        max-height:800px;
     }
 }
 
@@ -94,7 +71,6 @@
     margin-bottom:5%;
     // border:1px dotted gold;
     // padding-top:7%;
-
     text-align: left;
 
 
@@ -106,8 +82,6 @@
         text-align:right;
         // float:right;
     }
-
-
 }
 
 
@@ -119,7 +93,6 @@
     margin:0 0 0 0;
     line-height:0.7em;
     pointer-events: none;
-
 }
 
 
@@ -128,7 +101,7 @@
     position: relative;
     // position: absolute;
     // right:5%;
-    // bottom:10%;
+    // bottom:20%;
 
     transform: skewY($nwg-skew);
     text-align: right;
@@ -138,27 +111,34 @@
     z-index:5;
 
 
+    // @include ptBreakpoint($nwg){
+    //     position: absolute;
+    //     right:1%;
+    //     bottom:10%;
+    // }
     @include ptBreakpoint($nwg){
         position: absolute;
+        // width:100%;
         right:1%;
+        // top:2%;
         bottom:10%;
-    }
-
-    .flip-left &{
-        text-align:left;
-        @include ptBreakpoint($nwg){
-            position: absolute;
+        .flip-left &{
+            right:initial;
             left:1%;
-            bottom:10%;
+            text-align:left;
         }
     }
 
     ul{
         list-style: none;
     }
-    h1,h2,h3,h4,h5,h6{
+    h3{
         display:inline-block;
+        font-family:$font-header1;
+        font-size:1.5rem;
     }
+    // h1,h2,h3,h4,h5,h6{
+    // }
 }
 
 
@@ -169,15 +149,50 @@
 
 .sectionNWG__action{
     display:none;
-    @include ptBreakpoint($md){
-        // display:block;
-    }
-    position: absolute;
-    left:50%;
-    top:50%;
+    // border:1px solid red;
+    // left:50%;
+    // top:50%;
     transform:translate(-50%, -50%);
-    z-index:2;
+
+    // position: absolute;
+    // width:50%;
+    // top:20%;
+    // right:1%;
+    // .flip-left &{
+    //     left:1%;
+    // }
+
     pointer-events:none;
+    z-index:2;
+
+
+    img.action-person{
+        // border:1px dotted green;
+        width:100%;
+        height:auto;
+    }
+
+
+
+    // @include ptBreakpoint($md){
+    @include ptBreakpoint($nwg){
+        // width:25%;
+        position: absolute;
+        display:block;
+        top:70%;
+        width:auto;
+        left:20%;
+        // left:5%;
+        // right:initial;
+        .flip-left &{
+            left:80%;
+            // left:initial;
+            // left:initial;
+            // text-align:left;
+        }
+    }
+
+
 }
 
 

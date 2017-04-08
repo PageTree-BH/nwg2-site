@@ -35,7 +35,7 @@ console.log("~~~~~~~~~ buildYouTubeVid ()");
 				playerVars: {
 					'autoplay': 0,
 					'rel':0,
-					'controls': 1,
+					'controls': 0,
 					'modestbranding':1,
 					'showinfo':0,
 					'iv_load_policy':3,

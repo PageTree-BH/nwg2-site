@@ -115,8 +115,7 @@ ThisTOPBAR.css({ 'top' : -ThisTOPBAR.outerHeight()});
             var hp_h = ThisHP.innerHeight();
 
 
-var loopThisMany = 1;
-var i = 0;
+
 
             ThisLOGO._origL = ThisLOGO.position().left;
             ThisLOGO._origT = ThisLOGO.position().top;
@@ -139,6 +138,8 @@ var i = 0;
 
 
 
+            // var loopThisMany = 1;
+            var i = 0;
 
             var ThisTLM_LOOP = new TimelineMax({
                 paused:true
@@ -146,10 +147,11 @@ var i = 0;
                 // ,repeat:-1
                 // ,yoyo:true
                 ,onComplete:function(){
-                    console.log("LOOP COMPLETE FUNC() " + PT._isPreloaded) ;
+                    console.log("LOOP COMPLETE FUNC() " + PT._isPreloaded);
                     i++;
-                    if((PT._isPreloaded) && (loopThisMany < i)){
-                        // console.log(" DONE ");
+                    // if((PT._isPreloaded) && (loopThisMany < i)){
+                    if((PT._isPreloaded)){
+                        console.log(" DONE ");
                         ThisTLM_LOOP.kill();
                         ThisTLM_OUTRO.play();
                         $('body').removeClass('noscroll');
@@ -197,43 +199,43 @@ var i = 0;
 
     // INTRO :
     //
-            ThisTLM_INTRO.set(ThisHP, {height:$(window).innerHeight() });
+// ThisTLM_INTRO.set(ThisHP, {height:$(window).innerHeight() });
 
             // ThisTLM_INTRO.set([ThisBG, ThisABOUT], {autoAlpha:0 });
             ThisTLM_INTRO.set(ThisINFO, {autoAlpha:0 });
+            ThisTLM_LOOP.set(ThisLOGO_GLOBE,   {alpha:0, left:"50%" });
+            ThisTLM_LOOP.set(ThisLOGO_TEXT,   {alpha:0,  left:"50%" });
 
-            ThisTLM_INTRO.to(ThisCOVER, 1, {delay:2, autoAlpha:0});
+            ThisTLM_INTRO.to(ThisCOVER, 1, {delay:0, autoAlpha:0});
 
 
     // LOOP :
-            ThisTLM_LOOP.fromTo(ThisLOGO_GLOBE, 0.2,   {alpha:0}, {alpha:0});
             ThisTLM_LOOP.fromTo(ThisLOGO_GLOBE, 1,   {scale:1, alpha:0}, {scale:1.1, alpha:1, ease:Power1.easeOut}, 'a');
             ThisTLM_LOOP.fromTo(ThisLOGO_TEXT,  0.8, {scale:1, alpha:0}, {scale:1.3, alpha:1, ease:Power1.easeOut}, 'a');
-            ThisTLM_LOOP.to(ThisLOGO_GLOBE, 1,   {scale:1, alpha:0, ease:Power1.easeIn}, 'aaa');
-            ThisTLM_LOOP.to(ThisLOGO_TEXT,  0.8, {scale:1, alpha:0, ease:Power1.easeIn}, 'aaa');
+            // ThisTLM_LOOP.to(ThisLOGO_GLOBE, 1,   {scale:1, alpha:0, ease:Power1.easeIn}, 'aaa');
+            // ThisTLM_LOOP.to(ThisLOGO_TEXT,  0.8, {scale:1, alpha:0, ease:Power1.easeIn}, 'aaa');
 
 
     // OUTRO :
-            ThisTLM_OUTRO.fromTo(ThisLOGO_GLOBE, 1,   {scale:1, alpha:0}, {scale:1.1, alpha:1, ease:Power1.easeOut}, 'aa');
-            ThisTLM_OUTRO.fromTo(ThisLOGO_TEXT,  0.8, {scale:1, alpha:0}, {scale:1.3, alpha:1, ease:Power1.easeOut}, 'aa');
+            // ThisTLM_OUTRO.fromTo(ThisLOGO_GLOBE, 1,   {scale:1, alpha:0}, {scale:1.1, alpha:1, ease:Power1.easeOut}, 'aa');
+            // ThisTLM_OUTRO.fromTo(ThisLOGO_TEXT,  0.8, {scale:1, alpha:0}, {scale:1.3, alpha:1, ease:Power1.easeOut}, 'aa');
 
-            ThisTLM_OUTRO.to(ThisLOGO_GLOBE, 1.2,   {scale:1, alpha:1, ease:Power1.easeInOut}, 'c');
-            ThisTLM_OUTRO.to(ThisLOGO_TEXT,  1, {scale:1, alpha:1, ease:Power1.easeInOut}, 'c');
+            ThisTLM_OUTRO.to(ThisLOGO_GLOBE, 1.5,     {scale:1, alpha:1, left:"0", ease:Power1.easeInOut}, 'c');
+            ThisTLM_OUTRO.to(ThisLOGO_TEXT,  1.5,     {scale:1, alpha:1, left:"0", ease:Power1.easeInOut}, 'c');
 
-            ThisTLM_OUTRO.to(ThisHP, 1, {height:hp_h, clearProps:'all'}, 'c' );
+            // ThisTLM_OUTRO.to(ThisHP, 1, {height:hp_h, clearProps:'all'}, 'c' );
+// ThisTLM_OUTRO.to(ThisHP,            2,  {height:"80vh", ease:Power1.easeInOut}, 'c' );
+            ThisTLM_OUTRO.to(ThisBG,            2,  {autoAlpha:1, ease:Power1.easeInOut}, 'c');
+            ThisTLM_OUTRO.to(ThisTOPBAR,        1,  {top:0, ease:Power1.easeInOut}, 'c' );
 
-            ThisTLM_OUTRO.to(ThisBG, 1,  {autoAlpha:1}, 'c');
 
+            ThisTLM_OUTRO.fromTo(ThisINFO,      1,  {alpha:0, left:'-100px', top:"10px"},
+                                                    {autoAlpha:1, left:"0", top:"0", ease:Power1.easeInOut}, 'c+=0.5');
 
-            ThisTLM_OUTRO.to([ThisLOGO_TEXT, ThisLOGO_GLOBE], 1, { rotation:0, scale:1, clearProps:'all' }, 'c');
-
-            // ThisTLM_OUTRO.to(ThisABOUT,         1,  {autoAlpha:1}, 'c');
-            ThisTLM_OUTRO.to(ThisINFO,         1,  {autoAlpha:1}, 'c');
 
             ThisTLM_OUTRO.fromTo(ThisBtn_TICKETS,   0.5,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
             ThisTLM_OUTRO.fromTo(ThisBtn_VIDEO,     0.7,  {opacity:0}, {  opacity:1 }, 'c+=0.2');
 
-            ThisTLM_OUTRO.fromTo(ThisTOPBAR,            1,  {top:-ThisTOPBAR.outerHeight()}, {top:0, ease:Power1.easeOut}, 'c+=0.2' );
 
 
 

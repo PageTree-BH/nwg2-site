@@ -24,52 +24,33 @@
 $nwg: $md;
 
 @import "pt/_pt-Library.scss";
-
-
- 
-
 @import "sasskits/_site-base.scss";
-
-
 @import "sasskits/typography.scss";
 
-
-
 // @import "sasskits/NWG-HomePlate.scss";
-@import "_thatnewnew/NWG-HomePlate.scss";
-
 
 @import "sasskits/nwg-nav.scss";
-
-
 @import "sasskits/ab-sections.scss";
 
 
-@import "sasskits/sectionNWG.scss";
-
-
 // @import "sasskits/nwg-modal.scss";
-
-
-
-
 //                 @import "sasskits/page-home.scss";
-
 // @import "sasskits/page-eventpage.scss";
 // @import "sasskits/page-aboutpage.scss";
 // @import "sasskits/page-venuepage.scss";
 // @import "sasskits/page-tickets.scss";
 // @import "sasskits/page-videos.scss";
 
+
 @import "sasskits/nwg-articles.scss";
 @import "sasskits/section-events-mini.scss";
 
-
-
-// ALTERNATE TO FLEXSLIDER:
 @import "sasskits/slick/slick-theme";
 @import "sasskits/slick/slick";
 
 
 
+
+@import "_thatnewnew/NWG-HomePlate.scss";
+@import "_thatnewnew/sectionNWG.scss";
 @import "_thatnewnew/_thatnewnew.scss";
