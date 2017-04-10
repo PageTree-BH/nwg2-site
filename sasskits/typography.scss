@@ -52,7 +52,6 @@ html {
 }
 
 
-
 body {
     font-family: $font-body;
     // letter-spacing: 0.1em;
@@ -124,11 +123,11 @@ p{
 h1,h2,h3,h4,h5,h6{
     letter-spacing: 0.05em;
     // line-height: 1em;
-
+    margin-bottom:0.5em;
     span{
         position: relative;
         color:white;
-        padding:0.3em 0.8em;
+        padding:0.5em 0.8em;
         line-height:1.7em;
         display:inline;
         background-color:rgba($nwg-darkblue, 0.8);
@@ -208,7 +207,7 @@ blockquote{
     transform: skewY($nwg-skew);
 }
 .nwg-skew-neg {
-    transform: skewY($nwg-skew);
+    transform: skewY(-$nwg-skew);
 }
 
 
@@ -345,124 +344,43 @@ blockquote{
 //
 
 
-@mixin btn() {
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    padding: 0.5em 1em;
-    text-align: center;
-    font-family: $font-button;
-    display:inline-block;
-    cursor: pointer;
-    border: 0;
-    border-radius: 0;
 
-    margin:0.5em 0;
 
-    // border:1px dotted black;
-    // background-color:lightgray;
 
-    &:focus,
-    &:hover {
-        text-decoration: none;
-    }
-}
+
+
 
 .btn {
     @include btn();
 }
+.btn-lightblue, .btn-primary {
+    @include btnLightBlue();
+}
+.btn-darkblue,.btn-secondary {
+    @include btnDarkBlue();
+}
+.btn-black{
+    @include btnBlack();
+}
+
 
 .btn-ghost {
-    @include btn();
-    color: white;
-    background-color: transparent;
-    border: 1px solid white;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: 0.2s;
-
-    &:focus,
-    &:hover {
-        color:$nwg-white;
-        border: 1px solid transparent;
-        background-color: $nwg-darkblue;
-        // transform: scale(1.2);
-    }
+    @include btnGhost();
 }
 .btn-ghost-darkblue {
-    @include btn();
-    color: $nwg-darkblue;
-    background-color: transparent;
-    border: 1px solid $nwg-darkblue;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: 0.2s;
-
-    &:focus,
-    &:hover {
-        color:$nwg-white;
-        border: 1px solid transparent;
-        background-color: $nwg-darkblue;
-        // transform: scale(1.2);
-    }
+    @include btnGhostDarkBlue();
 }
 .btn-ghost-lightblue {
-    @include btn();
-    color: $nwg-lightblue;
-    background-color: transparent;
-    border: 1px solid $nwg-lightblue;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: 0.2s;
-
-    &:focus,
-    &:hover {
-        color:$nwg-white;
-        border: 1px solid transparent;
-        background-color: $nwg-lightblue;
-        // transform: scale(1.2);
-    }
+    @include btnGhostLightBlue();
 }
 
-.btn-lightblue,
-.btn-primary {
-    @include btn();
-    color: white;
-    background-color: $nwg-lightblue;
-    // border: 1px solid white;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: 0.2s;
-    box-shadow: 0 0 0 0 rgba(0,0,0,0);
 
-    &:focus,
-    &:hover {
-        color: $nwg-lightblue;
-        // border: 1px solid white;
-        background-color: $nwg-darkblue;
-        // transform: scale(1.2);
-        // box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.3);
-    }
-}
 
-.btn-darkblue,
-.btn-secondary {
-    @include btn();
-    color: white;
-    background-color: $nwg-darkblue;
-    // border: 1px solid $nwg-lightblue;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: 0.2s;
-    // box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-    &:focus,
-    &:hover {
-        color: $nwg-darkblue;
-        // border: 1px solid white;
-        background-color: $nwg-lightblue;
-        // transform: scale(1.2);
-        // box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.3);
-    }
-}
+
+
+
+
+
 
 .btn-center {
     position: relative;
@@ -476,4 +394,36 @@ blockquote{
     &.btn-center{
         transform: translateX(-50%) skewY(-5deg);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.float-right{
+    float:right;
+}
+.float-left{
+    float:left;
+}
+.float-none{
+    float:none;
+}
+
+
+span.block{
+    display:block;
+}
+span.inline-block{
+    display:inline-block;
 }

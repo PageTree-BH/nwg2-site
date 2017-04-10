@@ -39,7 +39,8 @@
 
 .quoteNWG~.sectionNWG{
     // border:10px solid gold;
-    padding-top:6%;
+    padding-top:7%;
+
 }
 .sectionNWG{
     position: relative;
@@ -73,6 +74,9 @@
     // padding-top:7%;
     text-align: left;
 
+    .btn{
+        font-size:1.4rem;
+    }
 
     @include ptBreakpoint($md){
         // width:40%;
@@ -86,13 +90,16 @@
 
 
 .sectionNWG__headline{
-    position: relative;
-    // z-index:0;
-    color:white;
-    font-size:10rem;
-    margin:0 0 0 0;
-    line-height:0.7em;
     pointer-events: none;
+    position: relative;
+    color:white;
+    margin:0 0 0 0;
+
+    font-size:8rem;
+    line-height:0.7em;
+    @include ptBreakpoint($nwg){
+        font-size:10rem;
+    }
 }
 
 
@@ -135,7 +142,7 @@
     h3{
         display:inline-block;
         font-family:$font-header1;
-        font-size:1.5rem;
+        font-size:1.8rem;
     }
     // h1,h2,h3,h4,h5,h6{
     // }
@@ -244,6 +251,7 @@
     }
     background-color:black;
 }
+
 
 
 .sectionNWG__bgvideo{

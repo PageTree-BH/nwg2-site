@@ -1,22 +1,181 @@
 
-// 
-// @mixin nwg-skew($n:-5){
-//   transform: skewY($n + deg);
-// }
-//
-//
-//
-//
-// @mixin pseudoMax(){
-//     content:'';
-//     position:absolute;
-//     top:0; left:0; bottom:0; right:0;
-//     width:100%;
-//     height:100%;
-// }
-//
-//
+
+
+@mixin skew(){
+    transform: skewY($nwg-skew);
+}
 
 
 
-// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+
+
+@mixin bgSkewColor($color, $height){
+    &:after{
+        content:'';
+        z-index: 0;
+        position:absolute;
+        // top:-25%;         bottom:0;        left:0;        right:0;
+        left:50%;
+        top:50%;
+        // top:0%;
+        background-color:$color;
+
+        width:100%;
+        // height:calc(100% + 3em);
+        // height:calc(100% + 2rem);
+        height:$height;
+        transform: translate(-50%, -50%) skewY($nwg-skew);
+        // transform: translate(0,0) skewY($nwg-skew);
+    }
+}
+
+
+
+
+.bg-skew-black{
+    &:after{
+        content:'';
+        z-index: 0;
+        position:absolute;
+        top:-25%;         bottom:0;        left:0;        right:0;
+
+        background-color:black;
+        width:100%;
+        height:130%;
+        transform: skewY($nwg-skew);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin btn() {
+    display:inline-block;
+    font-family: $font-button;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 0;
+    border-radius: 0;
+
+    padding: 0.6em 1em 0.5em 1em;
+    margin:0.5em 0;
+
+    transition: 0.2s;
+    cursor: pointer;
+
+    background:lightblue;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+@mixin btnGhost(){
+    @include btn();
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    &:focus,
+    &:hover {
+        color:$nwg-white;
+        border: 1px solid transparent;
+        background-color: $nwg-darkblue;
+    }
+}
+
+@mixin btnGhostDarkBlue(){
+    @include btn();
+    color: $nwg-darkblue;
+    background-color: transparent;
+    border: 1px solid $nwg-darkblue;
+    &:focus,
+    &:hover {
+        color:$nwg-white;
+        border: 1px solid transparent;
+        background-color: $nwg-darkblue;
+    }
+}
+
+@mixin btnGhostLightBlue(){
+    @include btn();
+    color: $nwg-lightblue;
+    background-color: transparent;
+    border: 1px solid $nwg-lightblue;
+    &:focus,
+    &:hover {
+        color:$nwg-white;
+        border: 1px solid transparent;
+        background-color: $nwg-lightblue;
+    }
+}
+
+@mixin btnLightBlue(){
+    @include btn();
+    color: $nwg-white;
+    background-color: $nwg-lightblue;
+    &:focus,
+    &:hover {
+        color: $nwg-lightblue;
+        background-color: $nwg-darkblue;
+    }
+}
+
+
+@mixin btnDarkBlue(){
+    @include btn();
+    color: $nwg-white;
+    background-color: $nwg-darkblue;
+    &:focus,
+    &:hover {
+        color: $nwg-darkblue;
+        background-color: $nwg-lightblue;
+    }
+}
+
+@mixin btnDarkBlue(){
+    @include btn();
+    color: $nwg-white;
+    background-color: $nwg-darkblue;
+    &:focus,
+    &:hover {
+        color: $nwg-darkblue;
+        background-color: $nwg-lightblue;
+    }
+}
+
+@mixin btnBlack(){
+    @include btn();
+    color: $nwg-white;
+    background-color: $nwg-black;
+    &:focus,
+    &:hover {
+        color: $nwg-white;
+        background-color: $nwg-lightblue;
+    }
+}

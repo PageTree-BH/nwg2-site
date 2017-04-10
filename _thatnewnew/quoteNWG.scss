@@ -1,0 +1,125 @@
+
+
+
+.sectionNWG ~ .quoteNWG{
+    padding:5% 5% 10% 5%;
+    margin-bottom: -14%;
+}
+
+.quoteNWG{
+    padding:1em 0;
+    position: relative;
+    width:100%;
+    overflow: hidden;
+
+
+    &.bg-splats:before{
+            content:'';
+            position: absolute;
+            top:0; left:0; bottom:0; right:0;
+            width:100%; height:100%;
+            background: $nwg-darkblue;
+
+            // background-image:url('img-homepage/hp-header-bg-LG.jpg');
+            background-image:url('img/bg-blue-splat-r2.jpg');
+            background-position:center center;
+            background-size:cover;
+            // background-attachment: fixed;
+
+            // opacity:0.5;
+            z-index: 0;
+
+    }
+
+    &.bg-arena:before{
+            content:'';
+            position: absolute;
+            top:0; left:0; bottom:0; right:0;
+            width:100%; height:100%;
+            background: $nwg-darkblue;
+            background-image: url('img-homepage/NWG-HP-BG.png');
+            background-size:cover;
+            background-position:50% 50%;
+            // background-attachment: fixed;
+            background-blend-mode: screen;
+            opacity:0.5;
+            z-index: 0;
+    }
+
+    background-color:$nwg-darkblue;
+
+    // background-image: linear-gradient(to right, $nwg-darkblue 80%, $nwg-darkblue 80%), url('img-homepage/hp-header-bg-LG.jpg');
+    // background-blend-mode: overlay;
+
+}
+
+
+
+.quoteNWG__quote {
+    font-size: 2rem;
+    font-family: $font-header2;
+    text-transform: uppercase;
+    text-align:center;
+    // margin:0;
+    // transform:skewY($nwg-skew);
+    position: relative;
+    max-width:1500px;
+    margin:auto;
+    padding:1vw 5vw;
+    span{
+        // background-color:$nwg-lightblue;
+        background-color:$nwg-black;
+        left:-10%;
+        display:inline-block;
+        color: $nwg-lightblue;
+    }
+    span ~ span{
+        // background-color:red;]
+        top:-0.5em;
+        left:10%;
+    }
+
+    // @include breakpoing($sm){
+        // font-size: 3vw;
+    // }
+
+}
+
+
+.quoteNWG__by{
+    position: relative;
+    // float:right;
+    // position: absolute;
+    // right:0;
+    // bottom:0;
+    // z-index: 2;
+    // text-align: center;
+    // margin:auto;
+
+    left:60%;
+    transform:translateY(-40%);
+    margin-bottom:-80px;
+    // top:-65px;
+
+    // margin-top:-60px;
+
+    text-transform: uppercase;
+    color:black;
+    font-family: $font-header1;
+    font-size:1.2rem;
+    z-index: 9;
+
+
+    z-index: 5;
+
+    >img{
+        position: relative;
+        bottom:0;
+        right:0;
+        border-radius:50%;
+        width:100px;
+        height:100px;
+        object-fit: cover;
+        margin:1em;
+    }
+}
