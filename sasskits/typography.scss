@@ -223,7 +223,7 @@ blockquote{
     text-align:right;
 }
 
-.txt-lightblue{
+.txt-lightblue.txt-lightblue{
     color:$nwg-lightblue;
 }
 .txt-darkblue{
@@ -234,6 +234,9 @@ blockquote{
 }
 .txt-white.txt-white{
     color: $nwg-white;
+    p{
+        color:$nwg-white;
+    }
 }
 .txt-black.txt-black{
     color: $nwg-black;
