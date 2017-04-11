@@ -53,8 +53,10 @@ body{
     width: 100%;
     max-width: $nwg-maxwidth;
     // max-width:initial;
-    margin: 0 auto;
-    padding: 0 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    // padding-left:2.5%;
+    // padding-right:2.5%;
     // border:1px dotted lightgreen;
 }
 //
@@ -69,8 +71,11 @@ body{
     position: relative;
     width: 100%;
     max-width: $nwg-maxwidth;
-    margin: 0 auto;
-    padding: 0;
+    margin-left:auto;
+    margin-right:auto;
+    // padding: 0;
+    padding-left:5%;
+    padding-right:5%;
 }
 
 

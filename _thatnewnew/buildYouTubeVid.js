@@ -160,7 +160,7 @@
 			console.log("HP_videoId = " + HP_videoId);
 
 			$('.homeplate-video-button').on('click', function(e){
-// console.log("+++++++BUTTON CLICKED++++++++");
+console.log("+++++++BUTTON CLICKED++++++++");
 				e.preventDefault();
 
 				if(Modernizr.touchevents) {

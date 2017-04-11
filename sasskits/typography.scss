@@ -29,7 +29,7 @@ $font-header1: $font-header;
 $font-header2: 'bebas_neueregular';
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // $font-paragraph: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-paragraph: $font-header2;
+$font-paragraph: $font-header1;
 
 $font-body: $font-paragraph;
 $font-button: $font-header1;
@@ -127,7 +127,7 @@ h1,h2,h3,h4,h5,h6{
     span{
         position: relative;
         color:white;
-        padding:0.5em 0.8em;
+        padding:0.5em 0.8em 0.5em 5%;
         line-height:1.7em;
         display:inline;
         background-color:rgba($nwg-darkblue, 0.8);
@@ -244,6 +244,27 @@ blockquote{
 
 
 
+.txt-intro{
+    // font-size:2rem;
+    // line-height:2.8rem;
+    // @include ptBreakpoint($md){
+    //     // text-align: center;
+    //     font-size:1.6rem;
+    //     line-height:2.5rem;
+    // }
+
+    font-size:1.5em;
+    line-height:1.5em;
+    @include ptBreakpoint($md){
+        font-size:2em;
+        line-height:1.5em;
+    }
+}
+
+
+
+
+
 .txt-shadow{
     // text-shadow:#474747 3px 5px 2px;
     @include nwg-textshadow();
@@ -253,65 +274,6 @@ blockquote{
 
 
 
-
-
-
-
-
-
-
-
-// .nwg-headline {
-//
-//     margin-bottom:0.5em;
-//
-//     >span{
-//         color:white;
-//         padding:0 0.25em;
-//         // font-size:1em;
-//         line-height:1.2em;
-//         display:inline;
-//         // font-style:normal;
-//         background-color:rgba($nwg-darkblue, 0.8);
-//         box-decoration-break: clone;
-//     }
-// }
-
-
-
-//
-// .nwg-headline{
-//
-//     font-size:3rem;
-//     margin:1em auto;
-//
-//     width:100%;
-//
-//     position:relative;
-//     // left:50%;
-//     // transform:translate(-50%, -90%) skewY($nwg-skew) perspective(1px);
-//     // transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
-//
-//     transform:skewY($nwg-skew) perspective(1px);
-//
-//     &.align-left{
-//
-//     }
-//     &.align-center{
-//         text-align: center;
-//         left:50%;
-//         transform:translate(-50%, 0) skewY($nwg-skew) perspective(1px);
-//     }
-//     &.align-right{
-//         text-align: right;
-//         left:100%;
-//         transform:translate(-100%, 0) skewY($nwg-skew) perspective(1px);
-//     }
-//     @include ptBreakpoint($nwg){
-//         font-size:5rem;
-//     }
-//
-// }
 
 
 

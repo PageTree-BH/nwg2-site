@@ -39,19 +39,11 @@
     width:100%;
     // @include bgSkewColor(black, 110%);
     // margin:100px 0;
-    >*{
-        margin:0em auto;
-    }
-    p{
-        color:white;
-        font-size:2rem;
-        line-height:2.8rem;
-        @include ptBreakpoint($md){
-            // text-align: center;
-            font-size:1.6rem;
-            line-height:2.5rem;
-        }
-    }
+
+    // >*{
+    //     margin:0em auto;
+    // }
+
 
 
     &:after{
@@ -96,6 +88,103 @@
 
 
 
+.eventPageIntro__info{
+    margin-bottom:5em;
+
+    position: relative;
+
+    z-index:3;
+
+    p{
+        text-align: left;
+    }
+
+    >div{
+        position: relative;
+        z-index: 1;
+    }
+    &:before{
+        content:'';
+        z-index: 0;
+        position:absolute;
+        left:50%;
+        top:50%;
+
+        background-color:rgba($nwg-darkblue, 0.8);
+
+        width:120%;
+        height:calc(100% + 3em);
+        transform: translate(-50%, -50%) skewY($nwg-skew);
+
+        @include ptBreakpoint($md){
+            height:130%;
+            // width:130px;
+        }
+    }
+
+
+
+}
+
+
+
+
+
+.eventPageIntro__categories{
+    position: relative;
+    height:auto;
+    z-index:2;
+    padding-left:5%;
+
+
+    ul{
+        text-align: left;
+        list-style-type: none;
+        font-size:1.3em;
+    }
+    >div{
+        position: relative;
+        z-index: 1;
+    }
+    &:before{
+        content:'';
+        z-index: 0;
+        position:absolute;
+        // top:-25%;         bottom:0;        left:0;        right:0;
+        left:50%;
+        top:50%;
+        // top:0%;
+
+        background-color:rgba($nwg-lightblue, 0.8);
+
+        width:120%;
+        height:calc(100% + 5em);
+        transform: translate(-50%, -50%) skewY($nwg-skew);
+
+        @include ptBreakpoint($md){
+            height:130%;
+        }
+    }
+
+
+}
+
+
+.eventPageIntro{
+    .ab-5050{
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .wrapper-EventsNWG{
     // max-width:1200px;
     // margin:auto;
@@ -114,34 +203,33 @@
         @include skew();
     }
 
-
-    &:after{
-        content:'';
-        position: absolute;
-        top:0; left:0;
-        // right:0;
-        // bottom:0;
-        width:100%; height:100%;
-        // width:100%; height:50vh;
-        // width:vw; height:vh;
-        // overflow: visible;
-        // background: $nwg-darkblue;
-        background-image:url('img/bg-blue-splat-r3.png');
-        background-position:center center;
-        background-size:100% auto;
-        // background-size:auto;
-
-        .no-touchevents &{
-            // background-image:url('img/bg-blue-splat-full.jpg');
-            background-image:url('img/bg-blue-splats-new.jpg');
-            background-repeat:repeat;
-            background-size:contain;
-            // background-attachment:fixed;
-        }
-
-        // opacity:0.5;
-        z-index: 1;
-    }
+    // &:after{
+    //     content:'';
+    //     position: absolute;
+    //     top:0; left:0;
+    //     // right:0;
+    //     // bottom:0;
+    //     width:100%; height:100%;
+    //     // width:100%; height:50vh;
+    //     // width:vw; height:vh;
+    //     // overflow: visible;
+    //     // background: $nwg-darkblue;
+    //     // background-image:url('img/bg-blue-splats-new.jpg');
+    //     // background-position:center center;
+    //     // background-size:100% auto;
+    //     // background-size:auto;
+    //
+    //     // .no-touchevents &{
+    //         // background-image:url('img/bg-blue-splat-full.jpg');
+    //         background-image:url('img/bg-blue-splats-new.jpg');
+    //         background-repeat:repeat;
+    //         background-size:contain;
+    //         // background-attachment:fixed;
+    //     // }
+    //
+    //     // opacity:0.5;
+    //     z-index: 1;
+    // }
 }
 
 

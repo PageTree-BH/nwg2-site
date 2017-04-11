@@ -366,16 +366,16 @@ $xl-only: ( min: map-get($xl, min) );
 
 
     EXAMPLES
-    .wg-p-a-0    [ padding-all-0 ]
-    .wg-p-a-2    [ padding-all-2rem ]
+    .pt-p-a-0    [ padding-all-0 ]
+    .pt-p-a-2    [ padding-all-2rem ]
 
-    .wg-p-ry-1    [ padding-ResponsiveY-(1rem/2rem/4/rem/8rem) ]
+    .pt-p-ry-1    [ padding-ResponsiveY-(1rem/2rem/4/rem/8rem) ]
 
 
 
 */
 
- 
+
 
 
 
@@ -389,7 +389,12 @@ $spacers: (
   1: ( x: $spacer-x,          y: $spacer-y ),
   2: ( x: ($spacer-x * 1.5),  y: ($spacer-y * 1.5) ),
   3: ( x: ($spacer-x * 3),    y: ($spacer-y * 3) ),
-  4: ( x: ($spacer-x * 4),    y: ($spacer-y * 4) )
+  4: ( x: ($spacer-x * 4),    y: ($spacer-y * 4) ),
+  5: ( x: ($spacer-x * 5),    y: ($spacer-y * 5) ),
+  6: ( x: ($spacer-x * 6),    y: ($spacer-y * 6) ),
+  7: ( x: ($spacer-x * 7),    y: ($spacer-y * 7) ),
+  8: ( x: ($spacer-x * 8),    y: ($spacer-y * 8) ),
+  9: ( x: ($spacer-x * 9),    y: ($spacer-y * 9) )
 ) !default;
 
 
@@ -444,7 +449,7 @@ $spacers: (
         .pt-#{$abbrev}-rx-#{$size} {
 
 
-            #{$prop}: $length-x ;
+            // #{$prop}: $length-x ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-left:  $length-x*2 ;
@@ -471,7 +476,7 @@ $spacers: (
         .pt-#{$abbrev}-ry-#{$size} {
 
 
-            #{$prop}: $length-y ;
+            // #{$prop}: $length-y ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-top: $length-y*2;
@@ -500,7 +505,7 @@ $spacers: (
 
         .pt-#{$abbrev}-rt-#{$size} {
 
-            #{$prop}: $length-y ;
+            // #{$prop}: $length-y ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-top: $length-y*2;
@@ -523,7 +528,7 @@ $spacers: (
 
         .pt-#{$abbrev}-rr-#{$size} {
 
-            #{$prop}: $length-x ;
+            // #{$prop}: $length-x ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-right: $length-x*2;
@@ -546,7 +551,7 @@ $spacers: (
 
         .pt-#{$abbrev}-rb-#{$size} {
 
-            #{$prop}: $length-y ;
+            // #{$prop}: $length-y ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-bottom: $length-y*2;
@@ -569,7 +574,7 @@ $spacers: (
 
         .pt-#{$abbrev}-rl-#{$size} {
 
-            #{$prop}: $length-x ;
+            // #{$prop}: $length-x ;
 
             @include ptBreakpoint($sm){
                 #{$prop}-left: $length-x*2;

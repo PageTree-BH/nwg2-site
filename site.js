@@ -22,10 +22,14 @@ YT:true
 
 // @codekit-append "_thatnewnew/homepage.js"
 // @codekit-append "_thatnewnew/buildBgVids.js"
-// @ codekit-append "_thatnewnew/homepage-video.js"
+// @codekit-append "_thatnewnew/homepage-video.js"
+
 
 // @codekit-append "_thatnewnew/animatePageHeader.js"
 
+
+
+// @    codekit-append "_thatnewnew/buildYouTubeVids.js"
 
 
 

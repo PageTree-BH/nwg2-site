@@ -25,6 +25,23 @@
 
 
 
+.bg-splats-repeat{
+    background-image:url('img/bg-blue-splats-new.jpg');
+    background-repeat:repeat;
+    background-size:contain;    
+}
+
+
+
+.nwg-maxwidth{
+    max-width:$nwg-maxwidth;
+    margin:auto;
+}
+
+
+
+
+
 
 
 .site-footer{

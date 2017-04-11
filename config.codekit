@@ -210,6 +210,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_deploy\/assets\/homepage-video.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/homepage-video.min.js",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/homepage-video.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/_deploy\/assets\/img-homepage\/BMX-cutout-01.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -789,6 +800,50 @@
 		"initialSize": 80850,
 		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/events-fmx-besttrick-header-bg2.jpg",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/events-fmx-besttrick-header-bg2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/assets\/img\/events\/events-dp\/header-events-dp.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149537,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/header-events-dp.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/header-events-dp.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/assets\/img\/events\/events-dp\/josh-portrait.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26130,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/josh-portrait.png",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/josh-portrait.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/assets\/img\/events\/events-dp\/levi-portrait.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28447,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/levi-portrait.png",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/levi-portrait.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/assets\/img\/events\/events-dp\/taka-portrait.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24705,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/taka-portrait.png",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/events\/events-dp\/taka-portrait.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2574,7 +2629,7 @@
 		},
 	"\/_thatnewnew\/homepage-video.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_thatnewnew\/homepage-video.js",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/homepage-video.min.js",
