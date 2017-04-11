@@ -9,9 +9,16 @@
 	tag.src = "https://www.youtube.com/iframe_api";
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+
+
+
+
+
     // NWG.buildYouTubeVid = function(){
+
     function buildYouTubeVid(){
-console.log("~~~~~~~~~ buildYouTubeVid ()");
+		console.log("~~~~~~~~~ buildYouTubeVid ()");
+
 		var HP_player;
 		var Mobile_player;
 
