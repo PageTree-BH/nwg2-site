@@ -133,12 +133,19 @@ h1,h2,h3,h4,h5,h6{
         background-color:rgba($nwg-darkblue, 0.8);
         box-decoration-break: clone;
     }
+    small{
+        position: relative;
+        top:-0.5em;
+    }
 
     &.span-bg-lightblue span {
         background-color:rgba($nwg-lightblue, 0.8);
     }
     &.span-bg-black span {
         background-color:rgba($nwg-black, 0.8);
+    }
+    &.span-bg-black-solid span {
+        background-color:$nwg-black;
     }
 
     a{
@@ -226,10 +233,10 @@ blockquote{
 .txt-lightblue.txt-lightblue{
     color:$nwg-lightblue;
 }
-.txt-darkblue{
+.txt-darkblue.txt-darkblue{
     color:$nwg-darkblue;
 }
-.txt-highlight{
+.txt-highlight.txt-highlight{
     color:$nwg-highlight;
 }
 .txt-white.txt-white{

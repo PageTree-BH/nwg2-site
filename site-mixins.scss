@@ -5,6 +5,10 @@
     transform: skewY($nwg-skew);
 }
 
+@mixin skew-neg(){
+    transform: skewY(-$nwg-skew);
+}
+
 
 
 
@@ -43,7 +47,6 @@
 
 
 
-
 // .bg-skew-black{
 //     &:after{
 //         content:'';
@@ -61,38 +64,28 @@
 
 .bg-skew-black{
     position: relative;
-    z-index:1;
-    // >*{
-        // position: relative;
-        // z-index: 1;
-    // }
-
-
-    // @include ptBreakpoint($md){
-        @include bgSkewColor($nwg-black, 130%);
-    // }
-
+    @include bgSkewColor($nwg-black, 130%);
 }
 
 
 .bg-skew-darkblue{
     position: relative;
-    z-index:0;
-    // >div{
-    //     position: relative;
-    //     z-index: 1;
-    // }
+    @include bgSkewColor(rgba($nwg-darkblue, 0.8), 130%);
+}
+
+.bg-skew-darkblue-solid{
+    position: relative;
     @include bgSkewColor($nwg-darkblue, 130%);
 }
 
 
 .bg-skew-lightblue{
     position: relative;
-    z-index:0;
-    // >div{
-    //     position: relative;
-    //     z-index: 1;
-    // }
+    @include bgSkewColor(rgba($nwg-lightblue, 0.8), 130%);
+}
+
+.bg-skew-lightblue-solid{
+    position: relative;
     @include bgSkewColor($nwg-lightblue, 130%);
 }
 

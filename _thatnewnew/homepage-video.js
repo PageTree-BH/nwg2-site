@@ -5,7 +5,7 @@
     // );
 
 
- 
+
     // NWG.build_HomePage_Video = function(){
     // function build_Homepage_video(){
 console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
@@ -174,7 +174,7 @@ console.log("+++++++BUTTON CLICKED++++++++");
 			});
 
 
-			$('.closeBtn').on('click', function(e){
+			VID_HOLDER.find('.closeBtn').on('click', function(e){
 				e.preventDefault();
 				hideHeaderPlateVid();
 			});

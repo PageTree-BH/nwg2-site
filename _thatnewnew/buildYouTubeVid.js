@@ -16,10 +16,12 @@
 
     // NWG.buildYouTubeVid = function(){
 
-    function buildYouTubeVid(){
-		console.log("~~~~~~~~~ buildYouTubeVid ()");
+    function bgYouTubeVid( _this_ ){
+		console.log("~~~~~~~~~ buildYouTubeVid ~*~*~*~*~*~*~*~*~*~*~*~ ()");
 
-		var HP_player;
+		var _THIS_ = $(_this_);
+
+		var BG_player;
 		var Mobile_player;
 
 		var VID_HOLDER;
@@ -30,54 +32,49 @@
 
 
 
+		BG_player = new YT.Player('player', {
+			height:'100%',
+			width:'100%',
+			// videoId:HP_videoId,
+			videoId:'GudH-ELXsKE',
+			playerVars: {
+				'autoplay': 0,
+				'rel':0,
+				'controls': 0,
+				'modestbranding':1,
+				'showinfo':0,
+				'iv_load_policy':3,
+				'playsinline':0
+			},
+			events:{
+			  'onStateChange': bgYouTubeVid_onPlayerStateChange
+			}
+		});
 
-
-		// function onYouTubeIframeAPIReady() {
-			console.log('!!YOUTUBE API IS READY!!');
-
-			HP_player = new YT.Player('player', {
-				height:'100%',
-				width:'100%',
-				videoId:HP_videoId,
-				playerVars: {
-					'autoplay': 0,
-					'rel':0,
-					'controls': 0,
-					'modestbranding':1,
-					'showinfo':0,
-					'iv_load_policy':3,
-					'playsinline':0
-				},
-				events:{
-				  'onStateChange': onPlayerStateChange
-				}
-			});
-
-			Mobile_player = new YT.Player('mobile-player', {
-				height:'100%',
-				width:'100%',
-				videoId:'GudH-ELXsKE',
-				playerVars: {
-					'autoplay': 0,
-					'rel':0,
-					'controls': 0,
-					'modestbranding':1,
-					'showinfo':0,
-					'iv_load_policy':3,
-					'playsinline':0
-				},
-				events:{
-				}
-			});
-
-		// }
+		Mobile_player = new YT.Player('mobile-player', {
+			height:'100%',
+			width:'100%',
+			videoId:'GudH-ELXsKE',
+			playerVars: {
+				'autoplay': 0,
+				'rel':0,
+				'controls': 0,
+				'modestbranding':1,
+				'showinfo':0,
+				'iv_load_policy':3,
+				'playsinline':0
+			},
+			events:{
+			}
+		});
 
 
 
-		function onPlayerStateChange(event) {
+
+		function bgYouTubeVid_onPlayerStateChange(event) {
 			if (event.data === YT.PlayerState.ENDED ) {
 
-				$('.homeplate-video-button').html('<i class="fa fa-play"></i>Play Video').removeClass('isPlaying');
+$('.homeplate-video-button').html('<i class="fa fa-play"></i>Play Video').removeClass('isPlaying');
 
 				TweenMax.to(VID_HOLDER, 0.2, { autoAlpha:0, onComplete:function(){
 						VID_HOLDER.removeClass('showme');
@@ -87,18 +84,19 @@
 		}
 
 
-		function hideHeaderPlateVid(){
+		// function hideHeaderPlateVid(){
+		function bgYouTubeVid_HIDE(){
 
-			$('.homeplate-video-button').html('<i class="fa fa-play"></i> Play Video').removeClass('isPlaying');
+$('.homeplate-video-button').html('<i class="fa fa-play"></i> Play Video').removeClass('isPlaying');
 
-			pauseVid();
+pauseVid();
 
 
 			TweenMax.to(".homeplate-inner", 2, { autoAlpha:1 });
 
 			TweenMax.to(VID_HOLDER, 2, { autoAlpha:0, onComplete:function(){
 					VID_HOLDER.removeClass('showme');
-					stopVid();
+stopVid();
 				}
 			});
 
@@ -107,15 +105,16 @@
 
 
 
-		function showHeaderPlateVid(){
+		// function showHeaderPlateVid(){
+		function bgYouTubeVid_SHOW(){
 
 			VID_HOLDER.addClass('showme');
 
-			$('.homeplate-video-button').html('<i class="fa fa-stop"></i> Stop Video').addClass('isPlaying');
+$('.homeplate-video-button').html('<i class="fa fa-stop"></i> Stop Video').addClass('isPlaying');
 
-			playVid();
+playVid();
 
-			TweenMax.to(".homeplate-inner", 2, { autoAlpha:0 });
+// TweenMax.to(".homeplate-inner", 2, { autoAlpha:0 });
 
 			TweenMax.set(VID_HOLDER, {autoAlpha:0});
 
@@ -126,20 +125,22 @@
 
 
 		function pauseVid() {
-			HP_player.pauseVideo();
+			BG_player.pauseVideo();
 		}
 
 		function stopVid() {
-			HP_player.stopVideo();
+			BG_player.stopVideo();
 		}
 
 		function restartVid() {
-			HP_player.seekTo(30);
-			HP_player.playVideo();
+			BG_player.seekTo(30);
+			BG_player.playVideo();
 		}
 
 		function playVid() {
-			HP_player.playVideo();
+			console.log('playVid motherfucker');
+			BG_player.playVideo();
+			// console.log(BG_player);
 		}
 
 
@@ -151,16 +152,20 @@
 
 		// $(function() {
 
-			VID_HOLDER = $('.homeplate-video');
+// VID_HOLDER = $('.homeplate-video');
+VID_HOLDER = _THIS_;
 
-			MobileVid_HOLDER = $('.mobile-video-holder');
+MobileVid_HOLDER = $('.mobile-video-holder');
 
 
-			HP_videoId = $('.homeplate-video').data('video-id');
-			console.log("HP_videoId = " + HP_videoId);
+HP_videoId = VID_HOLDER.data('video-id');
 
-			$('.homeplate-video-button').on('click', function(e){
-console.log("+++++++BUTTON CLICKED++++++++");
+	// console.log("HP_videoId = " + HP_videoId);
+
+// $('.homeplate-video-button').on('click', function(e){
+$('.btn-video').on('click', function(e){
+
+				// console.log("+++++++BUTTON CLICKED++++++++");
 				e.preventDefault();
 
 				if(Modernizr.touchevents) {
@@ -169,32 +174,30 @@ console.log("+++++++BUTTON CLICKED++++++++");
 
 				}else{
 
-					$('.homeplate-video-button').html('IS NOT TOUCH');
+// $('.homeplate-video-button').html('IS NOT TOUCH');
+// $('.btn-video').html('IS NOT TOUCH');
 
 					if( $(this).hasClass('isPlaying') ){
-						hideHeaderPlateVid();
+						bgYouTubeVid_HIDE();
 					}else{
-						showHeaderPlateVid();
+						bgYouTubeVid_SHOW();
 					}
 				}
 			});
 
 
-			$('.closeBtn').on('click', function(e){
-				e.preventDefault();
-				hideHeaderPlateVid();
-			});
+_THIS_.find('.closeBtn').on('click', function(e){
+	e.preventDefault();
+	// hideHeaderPlateVid();
+	bgYouTubeVid_HIDE();
+});
 
 
-			$('.mobile-video-closebtn').on('click', function(e){
-
-				e.preventDefault();
-
-				MobileVid_HOLDER.removeClass('showme');
-
-				Mobile_player.stopVideo();
-
-			});
+$('.mobile-video-closebtn').on('click', function(e){
+	e.preventDefault();
+	MobileVid_HOLDER.removeClass('showme');
+	Mobile_player.stopVideo();
+});
 
 
 		// });
@@ -204,5 +207,12 @@ console.log("+++++++BUTTON CLICKED++++++++");
 
     }
     // buildYouTubeVid();
+
+
+	function buildYouTubeVid(){
+console.log('buildYouTubeVid()()()()()()()()()()())()))))()()()())()(  )');
+		bgYouTubeVid( $('.bgYouTubeVid')[0] );
+
+	}
 
 PT.addOnLoad( buildYouTubeVid );

@@ -171,7 +171,7 @@ var PT = {
 
             var arg = [''];
             var textArr = _data_;
-            var ratio = 360 / textArr.length;
+            // var ratio = 360 / textArr.length;
 
             // console.log('_color_ = ' + _color_);
 

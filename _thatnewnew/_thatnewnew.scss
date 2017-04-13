@@ -4,31 +4,66 @@
 
 
 
-.imgSkewMask{
-  width:100%;
-  height:100%;
-  display:block;
-  // position: absolute;
-  // left:0; top:0; right:0; bottom:0;
-  image{
-    display:block;
+// .imgSkewMask{
+//   width:100%;
+//   height:100%;
+//   display:block;
+
+//   image{
+//     display:block;
+//     width:100%;
+//     height:auto;
+//     margin:0;
+//     padding:0;
+//     border:1px solid green;
+//   }
+//   border:1px solid red;
+// }
+
+
+
+
+
+
+.athletesList{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
     width:100%;
-    height:auto;
-    margin:0;
-    padding:0;
-    border:1px solid green;
-  }
-  border:1px solid red;
+    padding:5% 0;
 }
 
 
+.athletesList__item{
+
+    @include skew();
+    width:90%;
+    margin:1em 0;
+
+    @include ptBreakpoint($sm){
+        flex:1 1 50%;
+    }
+}
+
+.athletesList__img{
+    @include skew-neg();
+    border-radius: 100%;
+    margin-right:1em;
+    width:100px;
+    height:auto;
+    float:left;
+}
+
+.athletesList__name{
+    margin-top:0;
+}
 
 
 
 .bg-splats-repeat{
     background-image:url('img/bg-blue-splats-new.jpg');
     background-repeat:repeat;
-    background-size:contain;    
+    background-size:contain;
 }
 
 
