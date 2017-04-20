@@ -28,17 +28,13 @@ $font-header1: $font-header;
 
 $font-header2: 'bebas_neueregular';
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$font-paragraph: $font-header1;
 
+$font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-paragraph: $font-header1;
 $font-body: $font-paragraph;
 $font-button: $font-header1;
 
-.font-helvetica{
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    p{
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-}
 
 
 :root {
@@ -74,6 +70,16 @@ body {
 
 .font-body {
     font-family: $font-body;
+}
+.font-paragraph{
+    font-family: $font-helvetica;
+}
+
+.font-helvetica{
+    font-family: $font-helvetica;
+    p{
+        font-family: $font-helvetica;
+    }
 }
 
 h1,

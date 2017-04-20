@@ -14,7 +14,7 @@
 
 
 
-@mixin bgSkewColor($color, $height, $skew){
+@mixin bgSkewColor($color:$nwg-darkblue, $width:110%, $height:130%, $skew:$nwg-skew){
     position:relative;
     >div{
         position: relative;
@@ -30,10 +30,7 @@
         // top:0%;
         background-color:$color;
 
-        width:100%;
-        // height:calc(100% + 3em);
-        // height:calc(100% + 2rem);
-
+        width:$width;
 
         height:calc(100% + 5em);
 
@@ -64,40 +61,40 @@
 
 
 .bg-skew-black{
-    @include bgSkewColor($nwg-black, 130%, $nwg-skew);
+    @include bgSkewColor($nwg-black);
 }
 .bg-skew-neg-black{
-    @include bgSkewColor($nwg-black, 130%, -$nwg-skew);
+    @include bgSkewColor($nwg-black);
 }
 
 
 .bg-skew-darkblue{
-    @include bgSkewColor(rgba($nwg-darkblue, 0.8), 130%, $nwg-skew);
+    @include bgSkewColor(rgba($nwg-darkblue, 0.8));
 }
 .bg-skew-neg-darkblue{
-    @include bgSkewColor(rgba($nwg-darkblue, 0.8), 130%, -$nwg-skew);
+    @include bgSkewColor(rgba($nwg-darkblue, 0.8));
 }
 
 .bg-skew-darkblue-solid{
-    @include bgSkewColor($nwg-darkblue, 130%, $nwg-skew);
+    @include bgSkewColor($nwg-darkblue);
 }
 .bg-skew-neg-darkblue-solid{
-    @include bgSkewColor($nwg-darkblue, 130%, -$nwg-skew);
+    @include bgSkewColor($nwg-darkblue);
 }
 
 
 .bg-skew-lightblue{
-    @include bgSkewColor(rgba($nwg-lightblue, 0.8), 130%, $nwg-skew);
+    @include bgSkewColor(rgba($nwg-lightblue, 0.8));
 }
 .bg-skew-neg-lightblue{
-    @include bgSkewColor(rgba($nwg-lightblue, 0.8), 130%, -$nwg-skew);
+    @include bgSkewColor(rgba($nwg-lightblue, 0.8));
 }
 
 .bg-skew-lightblue-solid{
-    @include bgSkewColor($nwg-lightblue, 130%, $nwg-skew);
+    @include bgSkewColor($nwg-lightblue);
 }
 .bg-skew-neg-lightblue-solid{
-    @include bgSkewColor($nwg-lightblue, 130%, -$nwg-skew);
+    @include bgSkewColor($nwg-lightblue);
 }
 
 
