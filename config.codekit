@@ -2571,6 +2571,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_deploy\/page-tickets.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/page-tickets.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_deploy\/page-video-detail.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -6842,6 +6851,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page-styleguide.kit",
 		"outputAbbreviatedPath": "\/_deploy\/page-styleguide.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page-tickets.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-tickets.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-tickets.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
