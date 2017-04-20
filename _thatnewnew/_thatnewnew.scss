@@ -20,8 +20,77 @@
 //   border:1px solid red;
 // }
 
+.z-9999{
+    z-index: 9999;
+}
+.socialShare{
+    // border:1px solid red;
+
+    position: absolute;
+    right:5%;
+    // top:-50%;
+    // bottom:0;
+    transform:translateY(-50%);
+
+    $white: #fff;
+    $color: #000;
+
+    ul.social-media-icons {
+        list-style: none;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        li a {
+            border:none;
+            color: $white;
+            background-color: $color;
+
+            font-size:1.5em;
+            padding:1em;
+
+            &:focus,
+            &:hover {
+                background-color: $white;
+                color: $color;
+            }
+        }
+    }
+
+    &.red{
+        $txt: #fff;
+        $bg: indianred;
+        ul.social-media-icons {
+            li a {
+                color: $txt;
+                background-color: $bg;
+                &:focus, &:hover {
+                    background-color: $txt;
+                    color: $bg;
+                }
+            }
+        }
+    }
+    &.white{
+        $txt: #000;
+        $bg: #fff;
+        ul.social-media-icons {
+            li a {
+                color: $txt;
+                background-color: $bg;
+                &:focus, &:hover {
+                    background-color: $txt;
+                    color: $bg;
+                }
+            }
+        }
+    }
 
 
+
+
+}
 
 
 
@@ -62,8 +131,10 @@
 
 .bg-splats-repeat{
     background-image:url('img/bg-blue-splats-new.jpg');
+    background-position:top center;
     background-repeat:repeat;
-    background-size:contain;
+    // background-size:contain;
+    background-size:cover;
 }
 
 

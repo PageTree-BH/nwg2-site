@@ -8,35 +8,53 @@
     z-index: 999;
 }
 
+header.pageHeaderNWG{
+    z-index: 99;
+}
 main.main{
     position: relative;
     z-index: 50;
 }
-
 footer.site-footer{
     position: relative;
     background:black;
     z-index:999;
 }
 
+.page-Events{
+    // background-image: url('img-homepage/NWG-HP-BG.png');
+    background-size:cover;
+    background-position:50% 50%;
 
-
+    .no-touch & {
+        background-attachment: fixed;
+    }
+}
 
 header.pageHeaderNWG{
+    // >*{
+        // border:2px dotted pink;
+        // flex:1 1 auto;
+        // width:100px;
+        // height:100px;
+    // }
+
     position: relative;
-    z-index: 99;
-    display:block;
+
 
     height:auto;
-    min-height:50vw;
+    // height:100%;
+    height:90vh;
+    // min-height:50vw;
+    // padding:100px 0 50px 0;
     padding:100px 0 50px 0;
+    margin:auto;
 
     display:flex;
     flex-direction:column;
-    justify-content: flex-end;
-    // align-items: center;
+    justify-content:flex-end;
+    // align-items: flex-end;
     // align-content: flex-end;
-
 
     // padding:10rem 0 10rem 0;
     overflow:hidden;
@@ -46,6 +64,14 @@ header.pageHeaderNWG{
     h1{
         font-size:2.5rem;
         width:70%;
+    }
+
+    h1,h2,h3,h4,h5{
+        span{
+            // line-height: 1.65em;
+            line-height: 1.2em;
+            padding:0.2em 0.5em 0.2em 5%;
+        }
     }
 
     h2{
@@ -75,31 +101,12 @@ header.pageHeaderNWG{
 
 
 
-.pageHeaderNWG__action{
-    position: absolute;
-    // bottom:0; left:0;
-    z-index:99;
-    transform:translate(-50%, -50%);
-    width:30%;
-    // left:25%;
-    // top:60%;
-
-    // display:none;
-
-    top:45%;
-    right:0%;
-    @include ptBreakpoint($sm){
-        // display:block;
-        // top:70%;
-    }
-    @include ptBreakpoint($md){
-        // left:20%;
-
-    }
-    @include ptBreakpoint($lg){
-        // left:20%;
-        // top:
-    }
+.pageHeaderNWG__inner{
+    position:relative;
+    // height:auto;
+    // width:100%;
+    // max-width:$nwg-maxwidth;
+    // margin:auto;
 }
 
 
@@ -131,22 +138,31 @@ header.pageHeaderNWG{
 
 
 
-.pageHeaderNWG__inner{
-    // border:1px dotted gold;
-    width:100%;
-    max-width:$nwg-maxwidth;
-    margin:auto;
-}
 
 
+.pageHeaderNWG__action{
+    position: absolute;
+    // bottom:0; left:0;
+    z-index:99;
+    transform:translate(-50%, -50%);
+    width:30%;
+    // left:25%;
+    // top:60%;
 
+    // display:none;
 
-.page-Events{
-    // background-image: url('img-homepage/NWG-HP-BG.png');
-    background-size:cover;
-    background-position:50% 50%;
+    top:45%;
+    right:0%;
+    @include ptBreakpoint($sm){
+        // display:block;
+        // top:70%;
+    }
+    @include ptBreakpoint($md){
+        // left:20%;
 
-    .no-touch & {
-        background-attachment: fixed;
+    }
+    @include ptBreakpoint($lg){
+        // left:20%;
+        // top:
     }
 }

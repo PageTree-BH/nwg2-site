@@ -28,11 +28,18 @@ $font-header1: $font-header;
 
 $font-header2: 'bebas_neueregular';
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// $font-paragraph: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-paragraph: $font-header1;
 
 $font-body: $font-paragraph;
 $font-button: $font-header1;
+
+.font-helvetica{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    p{
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+}
+
 
 :root {
     font-size: 12px;
@@ -50,7 +57,6 @@ $font-button: $font-header1;
 html {
     // font: 100%/1;
 }
-
 
 body {
     font-family: $font-body;
@@ -232,21 +238,36 @@ blockquote{
 
 .txt-lightblue.txt-lightblue{
     color:$nwg-lightblue;
+    span{
+        color:$nwg-lightblue;
+    }
 }
 .txt-darkblue.txt-darkblue{
     color:$nwg-darkblue;
+    span{
+        color:$nwg-darkblue;
+    }
 }
 .txt-highlight.txt-highlight{
     color:$nwg-highlight;
+    span{
+        color:$nwg-highlight;
+    }
 }
 .txt-white.txt-white{
     color: $nwg-white;
+    span{
+        color: $nwg-white;
+    }
     p{
         color:$nwg-white;
     }
 }
 .txt-black.txt-black{
     color: $nwg-black;
+    span{
+        color: $nwg-black;
+    }
 }
 
 
@@ -346,7 +367,9 @@ blockquote{
     @include btnGhostLightBlue();
 }
 
-
+.btn-giant{
+    font-size:1.5em;
+}
 
 
 

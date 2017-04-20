@@ -18,9 +18,10 @@
 
 
 .bgYouTubeVid{
-    border:10px solid red;
+    // border:10px solid red;
 
     position:absolute;
+    // position:relative;
     top:0;
     // // top:10%;
     // // top:50%;
@@ -57,13 +58,16 @@
         color:white;
         background-color:rgba(black, 0.8);
         text-align: center;
-
+display: flex;
+justify-content: center;
+flex-direction: column;
         font-size:2rem;
         transition:0.2s;
 
         &:hover, &:focus{
             cursor: pointer;
             background-color:$nwg-highlight;
+            text-decoration: none;
             // color:black;
         }
 

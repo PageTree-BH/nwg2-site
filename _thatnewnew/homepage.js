@@ -150,7 +150,8 @@ ThisTOPBAR.css({ 'top' : -ThisTOPBAR.outerHeight()});
                     console.log("LOOP COMPLETE FUNC() " + PT._isPreloaded);
                     i++;
                     // if((PT._isPreloaded) && (loopThisMany < i)){
-                    if((PT._isPreloaded)){
+                    // if(PT._isPreloaded){
+                    if(true){
                         console.log(" DONE ");
                         ThisTLM_LOOP.kill();
                         ThisTLM_OUTRO.play();

@@ -7,8 +7,11 @@
 
 
     // NWG.build_HomePage_Video = function(){
-    // function build_Homepage_video(){
+
+    function build_Homepage_video(){
+
 console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
+
 		var HP_player;
 		var Mobile_player;
 
@@ -18,15 +21,43 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 
 		var HP_videoId = 'GudH-ELXsKE';
 
-		var tag = document.createElement('script');
+		// var tag = document.createElement('script');
 
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		// tag.src = "https://www.youtube.com/iframe_api";
+		// var firstScriptTag = document.getElementsByTagName('script')[0];
+		// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		//
+		$(document).ready( function() {
+		  console.log( "ready!" );
+		  loadPlayer();
+		});
+
+		function loadPlayer() {
+		  if (typeof(YT) === 'undefined' || typeof(YT.Player) === 'undefined') {
+
+		    var tag = document.createElement('script');
+		    tag.src = "https://www.youtube.com/iframe_api";
+		    var firstScriptTag = document.getElementsByTagName('script')[0];
+		    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		    window.onYouTubePlayerAPIReady = function() {
+		      onYouTubePlayer();
+		    };
+
+		  } else {
+
+		    onYouTubePlayer();
+
+		  }
+		}
 
 
 
-		function onYouTubeIframeAPIReady() {
+
+
+
+		function onYouTubePlayer() {
+		// function onYouTubeIframeAPIReady() {
 			console.log('!!YOUTUBE API IS READY!!');
 
 			HP_player = new YT.Player('player', {
@@ -36,7 +67,7 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 				playerVars: {
 					'autoplay': 0,
 					'rel':0,
-					'controls': 1,
+					'controls': 0,
 					'modestbranding':1,
 					'showinfo':0,
 					'iv_load_policy':3,
@@ -46,16 +77,17 @@ console.log("~~~~~~~~~ HOMEPAGE-VIDEO ()");
 				  'onStateChange': onPlayerStateChange
 				}
 			});
+			console.log(HP_player);
 
 			Mobile_player = new YT.Player('mobile-player', {
 				height:'100%',
 				width:'100%',
-				videoId:'GudH-ELXsKE',
+				videoId:HP_videoId,
 				playerVars: {
 					'autoplay': 0,
 					'rel':0,
 					'controls': 0,
-					'modestbranding':1,
+					'modestbranding':0,
 					'showinfo':0,
 					'iv_load_policy':3,
 					'playsinline':0
@@ -196,5 +228,12 @@ console.log("+++++++BUTTON CLICKED++++++++");
 
 
 
-    // }
-    // build_Homepage_video();
+    }
+
+
+	if( $('.homeplate-video')[0] ){
+		console.log('yes');
+		build_Homepage_video();
+	}else{
+		console.log('no');
+	}
