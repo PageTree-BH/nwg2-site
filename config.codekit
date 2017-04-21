@@ -1486,6 +1486,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_deploy\/assets\/img\/partners\/partners-logo-smithtix-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14435,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-smithtix-black.png",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-smithtix-black.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_deploy\/assets\/img\/partners\/partners-logo-valvoline-color.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1504,6 +1515,17 @@
 		"initialSize": 2670,
 		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-valvoline-white.png",
 		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-valvoline-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/assets\/img\/partners\/partners-logo-vividseats-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14242,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-vividseats-black.png",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/partners\/partners-logo-vividseats-black.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2201,6 +2223,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_deploy\/assets\/img\/tickets\/stadium-map.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34109,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img\/tickets\/stadium-map.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img\/tickets\/stadium-map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_deploy\/assets\/img\/tickets\/tickets-vividseats.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2785,6 +2818,38 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_thatnewnew\/sectionNWG.scss",
 		"outputAbbreviatedPath": "\/css\/sectionNWG.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/_thatnewnew\/ticketsPage.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_thatnewnew\/ticketsPage.scss",
+		"outputAbbreviatedPath": "\/css\/ticketsPage.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/_thatnewnew\/typography.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_thatnewnew\/typography.scss",
+		"outputAbbreviatedPath": "\/css\/typography.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -3473,6 +3538,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/site-mixins.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/ticketsPage.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/ticketsPage.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -7512,22 +7586,6 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sasskits\/top-navigation.scss",
 		"outputAbbreviatedPath": "\/css\/top-navigation.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 0
-		},
-	"\/sasskits\/typography.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sasskits\/typography.scss",
-		"outputAbbreviatedPath": "\/css\/typography.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

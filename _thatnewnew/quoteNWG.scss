@@ -56,8 +56,8 @@
 
 
 .quoteNWG__quote {
-    font-size: 2rem;
-    font-family: $font-header2;
+    font-size: 1.5rem;
+    font-family: $font-header;
     text-transform: uppercase;
     text-align:center;
     // margin:0;
@@ -70,6 +70,7 @@
     span{
         // background-color:$nwg-lightblue;
         background-color:$nwg-black;
+        background-color:rgba(#8DC1F4, 0.8);
         left:-10%;
         display:inline-block;
         color: $nwg-lightblue;

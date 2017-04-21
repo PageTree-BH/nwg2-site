@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+
+
+.homeplate--tickets{
+    .homeplate-inner{
+        flex-direction: column;
+    }
+    .homeplate-info:after{
+        display:none;
+    }
+
+    .homeplate-info{
+        background-color:rgba($nwg-darkblue, 0.8);
+
+
+        @include ptBreakpoint($md){
+            width:55%;
+            top:-65px;
+        };
+
+        // padding-left:5%;
+        // padding-right:5%;
+
+    }
+
+}
+
+
+
+
+// .tictetsPageIntro{
+//
+//
+//     @include bgSkew(rgba($nwg-darkblue, 0.8), 110%, 130%, $nwg-skew);
+//
+// }
+//

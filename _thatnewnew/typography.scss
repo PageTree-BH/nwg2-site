@@ -303,11 +303,15 @@ blockquote{
         font-size:2em;
         line-height:1.5em;
     }
+
 }
 
-
-
-
+.txt-huge{
+    font-size:4em;
+    @include ptBreakpoint($md){
+        font-size:6em;
+    }
+}
 
 .txt-shadow{
     // text-shadow:#474747 3px 5px 2px;

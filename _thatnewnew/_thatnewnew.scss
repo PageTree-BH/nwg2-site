@@ -1,5 +1,8 @@
 
 
+.main{
+    overflow:hidden;
+}
 
 
 
@@ -23,9 +26,9 @@
 .z-9999{
     z-index: 9999;
 }
+
 .socialShare{
     // border:1px solid red;
-
     position: absolute;
     right:5%;
     // top:-50%;
@@ -72,6 +75,7 @@
             }
         }
     }
+
     &.white{
         $txt: #000;
         $bg: #fff;
@@ -86,9 +90,6 @@
             }
         }
     }
-
-
-
 
 }
 
@@ -112,7 +113,6 @@ table.resultsTable {
     color: black;
 
     font-family: $font-helvetica;
-
 
     th{
         color: #333;
