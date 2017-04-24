@@ -23,6 +23,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+
 $font-header: 'archiveregular';
 $font-header1: $font-header;
 
@@ -31,7 +34,7 @@ $font-header2: 'bebas_neueregular';
 
 $font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$font-paragraph: $font-header1;
+$font-paragraph: $font-header2;
 $font-body: $font-paragraph;
 $font-button: $font-header1;
 
@@ -59,6 +62,25 @@ body {
     // letter-spacing: 0.1em;
 }
 
+
+
+$font-archive: 'archiveregular';
+.font-archive{
+    font-family: $font-archive;
+}
+
+$font-bebas: 'bebas_neueregular';
+.font-bebas{
+    font-family: $font-bebas;
+}
+
+.font-helvetica{
+    font-family: $font-helvetica;
+    p{
+        font-family: $font-helvetica;
+    }
+}
+
 .font-header,
 .font-header1 {
     font-family: $font-header;
@@ -75,12 +97,7 @@ body {
     font-family: $font-helvetica;
 }
 
-.font-helvetica{
-    font-family: $font-helvetica;
-    p{
-        font-family: $font-helvetica;
-    }
-}
+
 
 h1,
 .h1 {
@@ -123,7 +140,12 @@ p{
     font-size: 1.2rem;
     font-family: $font-paragraph;
     letter-spacing: 0.1em;
-    line-height: 1.5rem;
+    line-height: 1.6em;
+
+    @include ptBreakpoint($md){
+
+    }
+
 }
 
 .txt-x2{
@@ -309,7 +331,7 @@ blockquote{
 .txt-huge{
     font-size:4em;
     @include ptBreakpoint($md){
-        font-size:6em;
+        font-size:8em;
     }
 }
 
@@ -387,15 +409,18 @@ blockquote{
     @include btnGhostLightBlue();
 }
 
-.btn-giant{
-    font-size:1.5em;
+
+
+.btn-big{
+    @include btn();
+    font-size: 2rem;
 }
-
-
-
-
-
-
+.btn-huge{
+    font-size: 3rem;
+}
+.btn-giant{
+    font-size:4rem;
+}
 
 .btn-center {
     position: relative;
@@ -405,17 +430,53 @@ blockquote{
 
 .btn-skew {
     transform: skewY($nwg-skew);
-    margin:1em;
+    // margin:1em;
     &.btn-center{
         transform: translateX(-50%) skewY(-5deg);
     }
 }
 
+// .btn-txt-white{
+//     color:white;
+//     transition:color 0.2s;
+//     &:hover, &:focus{
+//         color:$nwg-lightblue;
+//     }
+// }
+// .btn-txt-shadow{
+//     text-shadow: 0px 0px 30px black;
+// }
+
+// .btn-circle{
+//     width:3rem;
+//     height:3rem;
+//     color:white;
+//     border-radius:100%;
+//     border:0;
+//     outline:0;
+//     text-align: center;
+//     // padding-left:1em;
+//     background:none;
+//
+//     text-shadow: 0px 0px 30px black;
+//
+// }
 
 
 
+.playBtn{
+    background:none;
+    border:0;
+    outline:none;
+    font-size:6rem;
 
+    color:white;
+    transition:color 0.2s;
+    &:hover, &:focus{
+        color:$nwg-lightblue;
+    }
 
+}
 
 
 

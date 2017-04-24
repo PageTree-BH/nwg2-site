@@ -13,10 +13,6 @@
 //     }
 // }
 
-.nwg-skew-neg{
-    transform:skewY(5deg);
-}
-
 
 html {
     box-sizing: border-box;
@@ -29,14 +25,14 @@ html {
 }
 
 body{
-    background:black;
+    background:white;
     &.noscroll{
         overflow:hidden;
     }
 }
 
 .viewport{
-    background:black;
+    background:white;
     >section,
     >article,
     >header
@@ -80,7 +76,7 @@ body{
 }
 
 
-.svg-clipped {
-    clip-path: url(#svgPath);
-    -webkit-clip-path: url(#svgPath);
-}
+// .svg-clipped {
+//     clip-path: url(#svgPath);
+//     -webkit-clip-path: url(#svgPath);
+// }

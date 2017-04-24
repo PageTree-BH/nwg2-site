@@ -550,8 +550,8 @@
 
     position: relative;
     display: block;
-    flex-direction: column;
-
+    // flex-direction: column;
+    // justify-content:center;
     // @include ptViewport(min-height, 50vh);
     // min-height:500px;
 
@@ -561,7 +561,6 @@
     .article-bg{
         position:relative;
         width:100%;
-        // height:20em;
 
         img{
             width:100%;
@@ -580,9 +579,22 @@
     @include ptBreakpoint($md){
         // border:10px solid blue !important;
         // @include ptViewport(height, 70vh);
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
 
         .article-bg{
-            // height:30em;
+            position:absolute;
+            top:0; left:0; bottom:0; right:0;
+            height:100%;
+            width:100%;
+
+            img{
+                width:100%;
+                height:100% !important;
+                object-fit:cover;
+                object-position: center;
+            }
         }
     }
 
@@ -714,23 +726,31 @@
             // overflow:hidden;
             z-index:1;
 
-            img{
-                width:100%;
-                max-width:100%;
-                height:auto;
+            // img{
+            //     width:100%;
+            //     max-width:100%;
+            //     height:auto;
                 // position: absolute;
                 // top:50%;
                 // transform:translateY(-50%);
-            }
+            // }
         }
 
         .article-infoblock{
             // border:1px solid green;
-            position:absolute;
-            left:3em;
-            top:50%;
-            transform:translateY(-50%) skewY(-5deg) perspective(1px);
-            width:100%;
+
+
+            // position:absolute;
+            // left:5%;
+            // top:50%;
+            // transform:translateY(-50%) skewY(-5deg) perspective(1px);
+            // width:100%;
+
+            position:relative;
+            left:5%;
+            // top:50%;
+            // transform:translateY(-50%) skewY(-5deg) perspective(1px);
+
         }
 
         .article-headline{
@@ -745,7 +765,7 @@
             max-width:50%;
             // left:0;
             padding-right:3em;
-            margin:0 0 0 0;
+            margin:0 0 6em 0;
             // padding:2em;
         }
 

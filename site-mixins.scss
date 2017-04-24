@@ -13,7 +13,7 @@
 
 
 
- 
+
 @mixin bgSkew($color:$nwg-darkblue, $width:110%, $height:130%, $skew:$nwg-skew){
     position:relative;
     >div{
@@ -136,13 +136,13 @@
     border: 0;
     border-radius: 0;
 
-    padding: 0.6em 1em 0.5em 1em;
-    margin:0.5em 0;
+    padding: 0.6em 2em 0.5em 2em;
+    // margin:0.5em 0;
 
     transition: 0.2s;
     cursor: pointer;
 
-    background:lightblue;
+    // background:lightblue;
 
     &:focus,
     &:hover {

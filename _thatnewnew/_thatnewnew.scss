@@ -23,9 +23,6 @@
 //   border:1px solid red;
 // }
 
-.z-9999{
-    z-index: 9999;
-}
 
 .socialShare{
     // border:1px solid red;
@@ -34,7 +31,8 @@
     // top:-50%;
     // bottom:0;
     transform:translateY(-50%);
-
+    z-index: 99;
+    
     $white: #fff;
     $color: #000;
 

@@ -47,7 +47,6 @@
         function doNow(){
 
             $('[data-nwg-animate-header]').each(function(i, val){
-console.log('honky');
 
                 var ThisDIV = $(val);
                 var ThisBG = ThisDIV.find('.pageHeaderNWG__bg');
@@ -71,7 +70,7 @@ console.log('honky');
 
 
                 if(PT._isDevMode){
-                    ThisSCENE.addIndicators({name: "Article Header"});
+                    // ThisSCENE.addIndicators({name: "Article Header"});
                 }
 
 
