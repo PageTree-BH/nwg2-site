@@ -69,8 +69,8 @@
     padding:2rem 5rem;
     span{
         // background-color:$nwg-lightblue;
-        background-color:$nwg-black;
-        background-color:rgba(#8DC1F4, 0.8);
+        // background-color:$nwg-black;
+        // background-color:rgba(#8DC1F4, 0.8);
         left:-10%;
         display:inline-block;
         color: $nwg-lightblue;
@@ -83,6 +83,12 @@
         left:10%;
     }
 
+    .bg-splats & span {
+        background-color:$nwg-black;
+    }
+    .bg-arena & span {
+        background-color:$nwg-lightblue;
+    }
     // @include breakpoing($sm){
         // font-size: 3vw;
     // }

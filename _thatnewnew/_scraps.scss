@@ -1,0 +1,47 @@
+
+
+
+.nwg-gallery figure{
+    margin:0;
+}
+
+
+ul.pressList{
+    list-style: none;
+    margin:0;
+    padding:0;
+    li>a{
+        display: block;
+        // *:first-child{
+        *:nth-child(1){
+            color:$nwg-darkblue;
+            font-family:$font-header1;
+            // border:1px solid green;
+        }
+        *:nth-child(2){
+            color:$nwg-lightblue;
+            font-family:$font-header2;
+        }
+
+
+    }
+    li{
+        padding:0.5em 1.5em;
+        margin:1em 0;
+        background:transparent;
+        transition:0.3s;
+        &:hover, &:focus{
+            background:$nwg-highlight;
+            a{
+                color:white;
+                text-decoration: none;
+                *:nth-child(1){
+                    color:white;
+                }
+                *:nth-child(2){
+                    color:white;
+                }
+            }
+        }
+    }
+}

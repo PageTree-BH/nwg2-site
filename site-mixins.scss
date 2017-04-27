@@ -41,6 +41,24 @@
         // transform: translate(0,0) skewY($nwg-skew);
         z-index:0;
     }
+
+    &.bg-tight:before {
+        height:100%;
+        @include ptBreakpoint($md){
+            height:100%;
+        }
+    }
+
+    &.bg-offset-top:before{
+        top:65%;
+        height:110%;
+    }
+
+    &.bg-offset-bottom:before{
+        top:35%;
+        height:110%;
+    }
+
 }
 
 
@@ -98,7 +116,6 @@
 .bg-skew-neg-lightblue-solid{
     @include bgSkew($nwg-lightblue, 110%, 130%, $nwg-skew-neg);
 }
-
 
 
 

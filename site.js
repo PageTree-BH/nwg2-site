@@ -33,6 +33,7 @@ YT:true
 
 
 
+
 // @        codekit-append "sasskits/nwg-modal.js"
 
 
@@ -98,6 +99,7 @@ var NWG = {
 
 
         NWG.build_Events_Mini_Slider();
+        NWG.buildArticleGALLERY();
 
 
 
@@ -243,7 +245,6 @@ var NWG = {
 
         $('[data-nwg-events-slider]').each(function(i, val){
 
-
             // $('#section-events-mini-slider').slick({
             $(this).slick({
                 dots: false
@@ -282,6 +283,134 @@ var NWG = {
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*
+    *
+    *
+    *
+    *
+
+           ###    ########  ######## ####  ######  ##       ########
+          ## ##   ##     ##    ##     ##  ##    ## ##       ##
+         ##   ##  ##     ##    ##     ##  ##       ##       ##
+        ##     ## ########     ##     ##  ##       ##       ######
+        ######### ##   ##      ##     ##  ##       ##       ##
+        ##     ## ##    ##     ##     ##  ##    ## ##       ##
+        ##     ## ##     ##    ##    ####  ######  ######## ########
+
+         ######      ###    ##       ##       ######## ########  ##    ##
+        ##    ##    ## ##   ##       ##       ##       ##     ##  ##  ##
+        ##         ##   ##  ##       ##       ##       ##     ##   ####
+        ##   #### ##     ## ##       ##       ######   ########     ##
+        ##    ##  ######### ##       ##       ##       ##   ##      ##
+        ##    ##  ##     ## ##       ##       ##       ##    ##     ##
+         ######   ##     ## ######## ######## ######## ##     ##    ##
+
+
+    *
+    *
+    *
+    **/
+
+        ,buildArticleGALLERY: function() {
+            PT.log('buildArticleGALLERY()');
+
+
+            $('[data-nwg-gallery]').each(function(i, val){
+                // PT.log( $(val) );
+                buildGallery(val);
+            });
+
+            function buildGallery(_val_){
+
+                var ThisGALLERY = $(_val_);
+
+                ThisGALLERY.find('.slider').slick({
+                    lazyLoad: 'ondemand',
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+                        dots: false,
+                        arrows: false,
+                            infinite: true,
+                            // autoplay: true,
+                            // autoplaySpeed: 2000,
+                            // speed: 300,
+                            cssEase: 'ease-in-out',
+                    fade: true,
+                    asNavFor: '.slider-nav-thumbnails',
+
+                 });
+
+
+
+                 ThisGALLERY.find('.slider-nav-thumbnails').slick({
+                    slidesToShow: 4
+                    ,slidesToScroll: 1
+                    ,infinite: true
+                    ,asNavFor: '.slider'
+                    ,cssEase: 'ease-in-out'
+                    ,focusOnSelect: true
+
+
+                        ,dots: false
+                        ,arrows: false
+                        // ,centerMode: true
+
+                        ,mobileFirst: true
+
+                        ,responsive: [
+                            {
+                                breakpoint: 1000,
+                                settings: {
+                                    slidesToShow: 6,
+                                    slidesToScroll: 1
+                                }
+                            }
+                        ]
+
+                 });
+
+
+                 //remove active class from all thumbnail slides
+                ThisGALLERY.find('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+
+                 //set active class to first thumbnail slides
+                ThisGALLERY.find('.slider-nav-thumbnails .slick-slide').eq(0).addClass('slick-active');
+
+                 // On before slide change match active thumbnail to current slide
+                ThisGALLERY.find('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    var mySlideNumber = nextSlide;
+                    ThisGALLERY.find('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+                    ThisGALLERY.find('.slider-nav-thumbnails .slick-slide').eq(mySlideNumber).addClass('slick-active');
+                });
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
 
 
 

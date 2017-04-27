@@ -138,11 +138,27 @@
 
     ul{
         list-style: none;
+        margin:0; padding:0;
+        // width:110%;
+        li{
+            display:inline-block;
+            margin:0; padding:0;
+            width:101%;
+        }
+    }
+    a{
+        // border:1px solid red;
+        position: relative;
+        // width:110%;
     }
     h3{
         display:inline-block;
         font-family:$font-header1;
         font-size:1.8rem;
+        width:100%;
+        span{
+            display:inline-block;
+        }
     }
     // h1,h2,h3,h4,h5,h6{
     // }

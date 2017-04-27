@@ -2523,6 +2523,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_deploy\/page-about.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/page-about.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_deploy\/page-articles.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -2586,6 +2595,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_deploy\/page-press.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/page-press.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_deploy\/page-results.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -2609,6 +2627,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_deploy\/page-tickets.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_deploy\/page-venue.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_deploy\/page-venue.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2658,6 +2685,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_thatnewnew\/_bgYouTubeVid.scss",
 		"outputAbbreviatedPath": "\/css\/_bgYouTubeVid.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/_thatnewnew\/_scraps.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_thatnewnew\/_scraps.scss",
+		"outputAbbreviatedPath": "\/css\/_scraps.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -6856,6 +6899,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/page-about.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-about.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-about.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-articles.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -6910,6 +6962,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/page-press.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-press.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-press.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-results.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -6934,6 +6995,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page-tickets.kit",
 		"outputAbbreviatedPath": "\/_deploy\/page-tickets.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page-venue.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-venue.kit",
+		"outputAbbreviatedPath": "\/_deploy\/page-venue.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
