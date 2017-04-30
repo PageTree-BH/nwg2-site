@@ -54,9 +54,14 @@
     padding-bottom:5%;
 
     @include ptBreakpoint($nwg){
-        min-height:700px;
-        height:80vh;
-        max-height:800px;
+        min-height:600px;
+        // height:80vh;
+        // max-height:800px;
+    }
+
+    .btn.btn.btn{
+        // padding:0;
+        font-size:1rem;
     }
 }
 
@@ -124,14 +129,12 @@
     //     bottom:10%;
     // }
     @include ptBreakpoint($nwg){
-        position: absolute;
-        // width:100%;
-        right:1%;
-        // top:2%;
-        bottom:10%;
+// position: absolute;
+// right:1%;
+// bottom:10%;
         .flip-left &{
             right:initial;
-            left:1%;
+            // left:0%;
             text-align:left;
         }
     }
@@ -156,8 +159,16 @@
         font-family:$font-header1;
         font-size:1.8rem;
         width:100%;
+        margin:3px;
         span{
             display:inline-block;
+            background-color:black;
+            transition:0.2s;
+        }
+        a:hover, a:focus{
+            span{
+                background-color:$nwg-darkblue;
+            }
         }
     }
     // h1,h2,h3,h4,h5,h6{

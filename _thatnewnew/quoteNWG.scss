@@ -2,12 +2,12 @@
 
 
 .sectionNWG ~ .quoteNWG{
-    padding:5% 5% 10% 5%;
+    padding:5% 5% 15% 5%;
     margin-bottom: -14%;
 }
 
 .quoteNWG{
-    padding:1em 0;
+    padding:3em 0;
     position: relative;
     width:100%;
     overflow: hidden;
@@ -50,6 +50,9 @@
 
     // background-image: linear-gradient(to right, $nwg-darkblue 80%, $nwg-darkblue 80%), url('img-homepage/hp-header-bg-LG.jpg');
     // background-blend-mode: overlay;
+
+
+
 
 }
 
@@ -98,32 +101,37 @@
 
 .quoteNWG__by{
     position: relative;
-    // float:right;
+
     // position: absolute;
     // right:0;
     // bottom:0;
     // z-index: 2;
     // text-align: center;
     // margin:auto;
-    left:10%;
-    transform:translateY(-30%);
-    margin-bottom:-80px;
-    @include ptBreakpoint($sm){
-        transform:translateY(-50%);
-        left:60%;
-    }
-    @include ptBreakpoint($lg){
-        transform:translateY(-60%);
-    }
-    // top:-65px;
 
-    // margin-top:-60px;
+
+    // left:10%;
+    // transform:translateY(-30%);
+    // margin-bottom:-80px;
+    // @include ptBreakpoint($sm){
+    //     transform:translateY(-50%);
+    //     left:60%;
+    // }
+    // @include ptBreakpoint($lg){
+    //     transform:translateY(-60%);
+    // }
+
+
+display:block;
+left:50%;
+transform:translateX(-50%);
+// border:1px solid red;
+text-align:center;
 
     text-transform: uppercase;
     color:black;
     font-family: $font-header1;
     font-size:1.2rem;
-    z-index: 9;
 
 
     z-index: 5;
@@ -136,6 +144,8 @@
         width:100px;
         height:100px;
         object-fit: cover;
-        margin:1em;
+        // margin:1em;
     }
+
+
 }

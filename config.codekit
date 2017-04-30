@@ -287,6 +287,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_deploy\/assets\/img-homepage\/NWG-HP-BG.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 259885,
+		"inputAbbreviatedPath": "\/_deploy\/assets\/img-homepage\/NWG-HP-BG.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/assets\/img-homepage\/NWG-HP-BG.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_deploy\/assets\/img-homepage\/NWG-HP-BG.png": {
 		"fileType": 32768,
 		"ignore": 0,

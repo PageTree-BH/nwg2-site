@@ -143,7 +143,7 @@
     ul{
         text-align: left;
         list-style-type: none;
-        font-size:1.3em;
+        font-size:1.4em;
     }
     >div{
         position: relative;
@@ -184,9 +184,21 @@
 }
 
 
+.athletesList__name {
+    line-height:0.8em;
+    small{
+        top:-0.7em;
+    }
+}
 
-
-
+.athletesList__img{
+    border:5px solid $nwg-lightblue;
+}
+.eventAthletesList{
+    img{
+        border:5px solid $nwg-lightblue;
+    }
+}
 
 
 
@@ -364,6 +376,8 @@
         height: 100%;
 
         object-fit: cover;
+
+
     }
     @include ptBreakpoint($sm) {
         // width:50%;
